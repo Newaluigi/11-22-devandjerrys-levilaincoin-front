@@ -1,6 +1,4 @@
-import './VilainButton.css'
-import son1 from '../assets/joker1.mp3'
-import icone1 from '../assets/icone1.jpg'
+import son1 from '../assets/audio/joker1.mp3'
 // import { useNavigate } from 'react-router-dom'
 
 const VilainButton = () => {
@@ -16,8 +14,12 @@ const VilainButton = () => {
     <>
       <div className='mainButton'>
         <button onClick={start} type='button'>
-          <img src={icone1} alt='icone +' className='iconePlus' /> Devenir
-          vilain
+          <img
+            src={require('../assets/img/icone1.jpg')}
+            alt='icone +'
+            className='iconePlus'
+          />{' '}
+          Devenir vilain
         </button>
       </div>
     </>

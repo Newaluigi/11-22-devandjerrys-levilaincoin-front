@@ -1,4 +1,3 @@
-import './Footer.css'
 import Search from './Search'
 // import Resp from './Resp'
 import { useState } from 'react'
@@ -13,7 +12,7 @@ const Footer = () => {
     <div className='lvcFooter'>
       <img
         className='logoAppliMobil'
-        src={require('../pictures/appliMobil.png')}
+        src={require('../assets/img/appliMobil.png')}
         alt='Télécharger application mobile'
       />
       <div className='footerButton'>

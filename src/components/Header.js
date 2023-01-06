@@ -1,18 +1,16 @@
-import image1 from '../assets/img/nuclear-bomb.svg'
-import image2 from '../assets/img/leVilainCoinLogo.png'
-
+import img1 from '../assets/img/nuclear-bomb.svg'
 
 const Header = () => {
   return (
     <div className='header-images'>
       <img
-        src={image1}
+        src={img1}
         alt='image_du_site'
         className='image1'
         onClick={'./screens/Home'}
       />
       <img
-        src={image2}
+        src={require('../assets/img/leVilainCoinLogo.png')}
         alt='logo_du_site'
         className='image2'
         onClick={'./screens/Home'}

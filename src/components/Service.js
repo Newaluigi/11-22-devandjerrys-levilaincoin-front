@@ -1,5 +1,3 @@
-import './Service.css'
-
 const Service = ({ img, details, alt }) => {
   return (
     <div className='cardService'>
