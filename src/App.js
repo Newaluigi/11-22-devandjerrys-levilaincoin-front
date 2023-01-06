@@ -1,4 +1,5 @@
 import Home from './screens/Home'
+import Footer from './components/Footer'
 import VilainButton from './components/VilainButton'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className='App'>
       <Home />
       <VilainButton />
+      <Footer />
     </div>
   )
 }
