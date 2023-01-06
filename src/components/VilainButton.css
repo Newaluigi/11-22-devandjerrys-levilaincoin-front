@@ -1,0 +1,76 @@
+:root {
+	font-size: calc(16px + (48 - 16)*(100vw - 320px)/(2560 - 320));
+    --background-color: #25282A;
+    --main-color: #ff6e14;
+    --secondary-color: #97A2A8;
+    --third-color: #FFFFFF;
+    --font1: 'Piedra', cursive;
+    --font2: 'OpenSans', cursive;
+    --font3: 'HelpMe';
+}
+body, button {
+	font: 1em/1.5 var(--font1);
+}
+button {
+    position: absolute;
+    bottom: 0px;
+    left: 750px;
+    padding: 8rem;
+    margin: 5px;
+	font-weight: 600;
+    font-size: 1.4rem;
+    background: var(--main-color);
+	border-radius: 4px;
+    border: 1px transparent;
+	color: #fff;
+	cursor: pointer;
+	margin: auto;
+	padding: 0.5em 1em;
+	transition: background .15s linear, color .15s linear;
+}
+button:focus, button:hover {
+	background: var(--main-color);
+}
+button:focus {
+	outline: transparent;
+}
+button::-moz-focus-inner {
+	border: 0;
+}
+button:active {
+	transform: translateY(0.1em);
+}
+.exploding, .exploding:focus, .exploding:hover {
+	background: transparent;
+	color: transparent;
+}
+.exploding {
+	pointer-events: none;
+	position: relative;
+	will-change: transform;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.particle {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.particle--debris {
+	background: var(--main-color);
+}
+.particle--fire {
+	border-radius: 50%;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #17181c;
+	}
+}
+
+.iconePlus {
+    height: 1.4rem;
+}
