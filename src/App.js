@@ -1,12 +1,12 @@
-import './App.css'
 import Home from './screens/Home'
+import VilainButton from './components/VilainButton'
 
 function App() {
   return (
-    <div className='app-Home'>
+    <div className='App'>
       <Home />
+      <VilainButton />
     </div>
   )
 }
-
 export default App

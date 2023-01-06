@@ -1,10 +1,12 @@
 import Service from '../components/Service'
+import Header from '../components/Header.js'
 import './Home.css'
 // import { Routes, Route } from 'react-router-dom'
 
 const Home = () => {
   return (
     <div>
+      <Header />
       <section id='home-cardService'>
         <Service
           img='/conquer.png'
