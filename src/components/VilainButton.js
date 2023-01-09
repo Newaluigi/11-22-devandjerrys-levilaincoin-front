@@ -19,7 +19,7 @@ const VilainButton = () => {
             alt='icone +'
             className='iconePlus'
           />
-          Devenir vilain
+          <p className='textBtn'>Devenir vilain</p>
         </button>
       </div>
     </>
