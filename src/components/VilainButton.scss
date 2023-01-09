@@ -85,9 +85,14 @@ body, .mainBtn {
 // }
 
 @media (min-width: 600px) { 
-	// .mainBtn, .containBtn {
-	// 	height: 1.7rem;
-	// 	font-size: 1rem;
-	// 	justify-content: flex-start;
-	// }
+	.mainBtn {
+		max-height: 2rem;
+		font-size: 1rem;
+		padding-bottom: 1rem;
+		justify-content: flex-start;
+	}
+	.iconePlus {
+		top : -5px ;
+}
+
 }
