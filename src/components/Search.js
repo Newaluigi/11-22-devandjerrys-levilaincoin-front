@@ -6,7 +6,7 @@ const Search = () => {
         src={require('../assets/img/glass.png')}
         alt='loupe'
       />
-      <input type='text' value='Rechercher' />
+      <input className='inputSearch' type='text' value='Rechercher' />
       {/* onChange */}
     </div>
   )

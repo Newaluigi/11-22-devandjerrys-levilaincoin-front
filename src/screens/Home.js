@@ -1,11 +1,17 @@
 import Service from '../components/Service'
-import Header from '../components/Header.js'
+import Header from '../components/Header'
+
 // import { Routes, Route } from 'react-router-dom'
 
 const Home = () => {
   return (
     <div>
       <Header />
+      <img
+        className='banner'
+        src={require('../assets/img/banner_resize.png')}
+        alt='banner du site'
+      ></img>
       <section id='home-cardService'>
         <Service
           img={require('../assets/img/conquer.png')}

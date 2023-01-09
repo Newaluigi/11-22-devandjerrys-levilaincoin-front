@@ -1,12 +1,12 @@
 import Home from './screens/Home'
 import Footer from './components/Footer'
-import VilainButton from './components/VilainButton'
+// import VilainButton from './components/VilainButton'
 
 function App() {
   return (
     <div className='App'>
       <Home />
-      <VilainButton />
+      {/* <VilainButton /> */}
       <Footer />
     </div>
   )
