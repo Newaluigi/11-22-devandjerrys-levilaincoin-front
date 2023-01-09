@@ -3,7 +3,7 @@
 .lvcFooter {
     background-color: #25282A;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -26,31 +26,30 @@
 
 
 /* * * * * MEDIA QUERIES * * * * */
-
+/*mobile*/
 @media (max-width: 600px) { 
 .footerButton {
         display: none;
     }
-.lvcFooter {
-    justify-content: flex-end;
-}
+// .lvcFooter {
+//     justify-content: space-between;
+// }
 .logoAppliMobil {
     display: none;
 }
    }
    
+/*desktop*/
 @media (min-width: 600px) { 
-.moduleSearch {
-    display: none;
-}
-/* 
-.lvcFooter {
-    justify-content: space-between;
-.menuBurger {
-       display: none;
-    }*/
+.searchModuleFooter {
+        display: none;
+    }
 
-.vilainBouton {
- display: none;
-} 
-   }
+    .containButtonFooter {
+        display: none;
+    }
+    
+                .menuBurgerFooter {
+                    display: none;
+                }
+}

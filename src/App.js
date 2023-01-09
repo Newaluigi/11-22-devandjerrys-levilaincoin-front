@@ -1,5 +1,6 @@
 import Home from './screens/Home'
 import Footer from './components/Footer'
+import Header from './components/Header'
 // import VilainButton from './components/VilainButton'
 import { Routes, Route } from 'react-router-dom'
 import Birthday from './screens/Birthday'

@@ -1,8 +1,6 @@
 import Service from '../components/Service'
 import { Link } from 'react-router-dom'
 
-// import { Routes, Route } from 'react-router-dom'
-
 const Home = () => {
   return (
     <div>

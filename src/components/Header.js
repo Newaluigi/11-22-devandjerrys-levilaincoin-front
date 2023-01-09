@@ -1,11 +1,15 @@
 import img1 from '../assets/img/nuclear-bomb.svg'
 import Search from './Search'
-import MenuButton from '../components/MenuButton'
+import VilainButton from './VilainButton'
+import BurgerMenu from './BurgerMenu'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div className='header-images'>
+    <div className='headerElements'>
+      <div className='containButtonHeader'>
+        <VilainButton />
+      </div>
       <Link to='/'>
         <img src={img1} alt='image_du_site' className='image1' />
       </Link>
@@ -16,8 +20,12 @@ const Header = () => {
           className='image2'
         />
       </Link>
-      <Search />
-      <MenuButton />
+      <div className='searchModuleHeader'>
+        <Search />
+      </div>
+      <div className='menuBurgerHeader'>
+        <BurgerMenu />
+      </div>
     </div>
   )
 }
