@@ -6,7 +6,6 @@ const TeamButton = () => {
       <a href='#' className='boutonTeam'>
         Notre équipe
       </a>
-      {/* <button className='boutonTeam'>Notre équipe</button> */}
     </div>
   )
 }
