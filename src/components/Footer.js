@@ -19,11 +19,13 @@ const Footer = () => {
         <ResponsabilityButton />
       </div>
 
-      <div className='burgerMenu'>{<BurgerMenu />}</div>
-      <div className='vilainBouton'>
+      <div className='menuBurgerFooter'>
+        <BurgerMenu />
+      </div>
+      <div className='containButtonFooter'>
         <VilainButton />
       </div>
-      <div className='moduleSearch'>
+      <div className='searchModuleFooter'>
         <Search />
       </div>
     </div>

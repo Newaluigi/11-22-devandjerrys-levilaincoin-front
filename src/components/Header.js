@@ -6,7 +6,9 @@ import BurgerMenu from './BurgerMenu'
 const Header = () => {
   return (
     <div className='headerElements'>
-      <VilainButton />
+      <div className='containButtonHeader'>
+        <VilainButton />
+      </div>
       <img
         src={img1}
         alt='image_du_site'
@@ -19,8 +21,12 @@ const Header = () => {
         className='image2'
         onClick={'./screens/Home'}
       />
-      <Search />
-      <BurgerMenu />
+      <div className='searchModuleHeader'>
+        <Search />
+      </div>
+      <div className='menuBurgerHeader'>
+        <BurgerMenu />
+      </div>
     </div>
   )
 }
