@@ -1,10 +1,12 @@
 import img1 from '../assets/img/nuclear-bomb.svg'
 import Search from './Search'
 import MenuButton from '../components/MenuButton'
+import VilainButton from './VilainButton'
 
 const Header = () => {
   return (
     <div className='header-images'>
+      <VilainButton />
       <img
         src={img1}
         alt='image_du_site'
