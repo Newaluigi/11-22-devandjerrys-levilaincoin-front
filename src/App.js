@@ -1,6 +1,7 @@
+import { Routes, Route } from 'react-router-dom'
 import Home from './screens/Home'
 import Footer from './components/Footer'
-// import VilainButton from './components/VilainButton'
+import NewVilain from './screens/NewVilain'
 
 function App() {
   return (
@@ -8,6 +9,9 @@ function App() {
       <Home />
       {/* <VilainButton /> */}
       <Footer />
+      <Routes>
+        <Route path='/newvilain' element={<NewVilain />} />
+      </Routes>
     </div>
   )
 }
