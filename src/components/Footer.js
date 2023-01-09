@@ -21,8 +21,6 @@ const Footer = () => {
       <div className='burgerMenu'>{/* <MenuBurger /> */}</div>
       <div className='vilainBouton'>
         <VilainButton />
-
- 
       </div>
       <div className='moduleSearch'>
         <Search />
