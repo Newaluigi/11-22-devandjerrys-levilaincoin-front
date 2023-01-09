@@ -1,13 +1,15 @@
+
 .burgerMenu {
-    @extend %center;
+    display: flex;
+        flex-direction: column-reverse;
 
     .menuButton {
         // background-color: pink;
     }
 
-    .menuList {
-        left: -400px;
+        nav {
         background-color: blue;
+        top: 500px;
     }
 }
 

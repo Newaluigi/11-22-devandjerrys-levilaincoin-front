@@ -1,26 +1,31 @@
 import { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
-function BurgerMenu() {
+const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className='burgerMenu'>
+    <div className='menuBurger'>
       <button className='menuButton' onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? 'Close' : <GiHamburgerMenu />}
+        {isOpen ? 'X' : <GiHamburgerMenu />}
       </button>
-      <ul className='menuList' style={{ display: isOpen ? 'block' : 'none' }}>
-        <li>Menu item 1</li>
-        <li>Menu item 2</li>
-        <li>Menu item 3</li>
-      </ul>
+      <nav>
+        <ul className='menuList' style={{ display: isOpen ? 'block' : 'none' }}>
+          <li>Connexion</li>
+          <li>Inscription</li>
+          <li>Devenir prestataire</li>
+          <li>Home</li>
+          <li>5e lien</li>
+        </ul>
+      </nav>
     </div>
   )
 }
 
 export default BurgerMenu
 
-// const MenuButton = () => {
+//   ---------------- Ancien code du burger -----
+//   const MenuButton = () => {
 //   let sidenav = document.getElementById('mySidenav')
 
 //   /* Set the width of the side navigation to 250px */
