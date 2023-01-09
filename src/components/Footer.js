@@ -10,7 +10,7 @@ const Footer = () => {
     <div className='lvcFooter'>
       <img
         className='logoAppliMobil'
-        src={require('../pictures/appliMobil.png')}
+        src={require('../assets/img/appliMobil.png')}
         alt='Télécharger application mobile'
       />
       <div className='footerButton'>

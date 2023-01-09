@@ -1,3 +1,15 @@
 * {
     background-color: var(--background-color)
 }
+#home-cardService {
+    display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ width: 900px;
+ margin: 30px;
+ color: var(--third-color) ;
+}
+@media screen and (max-width: 699px) {
+ #home-cardService {
+  width: 350px;
+}}
