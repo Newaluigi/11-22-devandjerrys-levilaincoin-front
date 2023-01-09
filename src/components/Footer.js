@@ -39,7 +39,7 @@ const Footer = () => {
           Compte-tenu de la gravité des évèments qui pourraient se produire,
           nous vous demandons de souscrire une assurance en béton. Dans le cas
           contraire, notre entreprise n&#39;assumera pas la responsabilité des
-          dommages ou des pertes causés.
+          dommages ou des pertes causées.
         </h5>
         <button className='boutonFooter' onClick={closePopup}>
           Fermer

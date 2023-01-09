@@ -1,11 +1,6 @@
-/* :root {
-    --background-color: #25282A;
-    --main-color: #FB6012;
-    --secondary-color: #97A2A8;
-    --third-color: #FFF;
-} */
+
 .lvcFooter {
-    background-color: #25282A;
+    background-color: pink;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,6 +11,7 @@
     width: auto;
     margin: 10px;
 }
+
 .boutonFooter {
     color: beige;
     display: inline-block;
