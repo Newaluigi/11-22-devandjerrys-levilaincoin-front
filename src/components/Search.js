@@ -8,7 +8,7 @@ const Search = () => {
         src={require('../pictures/glass.png')}
         alt='loupe'
       />
-      <input type='text' value='Rechercher' />
+      <input className='inputSearch' type='text' value='Rechercher' />
       {/* onChange */}
     </div>
   )

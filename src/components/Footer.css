@@ -1,56 +1,33 @@
-/* :root {
-    --background-color: #25282A;
-    --main-color: #FB6012;
-    --secondary-color: #97A2A8;
-    --third-color: #FFF;
-} */
+
+/* DIV ENTIERE DU FOOTER */
 .lvcFooter {
     background-color: #25282A;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
+/* DIV COMPRENANT LES BOUTONS TEAM & RESPONSABILITY */
+.footerButton {
+    display: flex;
+    flex-direction: row;
+}
+
+/* IMAGES APPLI MOBILE */
 .logoAppliMobil {
     height: 40px;
     width: auto;
     margin: 10px;
 }
-.boutonFooter {
-    color: beige;
-    display: inline-block;
-    background-color: #FB6012;
-    border: 2px solid #97A2A8;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px #97A2A8;
-    text-align: center;
-    padding: 10px;
-    width: auto;
-    /* -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s; */
-    cursor: pointer;
-    margin: 10px;
-}
-.bouton:hover {
-    background-color: #97A2A8;
-  }
 
-.dechargeText1 {
-    background-color: white;
-  }
-
-.dechargeText2 {
-    background-color: white;
-    text-align: justify;
-  }
 
 
 
 /* * * * * MEDIA QUERIES * * * * */
 
-@media (max-width: 400px) { 
+@media (max-width: 600px) { 
 .footerButton {
         display: none;
     }
@@ -62,7 +39,7 @@
 }
    }
    
-@media (min-width: 400px) { 
+@media (min-width: 600px) { 
 .moduleSearch {
     display: none;
 }
@@ -71,8 +48,9 @@
     justify-content: space-between;
 .menuBurger {
        display: none;
-    }
-.boutonPrestataire {
+    }*/
+
+.vilainBouton {
  display: none;
-} */
+} 
    }
