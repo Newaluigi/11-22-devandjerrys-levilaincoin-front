@@ -17,9 +17,12 @@ const Footer = () => {
         <TeamButton />
         <ResponsabilityButton />
       </div>
+
       <div className='burgerMenu'>{/* <MenuBurger /> */}</div>
       <div className='vilainBouton'>
         <VilainButton />
+
+ 
       </div>
       <div className='moduleSearch'>
         <Search />

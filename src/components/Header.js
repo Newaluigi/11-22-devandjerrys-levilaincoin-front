@@ -1,4 +1,6 @@
 import img1 from '../assets/img/nuclear-bomb.svg'
+import Search from './Search'
+import MenuButton from '../components/MenuButton'
 
 const Header = () => {
   return (
@@ -15,6 +17,8 @@ const Header = () => {
         className='image2'
         onClick={'./screens/Home'}
       />
+      <Search />
+      <MenuButton />
     </div>
   )
 }
