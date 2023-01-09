@@ -8,15 +8,22 @@
     --font2: 'OpenSans', cursive;
     --font3: 'HelpMe';
 }
-body, button {
+body, .mainBtn {
 	font: 1em/1.5 var(--font1);
 }
-button {
-    position: absolute;
-    bottom: 0px;
+.iconePlus {
+    height: 1.4rem;
+	position: relative;
+	top : 8px ;
+	padding-right: 8px;
+	background-color: var(--main-color);
+}
+.mainBtn {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
     left: 750px;
-    padding: 8rem;
-    margin: 5px;
+	max-height: 600px;
 	font-weight: 600;
     font-size: 1.4rem;
     background: var(--main-color);
@@ -25,52 +32,62 @@ button {
 	color: #fff;
 	cursor: pointer;
 	margin: auto;
+	margin-bottom: 1rem;
 	padding: 0.5em 1em;
 	transition: background .15s linear, color .15s linear;
 }
-button:focus, button:hover {
+.mainBtn:focus, .mainBtn:hover {
 	background: var(--main-color);
+	transform: translateY(-0.1em);
 }
-button:focus {
+.mainBtn:focus {
 	outline: transparent;
 }
-button::-moz-focus-inner {
+.mainBtn::-moz-focus-inner {
 	border: 0;
 }
-button:active {
-	transform: translateY(0.1em);
-}
-.exploding, .exploding:focus, .exploding:hover {
-	background: transparent;
-	color: transparent;
-}
-.exploding {
-	pointer-events: none;
-	position: relative;
-	will-change: transform;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-.particle {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-.particle--debris {
-	background: var(--main-color);
-}
-.particle--fire {
-	border-radius: 50%;
-}
+// .mainBtn:active {
+// 	transform: translateY(0.1em);
+// }
 
-@media (prefers-color-scheme: dark) {
-	body {
-		background: #17181c;
-	}
-}
+// -----------------------Effet explosion------------------
 
-.iconePlus {
-    height: 1.4rem;
+// .exploding, .exploding:focus, .exploding:hover {
+// 	background: transparent;
+// 	color: transparent;
+// }
+// .exploding {
+// 	pointer-events: none;
+// 	position: relative;
+// 	will-change: transform;
+// 	-webkit-user-select: none;
+// 	-moz-user-select: none;
+// 	-ms-user-select: none;
+// 	user-select: none;
+// }
+// .particle {
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// }
+// .particle--debris {
+// 	background: var(--main-color);
+// }
+// .particle--fire {
+// 	border-radius: 50%;
+// }
+
+// @media (prefers-color-scheme: dark) {
+// 	body {
+// 		background: #17181c;
+
+// 	}
+// }
+
+@media (min-width: 600px) { 
+	// .mainBtn, .containBtn {
+	// 	height: 1.7rem;
+	// 	font-size: 1rem;
+	// 	justify-content: flex-start;
+	// }
 }

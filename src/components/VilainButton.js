@@ -1,5 +1,5 @@
 import son1 from '../assets/audio/joker1.mp3'
-// import { useNavigate } from 'react-router-dom'
+// import { Link, redirect, useNavigate } from 'react-router-dom'
 
 const VilainButton = () => {
   //   const navigate = useNavigate()
@@ -7,18 +7,18 @@ const VilainButton = () => {
 
   const start = () => {
     audio1.play()
-    // navigate('/Home.js')
+    // navigate('/NewVilain.js')
   }
 
   return (
     <>
-      <div className='mainButton'>
-        <button onClick={start} type='button'>
+      <div className='containBtn'>
+        <button onClick={start} type='button' className='mainBtn'>
           <img
             src={require('../assets/img/icone1.jpg')}
             alt='icone +'
             className='iconePlus'
-          />{' '}
+          />
           Devenir vilain
         </button>
       </div>
