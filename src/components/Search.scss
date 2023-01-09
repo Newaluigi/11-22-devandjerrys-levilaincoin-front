@@ -1,15 +1,12 @@
-/* :root {
-    --background-color: #25282A;
-    --main-color: #FB6012;
-    --secondary-color: #97A2A8;
-    --third-color: #FFF;
-} */
-* {
+.searchModule {
     background-color: #25282A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-input {
+
+.inputSearch {
     color: beige;
 }
+
 .glassPicture {
     height: 20px;
     width: auto;
