@@ -1,4 +1,4 @@
-import './Footer.css'
+import './Footer.scss'
 
 import ResponsabilityButton from './ResponsabilityButton'
 import Search from './Search'
@@ -21,8 +21,6 @@ const Footer = () => {
       <div className='burgerMenu'>{/* <MenuBurger /> */}</div>
       <div className='vilainBouton'>
         <VilainButton />
-
- 
       </div>
       <div className='moduleSearch'>
         <Search />
