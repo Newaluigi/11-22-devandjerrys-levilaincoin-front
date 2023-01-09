@@ -1,3 +1,4 @@
+import BurgerMenu from './BurgerMenu'
 import './Footer.scss'
 
 import ResponsabilityButton from './ResponsabilityButton'
@@ -18,7 +19,7 @@ const Footer = () => {
         <ResponsabilityButton />
       </div>
 
-      <div className='burgerMenu'>{/* <MenuBurger /> */}</div>
+      <div className='burgerMenu'>{<BurgerMenu />}</div>
       <div className='vilainBouton'>
         <VilainButton />
       </div>

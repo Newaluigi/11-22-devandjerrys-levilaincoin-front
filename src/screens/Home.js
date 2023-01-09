@@ -1,12 +1,10 @@
 import Service from '../components/Service'
-import Header from '../components/Header'
 
 // import { Routes, Route } from 'react-router-dom'
 
 const Home = () => {
   return (
     <div>
-      <Header />
       <img
         className='banner'
         src={require('../assets/img/banner_resize.png')}

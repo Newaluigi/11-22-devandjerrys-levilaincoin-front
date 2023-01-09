@@ -1,5 +1,3 @@
-import './TeamButton.css'
-
 const TeamButton = () => {
   return (
     <div>
