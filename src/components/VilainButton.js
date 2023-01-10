@@ -13,7 +13,7 @@ const VilainButton = () => {
   return (
     <>
       <div className='containBtn'>
-        <Link to='/NewVillain'>
+        <Link to='/NewVillain' style={{ textDecoration: 'none' }}>
           <button onClick={start} type='button' className='mainBtn'>
             <img
               src={require('../assets/img/icone1.jpg')}
