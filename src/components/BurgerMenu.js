@@ -1,5 +1,5 @@
 import { useState } from 'react'
-// import { GiHamburgerMenu } from 'react-icons/gi'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
