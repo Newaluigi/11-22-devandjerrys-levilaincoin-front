@@ -1,13 +1,14 @@
 .cardService-Desc {
 	text-align: center;
-	font-size: 18px;
-
+  font: var(--font2);
 }
+
 .cardService-Img {
     width: 250px;
     height: auto;
     transition: width 0.5s ease-in;
 }
+
 .cardService {
     margin:10px;
     display: flex;
@@ -16,9 +17,11 @@
     transition: width 0.5s ease-in;
     box-shadow: 5px 5px 5px black;
 }
+
 .cardService-Img:hover {
     width: 320px;
   }
+
 .cardService:hover {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
@@ -41,6 +44,7 @@
       transform: translate3d(4px, 0, 0);
     }
   }
+
 .page-Service {
   *{
     color:white;

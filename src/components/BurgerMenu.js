@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { Link } from 'react-router-dom'
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,13 +11,30 @@ const BurgerMenu = () => {
         {isOpen ? 'X' : <GiHamburgerMenu />}
       </button>
       <nav>
-        <ul className='menuList' style={{ display: isOpen ? 'block' : 'none' }}>
-          <li>Connexion</li>
-          <li>Inscription</li>
-          <li>Devenir prestataire</li>
-          <li>Home</li>
-          <li>5e lien</li>
-        </ul>
+        <div className='menuListDiv'>
+          <ul
+            className='menuList'
+            style={{ display: isOpen ? 'block' : 'none' }}
+          >
+            <div className='menuListLi'>
+              <Link to='/connexion'>
+                <li>Connexion</li>
+              </Link>
+              <Link to='/inscription'>
+                <li>Inscription</li>
+              </Link>
+              <Link to='/notreequipe'>
+                <li>Notre équipe</li>
+              </Link>
+              <Link to='/#popup'>
+                <li>iResponsabilité</li>
+              </Link>
+              <Link to='/'>
+                <li>Home</li>
+              </Link>
+            </div>
+          </ul>
+        </div>
       </nav>
     </div>
   )
