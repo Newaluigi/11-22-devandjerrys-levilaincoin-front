@@ -1,5 +1,4 @@
-import './Footer.scss'
-
+import BurgerMenu from './BurgerMenu'
 import ResponsabilityButton from './ResponsabilityButton'
 import Search from './Search'
 import TeamButton from './TeamButton'
@@ -18,11 +17,13 @@ const Footer = () => {
         <ResponsabilityButton />
       </div>
 
-      <div className='burgerMenu'>{/* <MenuBurger /> */}</div>
-      <div className='vilainBouton'>
+      <div className='menuBurgerFooter'>
+        <BurgerMenu />
+      </div>
+      <div className='containButtonFooter'>
         <VilainButton />
       </div>
-      <div className='moduleSearch'>
+      <div className='searchModuleFooter'>
         <Search />
       </div>
     </div>

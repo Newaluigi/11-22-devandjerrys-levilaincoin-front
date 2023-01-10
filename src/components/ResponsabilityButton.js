@@ -1,5 +1,3 @@
-import './ResponsabilityButton.css'
-
 const ResponsabilityButton = () => {
   return (
     <div>
