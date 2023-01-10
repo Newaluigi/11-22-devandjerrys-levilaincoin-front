@@ -1,7 +1,6 @@
 import Home from './screens/Home'
 import Footer from './components/Footer'
 import Header from './components/Header'
-// import VilainButton from './components/VilainButton'
 import { Routes, Route } from 'react-router-dom'
 import Birthday from './screens/Birthday'
 import Conquer from './screens/Conquer'
@@ -9,7 +8,6 @@ import Destroy from './screens/Destroy'
 import Escort from './screens/Escort'
 import Nanny from './screens/Nanny'
 import Stag from './screens/Stag'
-import Header from './components/Header'
 
 function App() {
   return (
@@ -24,7 +22,7 @@ function App() {
         <Route path='/nanny' element={<Nanny />} />
         <Route path='/stag' element={<Stag />} />
       </Routes>
-      {/* <VilainButton /> */}
+
       <Footer />
     </div>
   )

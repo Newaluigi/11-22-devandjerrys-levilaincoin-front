@@ -1,6 +1,4 @@
 import BurgerMenu from './BurgerMenu'
-import './Footer.css'
-
 import ResponsabilityButton from './ResponsabilityButton'
 import Search from './Search'
 import TeamButton from './TeamButton'
