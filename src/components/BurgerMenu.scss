@@ -1,21 +1,30 @@
+.menuButton{
+    scale: 3;
+    border: none;
+    color: var(--main-color);
+}
 
-.burgerMenu {
-    display: flex;
-        flex-direction: column-reverse;
-
-    .menuButton {
-        // background-color: pink;
-    }
-
-        nav {
-        background-color: blue;
-        top: 500px;
-    }
+.menuListDiv{
+    background-color: var(--secondary-color);
+    padding-right: 40px;
+    .menuList{
+        background-color: var(--secondary-color);
+        .menuListLi{
+            list-style: none;
+            font-size: 25px;
+            background-color: var(--secondary-color);
+        }
+        li{
+            background-color: var(--secondary-color);
+            text-decoration: none
+        }}
 }
 
 
 
-//----------ci dessous css de l'ancien code
+
+
+//----------ci dessous css de l'ancien code (cf hackathon-1)
 // .sidenav {
 //     height: 100%;
 //     width: 250px;

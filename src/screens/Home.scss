@@ -6,12 +6,13 @@
     height: 20vh;
 }
 #home-cardService {
-display: flex;
- flex-wrap: wrap;
- justify-content: center;
- width: 900px;
- margin: 30px;
- color: var(--third-color) ;
+    position: absolute;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 70%;
+    margin: 30px;
 }
 
 @media screen and (max-width: 699px) {
