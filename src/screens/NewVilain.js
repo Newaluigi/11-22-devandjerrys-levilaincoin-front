@@ -1,11 +1,5 @@
-import Header from '../components/Header.js'
-
 const NewVilain = () => {
-  return (
-    <div>
-      <Header />
-    </div>
-  )
+  return <div>test</div>
 }
 
 export default NewVilain
