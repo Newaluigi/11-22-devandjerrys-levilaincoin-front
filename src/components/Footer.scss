@@ -45,14 +45,17 @@
 .footerButton {
         display: none;
     }
-// .lvcFooter {
-//     justify-content: space-between;
-// }
 .logoAppliMobil {
     display: none;
 }
    }
-   
+.glassPicture{
+    scale: 2;
+   }
+.inputSearch{
+    display: none;
+}
+
 /*desktop*/
 @media (min-width: 600px) { 
 .searchModuleFooter {
