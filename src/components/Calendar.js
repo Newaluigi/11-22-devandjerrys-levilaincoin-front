@@ -17,7 +17,7 @@ class Calendar extends Component {
 
   render() {
     return (
-      <div className='App'>
+      <div className='Calendar'>
         <DateRangePicker
           startDateId='startDate'
           endDateId='endDate'
