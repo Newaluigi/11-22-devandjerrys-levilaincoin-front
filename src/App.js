@@ -9,6 +9,7 @@ import Destroy from './screens/Destroy'
 import Escort from './screens/Escort'
 import Nanny from './screens/Nanny'
 import Stag from './screens/Stag'
+import DetailedCardService from './screens/DetailedCardService'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/escort' element={<Escort />} />
         <Route path='/nanny' element={<Nanny />} />
         <Route path='/stag' element={<Stag />} />
+        <Route path='/profile' element={<DetailedCardService />} />
       </Routes>
 
       <Footer />
