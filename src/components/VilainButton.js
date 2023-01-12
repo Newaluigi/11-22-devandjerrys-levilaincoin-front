@@ -1,5 +1,6 @@
 import son1 from '../assets/audio/joker1.mp3'
-import { Link, redirect, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+// import { redirect, useNavigate } from 'react-router-dom'
 
 const VilainButton = () => {
   // const navigate = useNavigate()
