@@ -16,3 +16,68 @@ font-size: 14px;
     width: 80%;
     margin: auto;
 }
+// Code ajouté pour le CSS des cartes simplifiées - Cécilia
+.Cards-photo {
+    width: 150px;
+    height: auto;
+    border: 2mm ridge rgba(144, 153, 50, 0.6);
+    border: 15px;
+}
+
+.Cards-item {
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: width 0.5s ease-in;
+    box-shadow: 5px 5px 5px black;
+    width: 350px;
+    background-color: #97A2A8
+}
+
+.Cards-item h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #97A2A8;
+    color: #25282A;
+}
+.Quickdescription {
+    font-size: 16px;
+    text-align: center;
+    margin: auto 10px auto 10px;    
+    background-color: #97A2A8;
+    color: #25282A;
+}
+
+.ButtonCards {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    background-color: #FB6012;
+    border: 2px solid #97A2A8;
+    box-shadow: 5px 5px 10px #97A2A8;
+    text-align: center;
+    font-size: 0.4em;
+    color: beige;
+    margin: 10px;
+    padding: 10px;
+    width: 120px;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.CardsFlex {
+    display: flex;
+    flex-direction: row;
+    background-color: #97A2A8;
+    border-radius: 10px;
+    padding: 10px;
+}
+.posts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
