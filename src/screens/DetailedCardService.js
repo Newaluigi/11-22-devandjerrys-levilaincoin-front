@@ -1,3 +1,5 @@
+import CalendarFromScratch from '../components/CalendarFromScratch'
+
 const DetailedCardService = () => {
   // console.log(props)
   return (
@@ -31,7 +33,7 @@ const DetailedCardService = () => {
 
       <div className='calendar'>
         <p>Calendrier</p>
-        {/* <Calendar/> */}
+        <CalendarFromScratch />
       </div>
     </div>
   )

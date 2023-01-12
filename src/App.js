@@ -15,7 +15,6 @@ import CalendarFromScratch from './components/CalendarFromScratch'
 function App() {
   return (
     <div className='App'>
-      <CalendarFromScratch />
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />

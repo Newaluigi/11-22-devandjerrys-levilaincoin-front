@@ -1,9 +1,13 @@
-.CalendarFrom{
+.Calendar{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
+    background-color: white;
+    scale: 0.7;
+    width: 40vh;
     box-shadow: 5px 5px 25px;
-    .paragraphe{
-        color: white;
+    .DateSelected{
+        color: black;
     }
 }

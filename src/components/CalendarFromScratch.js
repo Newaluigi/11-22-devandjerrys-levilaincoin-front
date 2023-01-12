@@ -30,7 +30,7 @@ export default class CalendarFromScratch extends Component {
     
   render() {
     return (
-      <div className='CalendarFrom'>
+      <div className='Calendar'>
         <div onClick={this.reset}>
         <Calendar onChange={this.onChange}
         selectRange={true} 
@@ -40,9 +40,9 @@ export default class CalendarFromScratch extends Component {
         {/* <p className='paragraphe'>Date choisie : {this.state.date.toLocaleDateString()}</p> */}
         <button onClick={this.validation}>Valider</button>
         {this.state.showDate ? (
-            <div>
-                <p>Du : {this.state.date[0].toLocaleDateString()}</p>
-                <p>Au : {this.state.date[1].toLocaleDateString()}</p>
+            <div >
+                <p className='DateSelected'>Du : {this.state.date[0].toLocaleDateString()}</p>
+                <p className='DateSelected'>Au : {this.state.date[1].toLocaleDateString()}</p>
             </div>
         ): null}
       </div>
