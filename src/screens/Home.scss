@@ -8,9 +8,32 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 70%;
+    height: 55%;
     margin: 30px;
 }
+
+.linkCardService:link {
+    font:var(--font2);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+.linkCardService:visited {
+    font:var(--font2);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+.linkCardService:hover {
+    font:var(--font2);
+    background-color: transparent;
+    text-decoration: none;
+  }
+.linkCardService:active {
+    font:var(--font2);
+    background-color: transparent;
+    text-decoration: none;
+  }
 
 @media screen and (max-width: 699px) {
  #home-cardService {

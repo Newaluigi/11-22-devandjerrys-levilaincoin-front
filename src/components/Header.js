@@ -10,7 +10,7 @@ const Header = () => {
       <div className='containButtonHeader'>
         <VilainButton />
       </div>
-      <Link to='/'>
+      <Link to='/' className='logoFromHeader'>
         <img src={img1} alt='image_du_site' className='image1' />
       </Link>
       <Link to='/'>
