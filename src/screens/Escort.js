@@ -49,8 +49,7 @@ const Escort = () => {
                     <span>ACHIEVEMENTS</span> {vilainInfo1.achievements}
                   </p>
                   <br />
-                  {/*paramètre passé à cette fonction. Elle sera exécuté sur onClick et concerne cette id 
-              strictement !!!! */}
+                  <img src={vilainInfo1.images.sm} alt={vilainInfo1.name} />   
                   {/* <button onClick={() => deleteProfile(vilainInfo1.id)}> */}
                   <button>Delete</button>
                 </div>
