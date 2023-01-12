@@ -1,0 +1,72 @@
+
+/* DIV ENTIERE DU FOOTER */
+.lvcFooter {
+    background-color: #25282A;
+    // position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position:fixed;
+    bottom:0px;
+    /*mettre la height à 100px*/
+    height:100px;
+    width:100%;
+}
+
+/* DIV COMPRENANT LES BOUTONS TEAM & RESPONSABILITY */
+.footerButton {
+    display: flex;
+    flex-direction: row;
+}
+
+/* IMAGES APPLI MOBILE */
+.logoAppliMobil {
+    height: 40px;
+    width: auto;
+    margin: 10px;
+}
+
+.menuBurgerFooter{
+    .menuListDiv{
+        position: absolute;
+        opacity: 0.8;
+        scale: 1.5;
+        bottom: 120px;
+        left: 51px;
+        // z-index: -1;
+    }
+}
+
+
+/* * * * * MEDIA QUERIES * * * * */
+/*mobile*/
+@media (max-width: 600px) { 
+.footerButton {
+        display: none;
+    }
+.logoAppliMobil {
+    display: none;
+}
+   }
+.glassPicture{
+    scale: 2;
+   }
+.inputSearch{
+    display: none;
+}
+
+/*desktop*/
+@media (min-width: 600px) { 
+.searchModuleFooter {
+        display: none;
+    }
+
+    .containButtonFooter {
+        display: none;
+    }
+    
+    .menuBurgerFooter {
+        display: none;
+    }
+}

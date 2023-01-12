@@ -1,0 +1,148 @@
+// ---------------ASPECT---------------------
+
+.mainBtn, .textBtn{
+	background-color: var(--main-color);
+}
+
+.textBtn{
+	color: var(--third-color);
+	font: var(--font2);
+}
+
+.mainBtn {
+	border-radius: 4px;
+	border: 1px transparent;
+	margin: 10px;
+	max-height: 40px;
+}
+
+
+// ---------------POSITION---------------------
+
+.mainBtn {
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	width: fit-content;
+}
+
+.iconePlus{
+	height: 30px;
+}
+
+// ---------------EFFET HOOVER---------------------
+
+.mainBtn:hover {
+	cursor: pointer;
+	transform: translateY(0.1em)
+
+}
+
+
+
+// ---------------EFFET ONCLICK---------------------
+
+.mainBtn:active {
+	transform: translateY(0.2em);}
+
+
+
+	
+// .containBtn {
+// justify-content: flex-start;
+// }
+// .iconePlus {
+//     height: 1.4rem;
+// 	position: relative;
+// 	top : -11px ;
+// 	padding-right: 8px;
+// 	background-color: var(--main-color);
+// }
+// .textBtn {
+// 	background-color: var(--main-color);
+// 	position: relative;
+// 	top : -47px ;
+// }
+
+// .mainBtn {
+// 	display: flex;
+
+//     left: 750px;
+// 	max-height: 60px;
+// 	font-weight: 600;
+// 	font: 1em var(--font1);
+//     background: var(--main-color);
+// 	border-radius: 4px;
+//     border: 1px transparent;
+// 	color: #fff;
+// 	cursor: pointer;
+// 	margin: auto;
+// 	margin-bottom: 1rem;
+// 	padding: 0.5em 1em;
+// 	transition: background .15s linear, color .15s linear;
+// }
+// // .mainBtn:focus, .mainBtn:hover {
+// // 	background: var(--main-color);
+// // 	transform: translateY(-0.1em);
+// // 	font : var(--font3);
+// // }
+// .mainBtn:focus {
+// 	outline: transparent;
+// }
+// .mainBtn::-moz-focus-inner {
+// 	border: 0;
+// }
+// // .mainBtn:active {
+// // 	transform: translateY(0.1em);
+// // }
+
+// // -----------------------Effet explosion------------------
+
+// // .exploding, .exploding:focus, .exploding:hover {
+// // 	background: transparent;
+// // 	color: transparent;
+// // }
+// // .exploding {
+// // 	pointer-events: none;
+// // 	position: relative;
+// // 	will-change: transform;
+// // 	-webkit-user-select: none;
+// // 	-moz-user-select: none;
+// // 	-ms-user-select: none;
+// // 	user-select: none;
+// // }
+// // .particle {
+// // 	position: absolute;
+// // 	top: 0;
+// // 	left: 0;
+// // }
+// // .particle--debris {
+// // 	background: var(--main-color);
+// // }
+// // .particle--fire {
+// // 	border-radius: 50%;
+// // }
+
+// // @media (prefers-color-scheme: dark) {
+// // 	body {
+// // 		background: #17181c;
+
+// // 	}
+// // }
+
+// // -----------------RESPONSIVE------------------------
+
+
+// @media (min-width: 600px) { 
+// 	.mainBtn {
+// 		max-height: 0.1rem;
+// 		font-size: 1rem;
+// 		padding-top: 1rem;
+// 		padding-bottom: 1rem;
+// 		justify-content: flex-start;
+// 	}
+// // 	.iconePlus {
+// // 		top : -5px ;
+// // }
+
+// }

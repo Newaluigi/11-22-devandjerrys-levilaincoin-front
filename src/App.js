@@ -1,25 +1,34 @@
-import logo from './logo.svg'
-import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import Home from './screens/Home'
+import Footer from './components/Footer'
+import NewVilain from './screens/NewVilain'
+import Header from './components/Header'
+import Birthday from './screens/Birthday'
+import Conquer from './screens/Conquer'
+import Destroy from './screens/Destroy'
+import Escort from './screens/Escort'
+import Nanny from './screens/Nanny'
+import Stag from './screens/Stag'
+import DetailedCardService from './screens/DetailedCardService'
 
 function App() {
   return (
     <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/newvilain' element={<NewVilain />} />
+        <Route path='/birthday' element={<Birthday />} />
+        <Route path='/conquer' element={<Conquer />} />
+        <Route path='/destroy' element={<Destroy />} />
+        <Route path='/escort' element={<Escort />} />
+        <Route path='/nanny' element={<Nanny />} />
+        <Route path='/stag' element={<Stag />} />
+        <Route path='/profile' element={<DetailedCardService />} />
+      </Routes>
+
+      <Footer />
     </div>
   )
 }
-
 export default App

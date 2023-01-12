@@ -1,0 +1,69 @@
+.box {
+    width: 0px;
+}
+
+.boutonResponsability {
+    /* display: inline-block; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    background-color: #FB6012;
+    border: 2px solid #97A2A8;
+    box-shadow: 5px 5px 10px #97A2A8;
+    text-align: center;
+    font-size: 0.4em;
+    color: beige;
+    margin: 10px;
+    padding: 10px;
+    width: 120px;
+    cursor: pointer;
+    /* -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; */
+    transition: all 0.3s ease-out;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #25282A;
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 4rem auto;
+    padding: 1.5rem;
+    background-color : white;
+    border-radius: 5px;
+    width: 40%;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+
+.popup .cross {
+    background-color: #25282A;
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: white;
+}
+.responsabilityText {
+    background-color: white;
+    text-align: justify;
+    font-size: 0.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
