@@ -1,12 +1,12 @@
+import Favorite from '../components/Favorite'
+
 const DetailedCardService = () => {
   // console.log(props)
+  let vilainFav = true
   return (
     <div className='Card-item'>
       <div className='favorite'>
-        <img
-          src='https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg'
-          alt='favorite'
-        />
+        <Favorite isFavorite={vilainFav} />
       </div>
       <div className='id'>
         <h2>Azazel</h2>
