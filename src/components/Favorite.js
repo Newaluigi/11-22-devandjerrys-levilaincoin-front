@@ -1,10 +1,18 @@
-const Favorite = () => {
+import React from 'react'
+
+function Favorite() {
+  const [isFavorite, setIsFavorite] = React.useState()
+  const handleClickFavorite = () => {
+    setIsFavorite(!isFavorite)
+  }
+
   return (
     <div className='favClick'>
-      <span className='fa fa-star-o'></span>
-      <div className='ring'></div>
-      <div className='ring2'></div>
-      <p className='info'>Ajouté à vos favoris!</p>
+      <div
+        id='favorite'
+        className={isFavorite ? 'isFavorite' : 'notFavorite'}
+        onClick={handleClickFavorite}
+      />
     </div>
   )
 }
