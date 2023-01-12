@@ -1,3 +1,12 @@
+.cardService {
+  margin:10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: width 0.5s ease-in;
+  box-shadow: 5px 5px 5px black;
+}
+
 .cardService-Desc {
 	text-align: center;
   font: var(--font2);
@@ -7,15 +16,6 @@
     width: 250px;
     height: auto;
     transition: width 0.5s ease-in;
-}
-
-.cardService {
-    margin:10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: width 0.5s ease-in;
-    box-shadow: 5px 5px 5px black;
 }
 
 .cardService-Img:hover {
