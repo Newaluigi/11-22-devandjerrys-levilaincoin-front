@@ -1,19 +1,24 @@
 .modalStyle{
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: aliceblue;
-    padding: 50px;
+      padding: 50px;
     z-index: 1000;
-}
+   }
 .form{
     display: flex;
     flex-direction: column;
+    font: var(--font2);
+     h1 {
+        font-size: 18px;
+        text-align: center;
+     }
 }
-.overlay{
+.overlayModal{
     position: fixed;
     top: 0;
     left: 0;
@@ -21,4 +26,15 @@
     bottom: 0;
     background-color: rgba(0,0,0,0.7);
     z-index: 1000;
+}
+
+@media screen and (max-width: 600px) {
+.modalStyle{
+    padding: 10px;
+   
+}
+// .form {
+//     font:v
+// }
+    
 }
