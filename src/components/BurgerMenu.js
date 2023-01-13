@@ -6,7 +6,7 @@ import ModalSigningIn from './ModalSigningIn'
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
   // XXXXXXXXXXXXXXXXXXXXXX STATE modal signing in XXXXXXXXXXXXXXXXXXXX
-  const [registrationIsOpen, setRegistrationIsOpen] = useState(false);
+  const [registrationIsOpen, setRegistrationIsOpen] = useState(false)
 
   return (
     <div className='menuBurger'>
@@ -25,25 +25,31 @@ const BurgerMenu = () => {
               </Link>
               {/* XXXXXXXXXXXXXXXXX lien clicKable modal XXXXXXXXXXXXXXXXXXXXXX */}
               <div>
-              <li onClick={() => setRegistrationIsOpen(true)}>Inscription</li>
-              <ModalSigningIn open={registrationIsOpen} onClose={() => setRegistrationIsOpen(false)}>
-                <h1>Inscription</h1>
-              </ModalSigningIn>
+                <li
+                  style={{ font: 'var(--font2)' }}
+                  onClick={() => setRegistrationIsOpen(true)}
+                >
+                  Inscription
+                </li>
+                <ModalSigningIn
+                  open={registrationIsOpen}
+                  onClose={() => setRegistrationIsOpen(false)}
+                ></ModalSigningIn>
+              </div>
+              <Link to='/notreequipe'>
+                <li>Notre équipe</li>
+              </Link>
+              <Link to='/#popup'>
+                <li>iResponsabilité</li>
+              </Link>
+              <Link to='/'>
+                <li>Home</li>
+              </Link>
             </div>
-            <Link to='/notreequipe'>
-              <li>Notre équipe</li>
-            </Link>
-            <Link to='/#popup'>
-              <li>iResponsabilité</li>
-            </Link>
-            <Link to='/'>
-              <li>Home</li>
-            </Link>
+          </ul>
         </div>
-      </ul>
+      </nav>
     </div>
-      </nav >
-    </div >
   )
 }
 

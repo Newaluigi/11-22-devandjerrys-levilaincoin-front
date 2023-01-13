@@ -13,7 +13,7 @@ const Header = () => {
       <Link to='/' className='logoFromHeader'>
         <img src={img1} alt='image_du_site' className='image1' />
       </Link>
-      <Link to='/'>
+      <Link to='/' className='logoFromHeader2'>
         <img
           src={require('../assets/img/leVilainCoinLogo.png')}
           alt='logo_du_site'

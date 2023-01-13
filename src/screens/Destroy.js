@@ -22,8 +22,7 @@ const Destroy = () => {
           <p>
             Description. Bonbon jujubes danish candy canes macaroon. Tiramisu
             powder cotton candy bear claw cupcake marzipan croissant shortbread
-            gummi bears. Gummies sweet roll lemon drops halvah toffee. Apple pie
-            jelly-o oat cake macaroon donut.
+            gummi bears.
           </p>
           <img
             src={require('../assets/img/destroy.png')}

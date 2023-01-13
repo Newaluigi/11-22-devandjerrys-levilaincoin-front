@@ -1,3 +1,5 @@
+// screens Birthday Stag Conquer Escort Nanny Destroy //
+
 .serviceDescription {
     h2 {
 
@@ -8,20 +10,30 @@ font-size: 14px;
     img {
         margin: auto;
         width: 150px;
+    
     }
 }
 .descriptionImg {
-    display: flex;
-    flex-direction: row;
     width: 80%;
     margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 23px;
+    p {
+        text-align: center;
+    }
+    img {
+        
+    }
 }
+
 // Code ajouté pour le CSS des cartes simplifiées - Cécilia
 .Cards-photo {
     width: 150px;
     height: auto;
     border: 2mm ridge rgba(144, 153, 50, 0.6);
     border: 15px;
+
 }
 
 .Cards-item {
@@ -31,9 +43,10 @@ font-size: 14px;
     justify-content: center;
     transition: width 0.5s ease-in;
     box-shadow: 5px 5px 5px black;
-    width: 350px;
-    background-color: #97A2A8
-}
+    width: 300px;
+    background-color: #97A2A8;
+    border-radius: 10px;
+    }
 
 .Cards-item h3 {
     text-align: center;
@@ -51,13 +64,13 @@ font-size: 14px;
 }
 
 .ButtonCards {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font: var(--font2);
+    font-size: 12px;
     text-decoration: none;
     background-color: #FB6012;
     border: 2px solid #97A2A8;
     box-shadow: 5px 5px 10px #97A2A8;
     text-align: center;
-    font-size: 0.4em;
     color: beige;
     margin: 10px;
     padding: 10px;
@@ -74,6 +87,12 @@ font-size: 14px;
     background-color: #97A2A8;
     border-radius: 10px;
     padding: 10px;
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 }
 .posts {
     display: flex;
@@ -81,3 +100,4 @@ font-size: 14px;
     flex-wrap: wrap;
     justify-content: center;
 }
+
