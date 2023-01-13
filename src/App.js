@@ -10,6 +10,7 @@ import Escort from './screens/Escort'
 import Nanny from './screens/Nanny'
 import Stag from './screens/Stag'
 import DetailedCardService from './screens/DetailedCardService'
+import CalendarFromScratch from './components/CalendarFromScratch'
 import GrosPlan from './components/GrosPlan'
 
 function App() {

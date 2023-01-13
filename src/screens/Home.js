@@ -1,7 +1,6 @@
 import Service from '../components/Service'
 import { Link } from 'react-router-dom'
-import Calendar from '../components/Calendar'
-import 'airbnb-js-shims'
+// import 'airbnb-js-shims'
 
 const Home = () => {
   return (
@@ -11,7 +10,6 @@ const Home = () => {
         src={require('../assets/img/banner_resize.png')}
         alt='banner du site'
       ></img>
-      <Calendar />
       <section id='home-cardService'>
         <Link to='/conquer' className='linkCardService'>
           <Service

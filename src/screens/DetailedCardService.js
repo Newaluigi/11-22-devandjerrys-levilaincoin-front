@@ -1,3 +1,4 @@
+import CalendarFromScratch from '../components/CalendarFromScratch'
 import Favorite from '../components/Favorite'
 
 const DetailedCardService = () => {
@@ -31,7 +32,7 @@ const DetailedCardService = () => {
 
       <div className='calendar'>
         <p>Calendrier</p>
-        {/* <Calendar/> */}
+        <CalendarFromScratch />
       </div>
     </div>
   )
