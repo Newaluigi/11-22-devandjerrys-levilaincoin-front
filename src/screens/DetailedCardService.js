@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import CalendarFromScratch from '../components/CalendarFromScratch'
-=======
 import Favorite from '../components/Favorite'
->>>>>>> dev
 
 const DetailedCardService = () => {
   // console.log(props)

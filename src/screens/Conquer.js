@@ -12,9 +12,7 @@ const Conquer = () => {
   }, [])
 
   return (
-
     <div className='page-Service'>
-
       <Link to='/'>
         <p> retour </p>
       </Link>
@@ -24,8 +22,7 @@ const Conquer = () => {
           <p>
             Description. Bonbon jujubes danish candy canes macaroon. Tiramisu
             powder cotton candy bear claw cupcake marzipan croissant shortbread
-            gummi bears. Gummies sweet roll lemon drops halvah toffee. Apple pie
-            jelly-o oat cake macaroon donut.
+            gummi bears.
           </p>
           <img
             src={require('../assets/img/conquer.png')}
@@ -38,11 +35,16 @@ const Conquer = () => {
       <div className='posts'>
         {vilainInfo1
           ? vilainInfo1.map(vilainInfo1 => {
-            return (
-              <DisplayVilainServicePage vilainInfo1={vilainInfo1} key = {vilainInfo1.id}/>)})
-              : null}          
-      </div > 
-    </div >
+              return (
+                <DisplayVilainServicePage
+                  vilainInfo1={vilainInfo1}
+                  key={vilainInfo1.id}
+                />
+              )
+            })
+          : null}
+      </div>
+    </div>
   )
 }
 

@@ -2,7 +2,8 @@
     scale: 3;
     border: none;
     color: var(--main-color);
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    cursor: pointer;
 }
 
 .menuListDiv{
@@ -20,6 +21,36 @@
             text-decoration: none
         }}
 }
+
+
+.menuListLi :nth-child(n):link {
+    font:var(--font2);
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+  }
+  
+.menuListLi :nth-child(n):visited {
+    font:var(--font2);
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+  }
+  
+.menuListLi.li :nth-child(n):hover {
+    font:var(--font2);
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+  }
+.menuListLi.li :nth-child(n):active {
+    font:var(--font2);
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+  }
 
 
 

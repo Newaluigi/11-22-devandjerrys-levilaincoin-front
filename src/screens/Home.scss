@@ -11,6 +11,10 @@
     height: 55%;
     margin: 30px;
 }
+#home-cardService::-webkit-scrollbar {
+  display: none;
+}
+
 
 .linkCardService:link {
     font:var(--font2);
@@ -35,7 +39,8 @@
     text-decoration: none;
   }
 
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 6px) {
  #home-cardService {
   width: 350px;
+  right: -10px;
 }}
