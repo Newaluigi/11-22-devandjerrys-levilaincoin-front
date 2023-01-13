@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
+import ModalSigningIn from './ModalSigningIn'
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
+  // XXXXXXXXXXXXXXXXXXXXXX STATE modal signing in XXXXXXXXXXXXXXXXXXXX
+  const [registrationIsOpen, setRegistrationIsOpen] = useState(false);
 
   return (
     <div className='menuBurger'>
@@ -20,23 +23,27 @@ const BurgerMenu = () => {
               <Link to='/connexion'>
                 <li>Connexion</li>
               </Link>
-              <Link to='/inscription'>
-                <li>Inscription</li>
-              </Link>
-              <Link to='/notreequipe'>
-                <li>Notre équipe</li>
-              </Link>
-              <Link to='/#popup'>
-                <li>iResponsabilité</li>
-              </Link>
-              <Link to='/'>
-                <li>Home</li>
-              </Link>
+              {/* XXXXXXXXXXXXXXXXX lien clicKable modal XXXXXXXXXXXXXXXXXXXXXX */}
+              <div>
+              <li onClick={() => setRegistrationIsOpen(true)}>Inscription</li>
+              <ModalSigningIn open={registrationIsOpen} onClose={() => setRegistrationIsOpen(false)}>
+                <h1>Inscription</h1>
+              </ModalSigningIn>
             </div>
-          </ul>
+            <Link to='/notreequipe'>
+              <li>Notre équipe</li>
+            </Link>
+            <Link to='/#popup'>
+              <li>iResponsabilité</li>
+            </Link>
+            <Link to='/'>
+              <li>Home</li>
+            </Link>
         </div>
-      </nav>
+      </ul>
     </div>
+      </nav >
+    </div >
   )
 }
 
