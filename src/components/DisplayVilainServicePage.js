@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 const DisplayVilainServicePage = (props) => {
+    const idVilain = props.vilainInfo1.id;
     return (
         <div className='vilain1' >
           {/* {console.log(props.vilainInfo1.id)} */}
@@ -12,7 +15,9 @@ const DisplayVilainServicePage = (props) => {
           </div>
           {/* <button onClick={() => deleteProfile(vilainInfo1.id)}> */}
           {/* <button>Delete</button> */}
+          {/* <Link to={`/grosplan/${idVilain}`}>/////////////////////////////////////////////////
           <button className='ButtonCards'>En savoir plus</button>
+          </Link>//////////////////////////////////////////////////////////////////////////// */}
         </div>
       </div>
     );
