@@ -31,7 +31,7 @@ const ModalSigningIn = ({ open, children, onClose }) => {
       let profile = [...customers, newProfile]
       // setting useState with new profile
       setCustomers(profile)
-      console.log(profile)
+      console.log(profile+"   "+typeof profile.id)
       // clearing input field (on vide les temporary states)
       setId()
       setName()

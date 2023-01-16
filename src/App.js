@@ -27,7 +27,8 @@ function App() {
         <Route path='/nanny' element={<Nanny />} />
         <Route path='/stag' element={<Stag />} />
         <Route path='/profile' element={<DetailedCardService />} />
-        {/* <Route path='/grosplan/:idVilain' element={<GrosPlan />} />//////////////////////////////////////// */}
+        <Route path='/grosplan/id/:idVilain' element={<GrosPlan />} />
+        <Route path='/grosplan/name/:nameVilain' element={<GrosPlan />} />
       </Routes>
 
       <Footer />

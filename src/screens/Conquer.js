@@ -5,6 +5,7 @@ import DisplayVilainServicePage from '../components/DisplayVilainServicePage'
 const Conquer = () => {
   // State réupération des infos de la catégorie concernée
   const [vilainInfo1, setVilainInfo1] = useState([])
+  // UseEffect
   useEffect(() => {
     axios.get('http://localhost:4242/occupation/conquer').then(response => {
       setVilainInfo1(response.data)
@@ -39,6 +40,7 @@ const Conquer = () => {
                 <DisplayVilainServicePage
                   vilainInfo1={vilainInfo1}
                   key={vilainInfo1.id}
+                  // key={vilainInfo1.name}
                 />
               )
             })
