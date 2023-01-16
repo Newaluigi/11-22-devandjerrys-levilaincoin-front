@@ -4,7 +4,7 @@ const DisplayVilainServicePage = (props) => {
     const idVilain = props.vilainInfo1.id;
     // const nameVilain = props.vilainInfo1.name;
     return (
-        <div className='vilain1' >
+        <div key={idVilain} className='vilain1' >
           {/* {console.log(props.vilainInfo1.id)} */}
         <div className='Cards-item'>
           <h3>{props.vilainInfo1.name}</h3>
