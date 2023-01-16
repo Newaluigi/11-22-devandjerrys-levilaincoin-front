@@ -1,4 +1,5 @@
-const Search = () => {
+const Search = (props) => {
+  const { search, setSearch } = props;
   return (
     <div className='searchModule'>
       <img
@@ -6,8 +7,12 @@ const Search = () => {
         src={require('../assets/img/glass.png')}
         alt='loupe'
       />
-      <input className='inputSearch' type='text' value='Rechercher' />
-      {/* onChange */}
+            <input className="inputSearch"
+                value={search}
+                type="text"
+                placeholder="..."
+                onChange={(e) => setSearch(e.target.value)}
+            />
     </div>
   )
 }
