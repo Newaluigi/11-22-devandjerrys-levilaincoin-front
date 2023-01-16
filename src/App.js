@@ -11,6 +11,7 @@ import Nanny from './screens/Nanny'
 import Stag from './screens/Stag'
 import DetailedCardService from './screens/DetailedCardService'
 import CalendarFromScratch from './components/CalendarFromScratch'
+import GrosPlan from './components/GrosPlan'
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
         <Route path='/nanny' element={<Nanny />} />
         <Route path='/stag' element={<Stag />} />
         <Route path='/profile' element={<DetailedCardService />} />
+        <Route path='/grosplan/id/:idVilain' element={<GrosPlan />} />
+        <Route path='/grosplan/name/:nameVilain' element={<GrosPlan />} />
       </Routes>
 
       <Footer />
