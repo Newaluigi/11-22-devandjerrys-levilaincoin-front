@@ -16,10 +16,13 @@ export default class CalendarFromScratch extends Component {
     ]
 
     validation = () => {
+        if (this.state.date[0] !== undefined && this.state.date[1] !== undefined) {
         this.setState({
             showDate: true
-        })
+        })}
         console.log(this.state.date);
+        console.log(this.setState);
+
     }
 
     reset = () =>{
@@ -37,14 +40,14 @@ export default class CalendarFromScratch extends Component {
         value={this.state.date}
         />
         </div>
-        {/* <p className='paragraphe'>Date choisie : {this.state.date.toLocaleDateString()}</p> */}
         <button className='ReactButton' onClick={this.validation}>Valider</button>
         {this.state.showDate ? (
-            <div >
-                <p className='DateSelected'>Du : {this.state.date[0].toLocaleDateString()}</p>
-                <p className='DateSelected'>Au : {this.state.date[1].toLocaleDateString()}</p>
+            <div className='DateSelected'>
+                <h3>Dates sélectionnées :</h3>
+                <p>Du : {this.state.date[0].toLocaleDateString()}‎ 
+                Au : {this.state.date[1].toLocaleDateString()}</p>
             </div>
-        ): null}
+        ):null}
       </div>
     )
   }

@@ -5,37 +5,38 @@
     flex-direction: column;
     background-color: white;
     scale: 0.9;
-    width: 40vh;
+    width: 38vh;
     box-shadow: 5px 5px 25px;
-    border-radius: 10px;
+    border-radius: 30px;
 
-    .DateSelected{
-        color: black;
-    }
     .react-calendar{
         border: none;
         .react-calendar__navigation{
             scale: 1.2;
         }
-        .react-calendar__month-view{
-           padding-bottom: 20px;
-        }
-        .react-calendar__tile {
-            border-radius: 10px;
-
-        }
-        .react-calendar__tile--active {
-            background: #FB6012;
-            box-shadow: 5px 5px 12px #FB6012;
-        }
-        .react-calendar__tile--range {
-            background: #FB6012;
-            box-shadow: 5px 5px 12px #FB6012;
-        }
-        .react-calendar__tile--now {
-            background: #FB6012;
-            box-shadow: 5px 5px 12px #FB6012;
-        }
+        .react-calendar__viewContainer{
+            .react-calendar__month-view{
+            padding-bottom: 20px;
+            }
+            .react-calendar__tile {
+                border-radius: 100px;
+            }
+            // ci-dessous vise les éléments (fleche, mois, chiffres)
+            .react-calendar button{
+                margin: 4px;
+                scale: 3;
+            }
+            .react-calendar__tile--active {
+                background: #FB6012;
+            }
+            .react-calendar__tile--range {
+                background: gainsboro;
+            }
+            .react-calendar__tile--now {
+                background: #FB6012;
+                box-shadow: 5px 5px 12px #FB6012;
+            }
+    }
     }
 }
 .ReactButton{
@@ -44,4 +45,19 @@
     position: relative;
     top: 10px;
     border-radius: 40px;
+}
+
+.DateSelected{
+    font:  var(--font2);
+    color: #FB6012;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3{
+        padding-top: 30px;
+        margin: 0;
+    }
+    p{
+        font-size: 20px;
+    }
 }
