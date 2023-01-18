@@ -26,6 +26,7 @@
         color: antiquewhite;
     }
 }
+
 /*mobile*/
 @media screen and (max-width: 600px) {
     .containButtonHeader {
@@ -46,4 +47,51 @@
         position: relative;
         right: 30px;
     }
+}
+
+@media screen and (min-width: 600px) {
+.menuListDiv{
+    position: absolute;
+    opacity: 0.8;
+    scale: 1.6;
+    right: 62px;
+    top: 112px;
+    backdrop-filter: blur(16px) saturate(164%);
+    border-radius: 12px;
+    z-index: 1;
+    .menuList{
+        .menuListLi{
+            list-style: none;
+        }
+        li{
+            text-decoration: none;
+            font-size : 20px;
+        }}
+}
+
+.menuListLi :nth-child(n):link {
+    font:var(--font2);
+    text-decoration: none;
+    color: black;
+  }
+  
+.menuListLi :nth-child(n):visited {
+    font:var(--font2);
+    text-decoration: none;
+    color: black;
+  }
+  
+.menuListLi.li :nth-child(n):hover {
+    font:var(--font2);
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+  }
+.menuListLi.li :nth-child(n):active {
+    font:var(--font2);
+    text-decoration: none;
+    color: black;
+  }
+
 }
