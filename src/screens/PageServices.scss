@@ -1,11 +1,14 @@
 // screens Birthday Stag Conquer Escort Nanny Destroy //
 
-.serviceDescription {
-    h2 {
+// DIV AJOUTÉE UNIQUEMENT SUR LA PAGE BIRTHDAY
+// .divGlobale {
+// display: flex;
+// }
+/////////////////////////
 
-    }
+.serviceDescription {
     p {
-font-size: 14px;
+        font-size: 14px;
     }
     img {
         margin: auto;
@@ -22,18 +25,6 @@ font-size: 14px;
     p {
         text-align: center;
     }
-    img {
-        
-    }
-}
-
-// Code ajouté pour le CSS des cartes simplifiées - Cécilia
-.Cards-photo {
-    width: 150px;
-    height: auto;
-    border: 2mm ridge rgba(144, 153, 50, 0.6);
-    border: 15px;
-
 }
 
 .Cards-item {
@@ -94,6 +85,18 @@ font-size: 14px;
         object-fit: cover;
     }
 }
+.CardsFlex2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    h4 {
+        color: #ffffff;
+        font-size: 1.8em;
+        margin: 15px 0px;
+        text-shadow: 3px 3px #FB6012;
+    }
+}
+
 .posts {
     display: flex;
     flex-direction: row;
