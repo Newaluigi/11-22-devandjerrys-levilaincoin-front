@@ -10,6 +10,7 @@ const Home = () => {
         src={require('../assets/img/banner_resize.png')}
         alt='banner du site'
       ></img>
+
       <section id='home-cardService'>
         <Link to='/conquer' className='linkCardService'>
           <Service
@@ -43,7 +44,7 @@ const Home = () => {
           <Service
             img={require('../assets/img/evjf.png')}
             alt='stag'
-            details='EVG /EVJF'
+            details='EVG et EVJF'
           />
         </Link>
         <Link to='/destroy' className='linkCardService'>

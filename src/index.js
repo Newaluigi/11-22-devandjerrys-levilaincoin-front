@@ -5,6 +5,11 @@ import App from './App'
 import { BrowserRouter } from 'react-router-dom'
 // import reportWebVitals from './reportWebVitals'
 
+export { default as Landing } from './screens/Google Auth/Landing'
+export { default as Login } from './screens/Google Auth/Login'
+export { default as Signup } from './screens/Google Auth/Signup'
+export { default as UserPage } from './screens/Google Auth/UserPage'
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>

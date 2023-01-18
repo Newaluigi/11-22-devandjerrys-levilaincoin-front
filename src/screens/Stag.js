@@ -6,6 +6,7 @@ import DisplayVilainServicePage from '../components/DisplayVilainServicePage'
 const Stag = () => {
   // State réupération des infos de la catégorie concernée
   const [vilainInfo1, setVilainInfo1] = useState([])
+  // UseEffect
   useEffect(() => {
     axios.get('http://localhost:4242/occupation/stag').then(response => {
       setVilainInfo1(response.data)
@@ -28,7 +29,7 @@ const Stag = () => {
           <img
             src={require('../assets/img/evjf.png')}
             alt='stag'
-            details='EVG /EVJF'
+            details='EVG/EVJF'
           />
         </div>
       </div>
@@ -48,4 +49,5 @@ const Stag = () => {
     </div>
   )
 }
+
 export default Stag
