@@ -28,7 +28,7 @@ const Conquer = () => {
           <img
             src={require('../assets/img/conquer.png')}
             alt='conquer'
-            details='Conquérir le monde'
+            // details='Conquérir le monde'
           />
         </div>
       </div>

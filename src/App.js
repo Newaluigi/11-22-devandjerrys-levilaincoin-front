@@ -14,13 +14,12 @@ import Nanny from './screens/Nanny'
 import Stag from './screens/Stag'
 import DetailedCardService from './screens/DetailedCardService'
 import CalendarFromScratch from './components/CalendarFromScratch'
-import GrosPlan from './components/GrosPlan'
+import Profile from './components/Profile'
 // XXXXXXXXXXXXXXXXXXXXX   import pour GOOGLE AUTH  XXXXXXXXXXXXXXXXX
 import Landing from './screens/Google Auth/Landing'
 import Login from './screens/Google Auth/Login'
 import Signup from './screens/Google Auth/Signup'
 import UserPage from './screens/Google Auth/UserPage'
-
 
 const App = () => {
   const [user, setUser] = useState({})
@@ -32,7 +31,6 @@ const App = () => {
       setUser(JSON.parse(theUser));
     }
   }, []);
-
   return (
     <div className='App'>
       <Header />
@@ -46,8 +44,8 @@ const App = () => {
         <Route path='/nanny' element={<Nanny />} />
         <Route path='/stag' element={<Stag />} />
         <Route path='/profile' element={<DetailedCardService />} />
-        <Route path='/grosplan/id/:idVilain' element={<GrosPlan />} />
-        <Route path='/grosplan/name/:nameVilain' element={<GrosPlan />} />
+        <Route path='/profile/id/:idVilain' element={<GrosPlan />} />
+        <Route path='/profile/name/:nameVilain' element={<GrosPlan />} />
         <Route path='/landing' element={user?.email ? <Navigate to="/UserPage" /> : <Landing />}/>
         <Route path='/sign up' element={user?.email ? <Navigate to="/UserPage" /> : <Signup />}/>
         <Route path='/login' element={user?.email ? <Navigate to="/UserPage" /> : <Login />}/>
