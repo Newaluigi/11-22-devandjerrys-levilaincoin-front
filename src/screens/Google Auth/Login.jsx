@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import useFetch from '../hooks/useFetch'
+import useFetch from './useFetch'
 
 // https://developers.google.com/identity/gsi/web/reference/js-reference
 

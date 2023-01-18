@@ -15,14 +15,14 @@ import Stag from './screens/Stag'
 import DetailedCardService from './screens/DetailedCardService'
 import CalendarFromScratch from './components/CalendarFromScratch'
 import GrosPlan from './components/GrosPlan'
-
+// XXXXXXXXXXXXXXXXXXXXX   import pour GOOGLE AUTH  XXXXXXXXXXXXXXXXX
 import Landing from './screens/Google Auth/Landing'
 import Login from './screens/Google Auth/Login'
 import Signup from './screens/Google Auth/Signup'
 import UserPage from './screens/Google Auth/UserPage'
 
 
-function App() {
+const App = () => {
   const [user, setUser] = useState({})
 
   useEffect(() => {
@@ -48,10 +48,10 @@ function App() {
         <Route path='/profile' element={<DetailedCardService />} />
         <Route path='/grosplan/id/:idVilain' element={<GrosPlan />} />
         <Route path='/grosplan/name/:nameVilain' element={<GrosPlan />} />
-        <Route path='/google' element={user?.email ? <Navigate to="/home" /> : <Landing />}/>
-        <Route path='/sign up' element={user?.email ? <Navigate to="/home" /> : <Signup />}/>
-        <Route path='/login' element={user?.email ? <Navigate to="/home" /> : <Login />}/>
-        <Route path='/UserPage' element={user?.email ? <UserPage user={user} /> : <Navigate to="/" />}/>
+        <Route path='/landing' element={user?.email ? <Navigate to="/UserPage" /> : <Landing />}/>
+        <Route path='/sign up' element={user?.email ? <Navigate to="/UserPage" /> : <Signup />}/>
+        <Route path='/login' element={user?.email ? <Navigate to="/UserPage" /> : <Login />}/>
+        <Route path='/UserPage' element={user?.email ? <UserPage user={user} /> : <Navigate to="/landing" />}/>
       </Routes>
 
       <Footer />
