@@ -28,7 +28,7 @@ const Nanny = () => {
           <img
             src={require('../assets/img/nanny.png')}
             alt='nanny'
-            details='Bad nounou'
+            // details='Bad nounou'
           />
         </div>
       </div>

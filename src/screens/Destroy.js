@@ -28,7 +28,7 @@ const Destroy = () => {
           <img
             src={require('../assets/img/destroy.png')}
             alt='destroy'
-            details='Dégradation en tout genre'
+            // details='Dégradation en tout genre'
           />
         </div>
       </div>

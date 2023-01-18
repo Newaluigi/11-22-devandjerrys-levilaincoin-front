@@ -28,7 +28,7 @@ const Escort = () => {
           <img
             src={require('../assets/img/escort.png')}
             alt='escort'
-            details='Escort vilain'
+            // details='Escort vilain'
           />
         </div>
       </div>
