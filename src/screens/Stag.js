@@ -29,7 +29,7 @@ const Stag = () => {
           <img
             src={require('../assets/img/evjf.png')}
             alt='stag'
-            details='EVG/EVJF'
+            // details='EVG/EVJF'
           />
         </div>
       </div>

@@ -8,15 +8,15 @@
     background-color: aliceblue;
     padding: 50px;
     z-index: 1000;
-   }
+}
 .form{
     display: flex;
     flex-direction: column;
     font: var(--font2);
-     h1 {
+    h1 {
         font-size: 18px;
         text-align: center;
-     }
+    }
 }
 .overlayModal{
     position: fixed;
@@ -31,7 +31,6 @@
 @media screen and (max-width: 600px) {
 .modalStyle{
     padding: 10px;
-   
 }
 // .form {
 //     font:v

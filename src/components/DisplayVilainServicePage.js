@@ -15,7 +15,7 @@ const DisplayVilainServicePage = props => {
         {/* <button onClick={() => deleteProfile(vilainInfo1.id)}> */}
         {/* <button>Delete</button> */}
         <div className='CardsFlex2'>
-          <Link to={`/grosplan/id/${idVilain}`}>
+          <Link to={`/profile/id/${idVilain}`}>
             {/* <Link to={`/grosplan/name/${nameVilain}`}> */}
             <button className='ButtonCards'>En savoir plus</button>
           </Link>
@@ -27,4 +27,3 @@ const DisplayVilainServicePage = props => {
 }
 
 export default DisplayVilainServicePage
-// key={props.vilainInfo1.id}

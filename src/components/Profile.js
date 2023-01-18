@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import DisplayVilainServicePage from '../components/DisplayVilainServicePage'
 import { useParams } from 'react-router-dom'
+import DetailedCardService from '../screens/DetailedCardService'
 
 const GrosPlan = () => {
   const params = useParams()
@@ -24,12 +23,7 @@ const GrosPlan = () => {
       <div className='posts'>
         {vilainInfo1
           ? vilainInfo1.map(vilainInfo1 => {
-              return (
-                <DisplayVilainServicePage
-                  // ---------- Props --------------
-                  vilainInfo1={vilainInfo1}
-                />
-              )
+              return <DetailedCardService vilainInfo1={vilainInfo1} />
             })
           : null}
       </div>
