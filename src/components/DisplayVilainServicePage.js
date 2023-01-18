@@ -14,10 +14,13 @@ const DisplayVilainServicePage = props => {
         </div>
         {/* <button onClick={() => deleteProfile(vilainInfo1.id)}> */}
         {/* <button>Delete</button> */}
-        <Link to={`/grosplan/id/${idVilain}`}>
-          {/* <Link to={`/grosplan/name/${nameVilain}`}> */}
-          <button className='ButtonCards'>En savoir plus</button>
-        </Link>
+        <div className='CardsFlex2'>
+          <Link to={`/grosplan/id/${idVilain}`}>
+            {/* <Link to={`/grosplan/name/${nameVilain}`}> */}
+            <button className='ButtonCards'>En savoir plus</button>
+          </Link>
+          <h4>{props.vilainInfo1.price}</h4>
+        </div>
       </div>
     </div>
   )

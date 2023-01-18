@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import DisplayVilainServicePage from '../components/DisplayVilainServicePage'
 
 const Stag = () => {
   // State réupération des infos de la catégorie concernée
   const [vilainInfo1, setVilainInfo1] = useState([])
+  // UseEffect
   useEffect(() => {
     axios.get('http://localhost:4242/occupation/stag').then(response => {
       setVilainInfo1(response.data)
@@ -27,7 +29,7 @@ const Stag = () => {
           <img
             src={require('../assets/img/evjf.png')}
             alt='stag'
-            details='EVG /EVJF'
+            details='EVG/EVJF'
           />
         </div>
       </div>
@@ -35,27 +37,11 @@ const Stag = () => {
         {vilainInfo1
           ? vilainInfo1.map(vilainInfo1 => {
               return (
-                <div className='vilain1' key={vilainInfo1.id}>
-                  <div className='Cards-item'>
-                    <h3>{vilainInfo1.name}</h3>
-                    <div className='CardsFlex'>
-                      {/* <img
-                          className='Cards-photo'
-                          src={require('../assets/img/birthday.png')}
-                        /> */}
-                      <img src={vilainInfo1.images.sm} alt={vilainInfo1.name} />
-
-                      <p className='Quickdescription'>
-                        {vilainInfo1.achievements}
-                      </p>
-                    </div>
-                    {/*paramètre passé à cette fonction. Elle sera exécuté sur onClick et concerne cette id 
-              strictement !!!! */}
-                    {/* <button onClick={() => deleteProfile(vilainInfo1.id)}> */}
-                    {/* <button>Delete</button> */}
-                    <button className='ButtonCards'>En savoir plus</button>
-                  </div>
-                </div>
+                <DisplayVilainServicePage
+                  vilainInfo1={vilainInfo1}
+                  key={vilainInfo1.id}
+                  // key={vilainInfo1.name}
+                />
               )
             })
           : null}
@@ -63,4 +49,5 @@ const Stag = () => {
     </div>
   )
 }
+
 export default Stag
