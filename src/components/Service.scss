@@ -1,5 +1,6 @@
 .cardService {
-  margin:10px;
+  // margin:10px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,24 +10,49 @@
 
 .cardService-Desc {
 	text-align: center;
-  font: var(--font2);
+  // font: var(--font2);
+  // Test Cécilia
+  font-family: 'Vibur', cursive;
+  font-size: 1.6em;
 }
 
 .cardService-Img {
     width: 250px;
     height: auto;
-    transition: width 0.5s ease-in;
+    // transition: width 0.5s ease-in;
+    // Test Cecilia
+    background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.3) 100%);
+    -webkit-mask-image: linear-gradient(black,transparent);
+    mask-image: linear-gradient(black,transparent);
+    transition: all 300ms;
 }
 
-.cardService-Img:hover {
-    width: 320px;
-  }
-
+// TEST CECILIA
 .cardService:hover {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-  }  
+  transform: scale(1.08);
+  box-shadow: 3px 3px 5px 3px rgb(205, 108, 47);
+}
+
+
+
+// ANCIEN CODE DE MARION
+
+// .cardService:hover {
+//   // transform: scale(1.10);
+//   // box-shadow: 5px 5px 5px rgb(214, 144, 63)
+//   // box-shadow: 3px 3px rgb(242, 133, 66), -1em 0 .4em rgb(242, 133, 66);
+// }
+
+// .cardService-Img:hover {
+//     width: 320px;
+//   }
+
+// .cardService:hover {
+//     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+//     transform: translate3d(0, 0, 0);
+//     backface-visibility: hidden;
+//   }  
+
   @keyframes shake {
     10%, 90% {
       transform: translate3d(-1px, 0, 0);

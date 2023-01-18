@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
+
 .banner {
     width: 100%;
     height: 20vh;
@@ -15,32 +17,52 @@
   display: none;
 }
 
+// TEST SUR TITRES CARD HOME
+.linkCardService {
+  font-family: 'Vibur', cursive;
+  text-decoration: none;
+  color: rgb(247, 111, 73);
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ec884e, 0 0 0.5em #f6623d, 0 0 0.1em #ff4444, 0 10px 3px #000;
 
-.linkCardService:link {
-    font:var(--font2);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-.linkCardService:visited {
-    font:var(--font2);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
+  // VIOLET
+  // color: rgb(164, 116, 254);
+  // text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #8514a1, 0 0 0.5em #b56de1, 0 0 0.1em #9e70fb, 0 10px 3px #000;
+}
+
 .linkCardService:hover {
-    font:var(--font2);
-    background-color: transparent;
-    text-decoration: none;
-  }
-.linkCardService:active {
-    font:var(--font2);
-    background-color: transparent;
-    text-decoration: none;
-  }
+      background-color: transparent;
+      text-decoration: none;
+      color: rgb(236, 142, 87);
+      text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ec884e, 0 0 0.5em #fc6d49, 0 0 0.1em #ff4444, 0 10px 3px #000;
+    }
+
+// .linkCardService:link {
+//     font:var(--font2);
+//     background-color: transparent;
+//     text-decoration: none;
+//   }
+  
+// .linkCardService:visited {
+//     font:var(--font2);
+//     background-color: transparent;
+//     text-decoration: none;
+//   }
+  
+// .linkCardService:hover {
+//     font:var(--font2);
+//     background-color: transparent;
+//     text-decoration: none;
+//   }
+// .linkCardService:active {
+//     font:var(--font2);
+//     background-color: transparent;
+//     text-decoration: none;
+//   }
 
 @media screen and (max-width: 6px) {
  #home-cardService {
   width: 350px;
   right: -10px;
-}}
+}
+}
+
