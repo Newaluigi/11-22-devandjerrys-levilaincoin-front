@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+// import React, { useState, useEffect } from "react";
+// import axios from "axios";
 import img1 from '../assets/img/nuclear-bomb.svg'
 import VilainButton from './VilainButton'
 import BurgerMenu from './BurgerMenu'
@@ -9,19 +9,19 @@ import SearchList from './SearchList';
 
 const Header = () => {
 
-  // XXXXXXXXXXXXXXX initial state, full list XXXXXXXXXXXXXXXXX
-  const [vilains, setVilains] = useState([])
-  // UseEffect
-  useEffect(() => {
-    axios.get('http://localhost:4242/').then(response => {
-      console.log(response.data);
-      setVilains(response.data)
-      console.log(vilains);
-    })
-  }, [])
-  // XXXXXXXXXXXXXXXX state of the vilain List display  XXXXXXXXXXXXXXXXXXXXXXXXXX
-  const [search, setSearch] = useState("");
-  const vilainsDisplayed = vilains;
+  // // XXXXXXXXXXXXXXX initial state, full list XXXXXXXXXXXXXXXXX
+  // const [vilains, setVilains] = useState([])
+  // // UseEffect
+  // useEffect(() => {
+  //   axios.get('http://localhost:4242/').then(response => {
+  //     console.log(response.data);
+  //     setVilains(response.data)
+  //     console.log(vilains);
+  //   })
+  // }, [])
+  // // XXXXXXXXXXXXXXXX state of the vilain List display  XXXXXXXXXXXXXXXXXXXXXXXXXX
+  // const [search, setSearch] = useState("");
+  // const vilainsDisplayed = vilains;
 
 
   return (
@@ -40,8 +40,10 @@ const Header = () => {
         />
       </Link>
       <div className='searchModuleHeader'>
-        <Search search={search} setSearch={setSearch} />
-        <SearchList search={search} vilainsDisplayed={vilainsDisplayed} />
+        {/* <Search search={search} setSearch={setSearch} /> */}
+        {/* <SearchList search={search} vilainsDisplayed={vilainsDisplayed} />*/}
+        <Search/>
+ 
       </div>
       <div className='menuBurgerHeader'>
         <BurgerMenu />

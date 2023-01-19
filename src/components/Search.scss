@@ -1,4 +1,8 @@
 .searchModule {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
     background-color: #25282A;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -11,4 +15,15 @@
 .glassPicture {
     height: 20px;
     width: auto;
+}
+@media (min-width: 600px) { 
+    .searchModule{
+        display: initial;
+        margin: 0;
+    }
+}
+@media (max-width: 599px) {
+    .inputSearch{
+        display: none;
+    }
 }
