@@ -2,7 +2,7 @@ import CalendarFromScratch from '../components/CalendarFromScratch'
 import Favorite from '../components/Favorite'
 
 const DetailedCardService = props => {
-  console.log(props)
+
   let vilainFav = true
   return (
     <div className='Card-item'>

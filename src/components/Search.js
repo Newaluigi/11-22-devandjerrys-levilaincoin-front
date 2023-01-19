@@ -14,9 +14,8 @@ import SearchList from './SearchList';
     axios.get('http://localhost:4242/').then(response => {
       console.log(response.data);
       setVilains(response.data)
-      console.log(vilains);
     })
-  }, [])
+  },[])
   // XXXXXXXXXXXXXXXX state of the vilain List display  XXXXXXXXXXXXXXXXXXXXXXXXXX
   const [search, setSearch] = useState("");
   const vilainsDisplayed = vilains;
@@ -30,6 +29,7 @@ import SearchList from './SearchList';
 
     setIsGlassDisplayed("none");
     setisInputDisplayed("initial");
+    
 
   }
 
@@ -45,11 +45,11 @@ import SearchList from './SearchList';
             <input className="inputSearch"
                 value={search}
                 type="text"
-                placeholder="..."
+                placeholder="Recherche"
                 onChange={(e) => setSearch(e.target.value)}
                 style= {{display: isInputDisplayed}}
             />
-            <SearchList search={search} vilainsDisplayed={vilainsDisplayed} />
+            <SearchList search={search} vilainsDisplayed={vilainsDisplayed} setSearch={setSearch} setIsGlassDisplayed={setIsGlassDisplayed}/>
     </div>
   )
 }

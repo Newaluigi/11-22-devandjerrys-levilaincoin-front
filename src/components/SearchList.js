@@ -1,34 +1,24 @@
-const SearchList = props => {
-  const { search, vilainsDisplayed } = props;
-  const idVilain = vilainsDisplayed.map (vilainsDisplayed.id);
+import { useState } from 'react';
+import ElementListSearchbar from './ElementListSearchbar';
+import ClickAwayListener from '@mui/base/ClickAwayListener'
 
-  // XXXXXXXXXXXXXXXXXXXXXX Click event on selected character XXXXXXXXXXXXXXXXXXXXXXXXX
-  const testClick = e => {
-    e.preventDefault()
-    console.log('hiha!!')
-    console.log(idVilain);
-  }
-  // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+const SearchList = props => {
+  const { search, vilainsDisplayed, setSearch,setIsGlassDisplayed } = props;
+
+
+
+
   return (
-    <div className='liste'>
+    <div className='liste' >
       {search.length > 0
         ? vilainsDisplayed
             .filter(vilainDisplayed => vilainDisplayed.name.includes(search))
-            .map(vilainDisplayed => (
-              <div
-                className='selection'
-                key={vilainDisplayed.id}
-                onClick={testClick}
-              >
-                <div>{vilainDisplayed.name}{vilainDisplayed.id}</div>
-                <img
-                  src={vilainDisplayed.images.xs}
-                  alt={vilainDisplayed.name}
-                />{' '}
-              </div>
+            .map(vilainsDisplayed => (
+              <ElementListSearchbar vilainsDisplayed={vilainsDisplayed} search={search} setSearch={setSearch} setIsGlassDisplayed={setIsGlassDisplayed}key={vilainsDisplayed.id}/>
             ))
         : null}
     </div>
+
   )
 }
 
