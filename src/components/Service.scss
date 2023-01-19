@@ -8,8 +8,6 @@
   border-radius: 100px;
   position: relative;
   .cardService-Img {
-    // transition: width 0.5s ease-in;
-    // Test Cecilia
     background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.3) 100%);
     -webkit-mask-image: linear-gradient(black,transparent);
     transition: all 300ms;
@@ -56,6 +54,8 @@
     }
   }
 }
+// Essai de select une cardservice et créer le blur sur les autres cardService-img où le hover n'est pas
+
 
 .cardService:hover .cardService-Img {
   animation-name : blurEffect;
@@ -66,10 +66,12 @@
       filter: blur(0);
     }
     100%{
-      filter: blur(3px);
+      filter: blur(2.5px);
     }
 }
 }
+
+
 .cardService:hover .cardService-Desc {
   animation-name : textEffect;
   animation-duration: 0.5s;

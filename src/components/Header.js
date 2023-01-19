@@ -5,10 +5,9 @@ import img1 from '../assets/img/nuclear-bomb.svg'
 import VilainButton from './VilainButton'
 import BurgerMenu from './BurgerMenu'
 import Search from './Search'
-import SearchList from './SearchList';
+import SearchList from './SearchList'
 
 const Header = () => {
-
   // // XXXXXXXXXXXXXXX initial state, full list XXXXXXXXXXXXXXXXX
   // const [vilains, setVilains] = useState([])
   // // UseEffect
@@ -22,7 +21,6 @@ const Header = () => {
   // // XXXXXXXXXXXXXXXX state of the vilain List display  XXXXXXXXXXXXXXXXXXXXXXXXXX
   // const [search, setSearch] = useState("");
   // const vilainsDisplayed = vilains;
-
 
   return (
     <div className='headerElements'>
@@ -42,8 +40,7 @@ const Header = () => {
       <div className='searchModuleHeader'>
         {/* <Search search={search} setSearch={setSearch} /> */}
         {/* <SearchList search={search} vilainsDisplayed={vilainsDisplayed} />*/}
-        <Search/>
- 
+        <Search />
       </div>
       <div className='menuBurgerHeader'>
         <BurgerMenu />

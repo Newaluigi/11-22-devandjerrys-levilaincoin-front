@@ -1,17 +1,15 @@
 
 /* DIV ENTIERE DU FOOTER */
 .lvcFooter {
-    background-color: #25282A;
-    // position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     position:fixed;
     bottom:0px;
-    /*mettre la height à 100px*/
-    height:100px;
+    height:5vh;
     width:100%;
+    z-index: 1;
 }
 
 /* DIV COMPRENANT LES BOUTONS TEAM & RESPONSABILITY */
