@@ -49,7 +49,7 @@ import SearchList from './SearchList';
                 onChange={(e) => setSearch(e.target.value)}
                 style= {{display: isInputDisplayed}}
             />
-            <SearchList search={search} vilainsDisplayed={vilainsDisplayed} setSearch={setSearch} setIsGlassDisplayed={setIsGlassDisplayed}/>
+            <SearchList search={search} vilainsDisplayed={vilainsDisplayed} setSearch={setSearch} setIsGlassDisplayed={setIsGlassDisplayed} setisInputDisplayed={setisInputDisplayed}/>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import ElementListSearchbar from './ElementListSearchbar';
 import ClickAwayListener from '@mui/base/ClickAwayListener'
 
 const SearchList = props => {
-  const { search, vilainsDisplayed, setSearch,setIsGlassDisplayed } = props;
+  const { search, vilainsDisplayed, setSearch,setIsGlassDisplayed,setisInputDisplayed } = props;
 
 
 
@@ -14,7 +14,7 @@ const SearchList = props => {
         ? vilainsDisplayed
             .filter(vilainDisplayed => vilainDisplayed.name.includes(search))
             .map(vilainsDisplayed => (
-              <ElementListSearchbar vilainsDisplayed={vilainsDisplayed} search={search} setSearch={setSearch} setIsGlassDisplayed={setIsGlassDisplayed}key={vilainsDisplayed.id}/>
+              <ElementListSearchbar vilainsDisplayed={vilainsDisplayed} search={search} setSearch={setSearch} setIsGlassDisplayed={setIsGlassDisplayed} setisInputDisplayed={setisInputDisplayed} key={vilainsDisplayed.id}/>
             ))
         : null}
     </div>

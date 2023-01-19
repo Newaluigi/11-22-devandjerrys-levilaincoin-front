@@ -56,7 +56,7 @@ const DetailedCardService = props => {
 
       <div className='calendar'>
         <p>Réserver votre prestation</p>
-        <CalendarFromScratch />
+        {/* <CalendarFromScratch /> */}
       </div>
     </div>
   )
