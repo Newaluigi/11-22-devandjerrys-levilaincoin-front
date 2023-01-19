@@ -27,11 +27,10 @@ import SearchList from './SearchList';
   const [isInputDisplayed, setisInputDisplayed] = useState('');
 
   const handleClickGlass = (e) =>{
-    console.log('cliclikkk')
+
     setIsGlassDisplayed("none");
     setisInputDisplayed("initial");
-    console.log(typeof isGlassDisplayed);
-    console.log(isInputDisplayed);
+
   }
 
   return (

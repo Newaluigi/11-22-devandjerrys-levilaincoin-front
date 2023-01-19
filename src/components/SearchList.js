@@ -1,10 +1,12 @@
 const SearchList = props => {
-  const { search, vilainsDisplayed } = props
+  const { search, vilainsDisplayed } = props;
+  const idVilain = vilainsDisplayed.map (vilainsDisplayed.id);
 
   // XXXXXXXXXXXXXXXXXXXXXX Click event on selected character XXXXXXXXXXXXXXXXXXXXXXXXX
   const testClick = e => {
     e.preventDefault()
     console.log('hiha!!')
+    console.log(idVilain);
   }
   // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   return (
@@ -18,7 +20,7 @@ const SearchList = props => {
                 key={vilainDisplayed.id}
                 onClick={testClick}
               >
-                {vilainDisplayed.name}{' '}
+                <div>{vilainDisplayed.name}{vilainDisplayed.id}</div>
                 <img
                   src={vilainDisplayed.images.xs}
                   alt={vilainDisplayed.name}
