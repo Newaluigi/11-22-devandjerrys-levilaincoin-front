@@ -27,17 +27,6 @@
     margin: 10px;
 }
 
-.menuBurgerFooter{
-    .menuListDiv{
-        position: absolute;
-        opacity: 0.8;
-        scale: 1.5;
-        bottom: 120px;
-        left: 51px;
-        // z-index: -1;
-    }
-}
-
 
 /* * * * * MEDIA QUERIES * * * * */
 /*mobile*/
@@ -48,12 +37,52 @@
 .logoAppliMobil {
     display: none;
 }
-   }
 .glassPicture{
     scale: 2;
    }
 .inputSearch{
     display: none;
+}
+.menuBurgerFooter{
+    .menuListDiv{
+        position: absolute;
+        opacity: 0.8;
+        scale: 1.5;
+        bottom: 120px;
+        left: 51px;
+        backdrop-filter: blur(16px) saturate(164%);
+        border-radius: 12px;
+        .menuList{
+            .menuListLi{
+                list-style: none;
+            }
+            li{
+                text-decoration: none;
+                font-size : 20px;
+            }}
+    }
+    .menuListLi :nth-child(n):link {
+        font:var(--font2);
+        text-decoration: none;
+        color: black;
+    }
+    .menuListLi :nth-child(n):visited {
+        font:var(--font2);
+        text-decoration: none;
+        color: black;
+    }
+    .menuListLi.li :nth-child(n):hover {
+        font:var(--font2);
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+    }
+    .menuListLi.li :nth-child(n):active {
+        font:var(--font2);
+        text-decoration: none;
+        color: black;
+    }
+}
 }
 
 /*desktop*/
