@@ -4,6 +4,7 @@
     position: absolute;
     z-index: 1;
     background-color: rgba(20, 20, 20, 0.75);
+    margin-bottom: 30px;
 }
 .selection{
     display: flex;
@@ -11,4 +12,19 @@
     justify-content: space-between;
     align-items: center;
     padding: 2px;
+    color: antiquewhite;
 }
+
+@media (min-width: 600px) { 
+    .searchModule{
+        display: initial;
+        margin: 0;
+
+    }
+}
+// /*Desktop*/
+// @media screen and (min-width: 600px){
+//     .inputSearch{
+//         display: initial;
+//     }
+// }
