@@ -1,8 +1,13 @@
+import { HiArrowNarrowRight } from 'react-icons/hi'
+
 const Service = ({ img, details, alt }) => {
   return (
     <div className='cardService'>
       <img className='cardService-Img' src={img} alt={alt} />
-      <div className='cardService-Desc'>{details}</div>
+      <div className='cardService-Desc'>
+        <div className='detailsDesc'>{details}</div>
+        <div>{<HiArrowNarrowRight className='arrowDesc' />}</div>
+      </div>
     </div>
   )
 }
