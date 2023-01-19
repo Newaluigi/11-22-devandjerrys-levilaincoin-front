@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 // Pass URL
-const useFetch = (url) => {
-const [loading, setLoading] = useState(false);
-const [error, setError] = useState("");
+const useFetch = url => {
+const [loading, setLoading] = useState(false)
+const [error, setError] = useState('')
 
 const handleGoogle = async (response) => {
-    setLoading(true);
+    setLoading(true)
     fetch(url, {
     method: "POST",
     headers: {

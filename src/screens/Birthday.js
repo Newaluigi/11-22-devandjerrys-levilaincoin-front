@@ -27,11 +27,7 @@ const Birthday = () => {
               powder cotton candy bear claw cupcake marzipan croissant
               shortbread gummi bears.
             </p>
-            <img
-              src={require('../assets/img/birthday.png')}
-              alt='birthday'
-              // details="Fête d'anniversaire"
-            />
+            <img src={require('../assets/img/birthday.png')} alt='birthday' />
           </div>
         </div>
         <div className='posts'>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 
 import Home from './screens/Home'
 import Footer from './components/Footer'
@@ -12,8 +12,6 @@ import Destroy from './screens/Destroy'
 import Escort from './screens/Escort'
 import Nanny from './screens/Nanny'
 import Stag from './screens/Stag'
-import DetailedCardService from './screens/DetailedCardService'
-import CalendarFromScratch from './components/CalendarFromScratch'
 import Profile from './components/Profile'
 // XXXXXXXXXXXXXXXXXXXXX   import pour GOOGLE AUTH  XXXXXXXXXXXXXXXXX
 import Landing from './screens/Google Auth/Landing'
@@ -43,9 +41,8 @@ const App = () => {
         <Route path='/escort' element={<Escort />} />
         <Route path='/nanny' element={<Nanny />} />
         <Route path='/stag' element={<Stag />} />
-        <Route path='/profile' element={<DetailedCardService />} />
-        <Route path='/profile/id/:idVilain' element={<GrosPlan />} />
-        <Route path='/profile/name/:nameVilain' element={<GrosPlan />} />
+        <Route path='/profile/id/:idVilain' element={<Profile />} />
+        <Route path='/profile/name/:nameVilain' element={<Profile />} />
         <Route path='/landing' element={user?.email ? <Navigate to="/UserPage" /> : <Landing />}/>
         <Route path='/sign up' element={user?.email ? <Navigate to="/UserPage" /> : <Signup />}/>
         <Route path='/login' element={user?.email ? <Navigate to="/UserPage" /> : <Login />}/>

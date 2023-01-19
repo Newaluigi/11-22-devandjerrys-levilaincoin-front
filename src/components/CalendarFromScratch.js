@@ -38,11 +38,18 @@ export default class CalendarFromScratch extends Component {
         />
         </div>
         {/* <p className='paragraphe'>Date choisie : {this.state.date.toLocaleDateString()}</p> */}
-        <button className='ReactButton' onClick={this.validation}>Valider</button>
+        <button className='ReactButton' onClick={this.validation}>GO</button>
         {this.state.showDate ? (
-            <div >
-                <p className='DateSelected'>Du : {this.state.date[0].toLocaleDateString()}</p>
-                <p className='DateSelected'>Au : {this.state.date[1].toLocaleDateString()}</p>
+            <div className='Date'>
+                Du <p className='DateSelected'>{this.state.date[0].toLocaleDateString()}</p>
+                <div className='globalIndicator'>
+                    <div className="indicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    </div>
+                Au <p className='DateSelected'>{this.state.date[1].toLocaleDateString()}</p>
             </div>
         ): null}
       </div>
