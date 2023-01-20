@@ -38,8 +38,6 @@ const Header = () => {
         />
       </Link>
       <div className='searchModuleHeader'>
-        {/* <Search search={search} setSearch={setSearch} /> */}
-        {/* <SearchList search={search} vilainsDisplayed={vilainsDisplayed} />*/}
         <Search />
       </div>
       <div className='menuBurgerHeader'>

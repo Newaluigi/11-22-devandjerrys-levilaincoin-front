@@ -1,143 +1,59 @@
 .cardService {
+  // margin:10px;
   margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   transition: width 0.5s ease-in;
-  box-shadow: 2px 2px 4px black;
-  border-radius: 100px;
-  position: relative;
-  .cardService-Img {
+  box-shadow: 5px 5px 5px black;
+  }
+
+.cardService-Desc {
+    text-align: center;
+  // font: var(--font2);
+  // Test Cécilia
+  font-family: 'Vibur', cursive;
+  font-size: 1.6em;
+}
+
+.cardService-Img {
+    width: 250px;
+    height: auto;
+    // transition: width 0.5s ease-in;
+    // Test Cecilia
     background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.3) 100%);
     -webkit-mask-image: linear-gradient(black,transparent);
+    mask-image: linear-gradient(black,transparent);
     transition: all 300ms;
-    width: 200px;
-    height: 270px;
-    border-radius: 100px;
-    object-fit: cover;
 }
-  .cardService-Desc {
-    font: var(--font2);
-    padding: 5px 0px;
-    border-radius: 3px;
-    font-size: 0.9em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 21px;
-    top: 221px;
-    text-align: -webkit-center;
-    justify-content: space-evenly;
-    background-color: var(--main-color);
-    text-decoration: none;
-    color: var(--third-color);
-    .detailsDesc{
-      width: 70%;
+[10:05]
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
     }
-    .arrowDesc{
-      display: block;
-      position: relative;
-      scale: 1.5;
-      animation-name: slidein;
-      animation-duration: 2.5s;
-      animation-iteration-count: infinite;
-      @keyframes slidein {
-        0%{
-          transform: translateX(0%);
-        }
-        100%{
-          transform: translateX(50%);
-        }
-      }
+
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
     }
   }
-}
-// Essai de select une cardservice et créer le blur sur les autres cardService-img où le hover n'est pas
 
-
-.cardService:hover .cardService-Img {
-  animation-name : blurEffect;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-  @keyframes blurEffect{
-    0%{
-      filter: blur(0);
-    }
-    100%{
-      filter: blur(2.5px);
-    }
-}
-}
-
-
-.cardService:hover .cardService-Desc {
-  animation-name : textEffect;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  
-  @keyframes textEffect {
-    0%{
-      background-color: var(--main-color);
-      color: var(--third-color);
-      font-weight: bold;
-    }
-    100%{
-      background-color: black;
-      color: rgb(247, 111, 73);
-      font-weight: bold;
-    }
-  }
-}
-
-
-// // TEST SUR TITRES CARD HOME
-// .linkCardService {
-//   font-family: 'Vibur', cursive;
-
-//   // VIOLET
-//   // color: rgb(164, 116, 254);
-//   // text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #8514a1, 0 0 0.5em #b56de1, 0 0 0.1em #9e70fb, 0 10px 3px #000;
-// }
-
-// .linkCardService:hover {
-//       background-color: transparent;
-//       text-decoration: none;
-//       color: rgb(236, 142, 87);
-//       text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ec884e, 0 0 0.5em #fc6d49, 0 0 0.1em #ff4444, 0 10px 3px #000;
-//     }
-
-
-
-//   @keyframes shake {
-//     10%, 90% {
-//       transform: translate3d(-1px, 0, 0);
-//     }
-    
-//     20%, 80% {
-//       transform: translate3d(2px, 0, 0);
-//     }
-  
-//     30%, 50%, 70% {
-//       transform: translate3d(-4px, 0, 0);
-//     }
-  
-//     40%, 60% {
-//       transform: translate3d(4px, 0, 0);
-//     }
-//   }
-
-// .page-Service {
+.page-Service {
 //   *{
 //     color:white;
 // }
-// p {
-//     font-size: 16px;
-    
-// }
-// h2 {
-//     text-align: center;
-// }
-// }
- 
+p {
+    font-size: 16px;
+
+}
+h2 {
+    text-align: center;
+}
+}
