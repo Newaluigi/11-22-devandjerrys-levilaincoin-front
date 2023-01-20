@@ -1,6 +1,8 @@
 import Service from '../components/Service'
+// import { useState } from 'react'
 import { Link } from 'react-router-dom'
 // import 'airbnb-js-shims'
+// const [isHovered, setIsHovered] = useState(false)
 
 const Home = () => {
   return (
@@ -10,6 +12,18 @@ const Home = () => {
         src={require('../assets/img/banner_resize.png')}
         alt='banner du site'
       ></img>
+      {/* <div>
+        <Elem1
+          onHover={() => this.setIsHovered({ isHovered: true })}
+          onUnHover={() => this.setIsHovered({ isHovered: false })}
+        />
+        <Elem2 isHovered={this.state.isHovered} />
+        <div>
+          onMouseEnter={this.props.onHover}
+          onMouseLeave={this.props.OnUnhover}
+        </div>
+        {//enfant1}
+        <div style={{ opacity: this.props.isHovered ? 0.5 : 1 }}></div> */}
 
       <section id='home-cardService'>
         <Link to='/conquer' className='linkCardService'>

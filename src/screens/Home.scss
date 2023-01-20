@@ -4,20 +4,7 @@
     width: 100%;
     height: 20vh;
 }
-#home-cardService {
-    position: absolute;
-    overflow: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 59%;
-    margin: 30px;
-}
+
 #home-cardService::-webkit-scrollbar {
   display: none;
 }
-
-
-// #home-cardService:hover :nth-child(2){
-//   background-color: pink;
-// }
