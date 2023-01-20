@@ -57,6 +57,7 @@
 // Essai de select une cardservice et créer le blur sur les autres cardService-img où le hover n'est pas
 
 
+
 .cardService:hover .cardService-Img {
   animation-name : blurEffect;
   animation-duration: 1.5s;
@@ -69,6 +70,12 @@
       filter: blur(2.5px);
     }
 }
+.cardService-Desc {
+    text-align: center;
+  // font: var(--font2);
+  // Test Cécilia
+  font-family: 'Vibur', cursive;
+  font-size: 1.6em;
 }
 
 
@@ -90,92 +97,3 @@
     }
   }
 }
-
-
-
-// .cardService {
-//   // margin:10px;
-//   margin: 20px;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   transition: width 0.5s ease-in;
-//   box-shadow: 5px 5px 5px black;
-//   }
-
-// .cardService-Desc {
-// 	text-align: center;
-//   // font: var(--font2);
-//   // Test Cécilia
-//   font-family: 'Vibur', cursive;
-//   font-size: 1.6em;
-// }
-
-// .cardService-Img {
-//     width: 250px;
-//     height: auto;
-//     // transition: width 0.5s ease-in;
-//     // Test Cecilia
-//     background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.3) 100%);
-//     -webkit-mask-image: linear-gradient(black,transparent);
-//     mask-image: linear-gradient(black,transparent);
-//     transition: all 300ms;
-// }
-
-// // TEST CECILIA
-// // .cardService:hover {
-// //   transform: scale(1.08);
-// //   box-shadow: 3px 3px 5px 3px rgb(205, 108, 47);
-// // }
-
-
-
-// // ANCIEN CODE DE MARION
-
-// // .cardService:hover {
-// //   // transform: scale(1.10);
-// //   // box-shadow: 5px 5px 5px rgb(214, 144, 63)
-// //   // box-shadow: 3px 3px rgb(242, 133, 66), -1em 0 .4em rgb(242, 133, 66);
-// // }
-
-// // .cardService-Img:hover {
-// //     width: 320px;
-// //   }
-
-// // .cardService:hover {
-// //     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-// //     transform: translate3d(0, 0, 0);
-// //     backface-visibility: hidden;
-// //   }  
-
-//   @keyframes shake {
-//     10%, 90% {
-//       transform: translate3d(-1px, 0, 0);
-//     }
-    
-//     20%, 80% {
-//       transform: translate3d(2px, 0, 0);
-//     }
-  
-//     30%, 50%, 70% {
-//       transform: translate3d(-4px, 0, 0);
-//     }
-  
-//     40%, 60% {
-//       transform: translate3d(4px, 0, 0);
-//     }
-//   }
-
-// .page-Service {
-// //   *{
-// //     color:white;
-// // }
-// p {
-//     font-size: 16px;
-    
-// }
-// h2 {
-//     text-align: center;
-// }
-// }
- 
