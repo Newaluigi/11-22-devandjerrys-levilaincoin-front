@@ -43,6 +43,7 @@ const App = () => {
         <Route path='/escort' element={<Escort />} />
         <Route path='/nanny' element={<Nanny />} />
         <Route path='/stag' element={<Stag />} />
+        <Route path='/profile' element={<DetailedCardService />} />
         <Route path='/profile/id/:idVilain' element={<Profile />} />
         <Route path='/profile/name/:nameVilain' element={<Profile />} />
         <Route path='/landing' element={user?.email ? <Navigate to="/UserPage" /> : <Landing />}/>
