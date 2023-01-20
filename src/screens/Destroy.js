@@ -21,9 +21,11 @@ const Destroy = () => {
         <h2>Choisissez votre prestataire pour détruire</h2>
         <div className='descriptionImg'>
           <p>
-            Description. Bonbon jujubes danish candy canes macaroon. Tiramisu
-            powder cotton candy bear claw cupcake marzipan croissant shortbread
-            gummi bears.
+            Vous n'êtes pas du genre à faire dans la finesse ? Vous êtes au bon
+            endroit ! Ici trouvez un acolyte pour tout casser, détruire,
+            démolir, ravager, exploser, dynamiter, incendier, anéantir,
+            délabrer, briser, torpiller, ruiner, bousiller, écrabouiller,
+            bref... ce sont de vrais artistes de la destruction !
           </p>
           <img
             src={require('../assets/img/destroy.png')}
