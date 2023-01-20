@@ -57,25 +57,18 @@
 // Essai de select une cardservice et créer le blur sur les autres cardService-img où le hover n'est pas
 
 
-
-.cardService:hover .cardService-Img {
+.cardService:hover {
   animation-name : blurEffect;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   @keyframes blurEffect{
     0%{
-      filter: blur(0);
+      scale:1;
     }
     100%{
-      filter: blur(2.5px);
+      scale: 1.1;
     }
 }
-.cardService-Desc {
-    text-align: center;
-  // font: var(--font2);
-  // Test Cécilia
-  font-family: 'Vibur', cursive;
-  font-size: 1.6em;
 }
 
 
@@ -83,7 +76,6 @@
   animation-name : textEffect;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  
   @keyframes textEffect {
     0%{
       background-color: var(--main-color);
@@ -96,4 +88,4 @@
       font-weight: bold;
     }
   }
-}}
+}
