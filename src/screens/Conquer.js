@@ -21,9 +21,11 @@ const Conquer = () => {
         <h2>Choisissez votre prestataire pour conquérir le monde</h2>
         <div className='descriptionImg'>
           <p>
-            Description. Bonbon jujubes danish candy canes macaroon. Tiramisu
-            powder cotton candy bear claw cupcake marzipan croissant shortbread
-            gummi bears.
+            Qu'allez-vous faire ce soir ? Sans doute la même chose que tous les
+            soirs : tenter de conquérir le monde ! Spoiler : vous n'y arriverez
+            pas tout seul. Seul un de nos cerveaux les plus vils sauront vous
+            indiquer comment s'y prendre. Plans machiavéliques et implication
+            totale garantis !
           </p>
           <img
             src={require('../assets/img/conquer.png')}
