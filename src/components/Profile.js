@@ -13,10 +13,10 @@ const GrosPlan = () => {
       .then(response => {
         // axios.get(`http://localhost:4242/selection/name/${params.nameVilain}`).then(response => {
         // console.log(params.nameVilain);
-        setVilainInfo1(response.data)
+        setVilainInfo1(response.data)      
         console.log(params)
       })
-  }, [])
+  }, [params])
 
   return (
     <div>

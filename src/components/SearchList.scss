@@ -10,11 +10,26 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     padding: 2px;
-    color: antiquewhite;
+   
+    .vilainName{
+        color: antiquewhite; 
+        &:hover{
+            color: aqua;  
+          }
+       
+    }
+ 
+    a{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+       
+    }
 }
 
+// Mobile
 @media (min-width: 600px) { 
     .searchModule{
         display: initial;
@@ -22,9 +37,9 @@
 
     }
 }
-// /*Desktop*/
-// @media screen and (min-width: 600px){
-//     .inputSearch{
-//         display: initial;
-//     }
-// }
+/*Desktop*/
+@media screen and (min-width: 600px){
+    .inputSearch{
+        display: initial;
+    }
+}
