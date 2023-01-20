@@ -21,9 +21,8 @@ const Escort = () => {
         <h2>Choisissez votre prestataire pour vous escorter</h2>
         <div className='descriptionImg'>
           <p>
-            Description. Bonbon jujubes danish candy canes macaroon. Tiramisu
-            powder cotton candy bear claw cupcake marzipan croissant shortbread
-            gummi bears.
+            Vous avez été très vilain ? Louez les services d'un superméchant !
+            Il saura vous punir avec sévérité !
           </p>
           <img
             src={require('../assets/img/escort.png')}

@@ -22,9 +22,9 @@ const Stag = () => {
         <h2>Choisissez votre prestataire pour un EVG</h2>
         <div className='descriptionImg'>
           <p>
-            Description. Bonbon jujubes danish candy canes macaroon. Tiramisu
-            powder cotton candy bear claw cupcake marzipan croissant shortbread
-            gummi bears.
+            Vous souhaitez enterrez la vie de jeune garçon ou de jeune fille
+            d'une connaissance ? Ici nos professionnels les enterreront tout
+            court.
           </p>
           <img
             src={require('../assets/img/evjf.png')}

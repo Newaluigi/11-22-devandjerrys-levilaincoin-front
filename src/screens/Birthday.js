@@ -23,9 +23,8 @@ const Birthday = () => {
           <h2>Choisissez votre prestataire pour un anniversaire</h2>
           <div className='descriptionImg'>
             <p>
-              Description. Bonbon jujubes danish candy canes macaroon. Tiramisu
-              powder cotton candy bear claw cupcake marzipan croissant
-              shortbread gummi bears.
+              Un anniversaire à ruiner ? Nos vilains mettrons le feu aux bougies
+              mais pas que...
             </p>
             <img src={require('../assets/img/birthday.png')} alt='birthday' />
           </div>
