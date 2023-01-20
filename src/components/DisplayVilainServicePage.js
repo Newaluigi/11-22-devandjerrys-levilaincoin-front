@@ -7,22 +7,25 @@ const DisplayVilainServicePage = props => {
     <div key={idVilain} className='vilain1'>
       {/* {console.log(props.vilainInfo1.id)} */}
       <div className='Cards-item'>
-        <h3>{props.vilainInfo1.name}</h3>
-        <div className='CardsFlex'>
+        <div className='picture'>
           <img src={props.vilainInfo1.images.sm} alt={props.vilainInfo1.name} />
-          <p className='Quickdescription'>{props.vilainInfo1.achievements}</p>
         </div>
-        {/* <button onClick={() => deleteProfile(vilainInfo1.id)}> */}
-        {/* <button>Delete</button> */}
+        <div className='CardsFlex'>
+          <h3>{props.vilainInfo1.name}</h3>
+          {/* <p className='Quickdescription'>{props.vilainInfo1.achievements}</p> */}
+          <h4>{props.vilainInfo1.price}</h4>
+        </div>
         <div className='CardsFlex2'>
           <Link to={`/profile/id/${idVilain}`}>
             {/* <Link to={`/grosplan/name/${nameVilain}`}> */}
             <button className='ButtonCards'>En savoir plus</button>
           </Link>
-          <h4>{props.vilainInfo1.price}</h4>
         </div>
       </div>
     </div>
+
+    // {/* <button onClick={() => deleteProfile(vilainInfo1.id)}> */}
+    // {/* <button>Delete</button> */}
   )
 }
 

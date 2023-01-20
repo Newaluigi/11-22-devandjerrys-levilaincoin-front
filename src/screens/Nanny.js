@@ -21,9 +21,9 @@ const Nanny = () => {
         <h2>Choisissez votre prestataire pour une nounou</h2>
         <div className='descriptionImg'>
           <p>
-            Description. Bonbon jujubes danish candy canes macaroon. Tiramisu
-            powder cotton candy bear claw cupcake marzipan croissant shortbread
-            gummi bears.
+            Vous souhaitez garder vos petits montres ? Faites appel à un monstre
+            professionnel qui saura les hanter jusqu'à la fin de leurs jours et
+            fera la joie de leur futur psy.
           </p>
           <img
             src={require('../assets/img/nanny.png')}
