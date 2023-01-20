@@ -26,11 +26,7 @@ const Birthday = () => {
               Un anniversaire à ruiner ? Nos vilains mettrons le feu aux bougies
               mais pas que...
             </p>
-            <img
-              src={require('../assets/img/birthday.png')}
-              alt='birthday'
-              // details="Fête d'anniversaire"
-            />
+            <img src={require('../assets/img/birthday.png')} alt='birthday' />
           </div>
         </div>
         <div className='posts'>
