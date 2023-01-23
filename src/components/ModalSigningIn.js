@@ -6,10 +6,11 @@ const ModalSigningIn = ({ open, children, onClose }) => {
   const [customers, setCustomers] = useState([])
 
   const [id, setId] = useState([])
-  const [name, setName] = useState()
-  const [occupation, setOccupation] = useState()
-  const [achievements, setAchievements] = useState()
-
+  const [firstName, setFirstName] = useState()
+  const [lastName, setLastName] = useState()
+  const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
+  const [passwordConfirmation, setPasswordConfirmation] = useState()
   useEffect(() => {
     axios.get('http://localhost:4242/customers').then(response => {
       setCustomers(response.data)
@@ -19,24 +20,29 @@ const ModalSigningIn = ({ open, children, onClose }) => {
   // XXXXXXXXXXXXXXXXXXXXXXX  POPULATE PROFILE  XXXXXXXXXXXXXXXXXXXXXXXXXX
   // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   const populateProfile = () => {
-    if (name && occupation && achievements) {
+    if (firstName && lastName && email && password && passwordConfirmation) {
       // create new profile object
       let newProfile = {
         id: uuidv1(),
-        name: name,
-        occupation: occupation,
-        achievements: achievements
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+        passwordConfirmation: passwordConfirmation,
       }
       // merging useState vilain with temp useState (on fusionne )
-      let profile = [...customers, newProfile]
+      let profile = [newProfile, ...customers]
+     
       // setting useState with new profile
       setCustomers(profile)
       console.log(profile+"   "+typeof profile.id)
       // clearing input field (on vide les temporary states)
       setId()
-      setName()
-      setAchievements()
-      setOccupation()
+      setFirstName()
+      setLastName ()
+      setEmail ()
+      setPassword()
+      setPasswordConfirmation()
       // writing on server file
       saveJson(profile)
     }
@@ -46,6 +52,7 @@ const ModalSigningIn = ({ open, children, onClose }) => {
   const saveJson = updateCustomers => {
     // api url
     const url = 'http://localhost:4242/write/customers'
+   
     axios.post(url, updateCustomers).then(Response => {
       console.log('incoming')
     })
@@ -63,21 +70,33 @@ const ModalSigningIn = ({ open, children, onClose }) => {
           <h1>Who are you?</h1>
           <br />
           <input
-            placeholder='name'
-            onChange={e => setName(e.target.value)}
-            value={name || ''}
+            placeholder='Firstname'
+            onChange={e => setFirstName(e.target.value)}
+            value={firstName || ''}
           />
           <br />
           <input
-            placeholder='occupation'
-            onChange={e => setOccupation(e.target.value)}
-            value={occupation || ''}
+            placeholder='Lastname'
+            onChange={e => setLastName(e.target.value)}
+            value={lastName || ''}
           />
           <br />
           <input
-            placeholder='achievements'
-            onChange={e => setAchievements(e.target.value)}
-            value={achievements || ''}
+            placeholder='email'
+            onChange={e => setEmail(e.target.value)}
+            value={email || ''}
+          />
+          <br />
+          <input
+            placeholder='Password'
+            onChange={e => setPassword(e.target.value)}
+            value={password || ''}
+          />
+          <br />
+          <input
+            placeholder='Password confirmation'
+            onChange={e => setPasswordConfirmation(e.target.value)}
+            value={passwordConfirmation || ''}
           />
           <br />
           {/*pas de paramètre à cette fonction. Elle sera exécuté sur onClick mais elle ne cible rien dans le HTML*/}
