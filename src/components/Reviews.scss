@@ -1,21 +1,87 @@
+/* ----------- un peu d'arborescence pour s'y retrouver :) ---------
+reviewsBlock
+    h1
+    .reviewsAndArrow
+        logoArrow
+        RandomReviews
+            randomReviewX
+                .reviewFromApi
+                .randomReviewProfileX
+                    .randomReviewImageX
+                    .randomReviewInformationsX
+*/
+
 .reviewsBlock{
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: var(--third-color);
-    width:20vw;
-    height: 30px;
     padding: 30px;
-    .firstReview{
-        background-color: aqua;
-        width: 35%;
+    h1{
+        color: green;
     }
-    .secondReview{
-        background-color: pink;
-        width: 35%;
-    }
-    .logoArrow{
-        scale: 2;
-        width: 10%;
+    .reviewsAndArrow{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .logoArrow{
+            scale: 3;
+            width: 10%;
+        }
+        .randomReviews{
+            display: flex;
+            flex-direction: row;
+        // ---------1ere review------------
+            .randomReview1{
+                border: 2px solid black;
+                width: 35%;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                .reviewFromApi{
+                    padding: 10px;
+                }
+                .randomReviewProfile1{
+                    display: flex;
+                    flex-direction:row ;
+                    align-items: center;
+                    .randomReviewImage1{
+                    scale: 2;
+                    padding: 15px;
+                    }
+                    .randomReviewInformations1{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }   
+
+    // ---------2e review------------
+            .randomReview2{
+                border: 2px solid black;
+                width: 35%;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                .reviewFromApi{
+                    padding: 10px;
+                }
+                .randomReviewProfile2{
+                    display: flex;
+                    flex-direction:row ;
+                    align-items: center;
+                    .randomReviewImage2{
+                    scale: 2;
+                    padding: 15px;
+                    }
+                    .randomReviewInformations2{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
     }
 }
