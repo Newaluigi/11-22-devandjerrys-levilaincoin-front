@@ -73,6 +73,7 @@ const ModalConnexion = ({ open, children, onClose }) => {
             value={name || ''}
           />
           <input
+            type={'password'}
             placeholder='&#x1F512; password'
             onChange={e => setOccupation(e.target.value)}
             value={occupation || ''}
