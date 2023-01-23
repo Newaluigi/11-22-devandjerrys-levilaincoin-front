@@ -4,7 +4,156 @@
     color: var(--main-color);
     background-color: var(--background-color);
     cursor: pointer;
+
+}
+ul{
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
+}
+/* ----------CSS du menuburger en DESKTOP------------*/
+@media screen and (min-width: 601px) {
+    .menuListDiv{
+        position: absolute;
+        opacity: 0.8;
+        scale: 1.6;
+        right: 59px;
+        top: 129px;
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: var(--background-color);
+        border-radius: 12px;
+        border: 2px solid var(--third-color);
+        z-index: 1;
+        .menuList{
+            margin: 0;
+            .menuListLi{
+                list-style: none;
+            }
+            li{
+                text-decoration: none;
+                color: var(--third-color);
+                cursor: pointer;
+                font: var(--font2);
+                padding: 5px 0;
+                margin: 5px;
+                overflow: hidden;
+                background: linear-gradient(to right, var(--main-color), var(--main-color) 50%, var(--third-color) 50%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-size: 200% 100%;
+                background-position: 100%;
+                transition: background-position 1s ease;
+                .iconeMenu{
+                    margin-right: 10px;
+                }
+            }
+            // possibilité de créer un effet hover sur les liens ici
+            li:hover{
+                background-position: 0 100%;
+                .iconeMenu{
+                    animation-name : fillLogo;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    @keyframes fillLogo {
+                    0%{
+                        color: var(--third-color);
+                    }
+                    100%{
+                        color: var(--main-color);
+                    }
+                    }
+                }
+            }
+            .menuListLi :nth-child(n):link {
+                font:var(--font2);
+                text-decoration: none;
+            }
+        }
+    }
+}
+    // .menuListLi :nth-child(n):visited {
+    //     font:var(--font2);
+    //     text-decoration: none;
+    //     color: black;
+    //   }
+      
+    // .menuListLi.li :nth-child(n):active {
+    //     font:var(--font2);
+    //     text-decoration: none;
+    //     color: black;
+    // }
+
+
+/*--------------CSS du menuBurger en MOBILE----------*/
+@media screen and (max-width: 600px) {
+.menuBurgerFooter{
+    .menuListDiv{
+        position: absolute;
+        opacity: 0.8;
+        scale: 1.5;
+        bottom: 176px;
+        left: 60px;
+        backdrop-filter: blur(16px) saturate(180%);
+        background-color: var(--background-color);
+        border-radius: 12px;
+        border: 2px solid var(--third-color);
+        .menuList{
+            .menuListLi{
+                list-style: none;
+            }
+            li{
+                text-decoration: none;
+                color: var(--third-color);
+                cursor: pointer;
+                font: var(--font2);
+                padding: 5px 0;
+                margin: 5px;
+                overflow: hidden;
+                background: linear-gradient(to right, var(--main-color), var(--main-color) 50%, var(--third-color) 50%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-size: 200% 100%;
+                background-position: 100%;
+                transition: background-position 1s ease;
+                .iconeMenu{
+                    margin-right: 10px;
+                }
+            }
+            // possibilité de créer un effet hover sur les liens ici
+            li:hover{
+                background-position: 0 100%;
+                .iconeMenu{
+                    animation-name : fillLogo;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    @keyframes fillLogo {
+                    0%{
+                        color: var(--third-color);
+                    }
+                    100%{
+                        color: var(--main-color);
+                    }
+                    }
+                }
+            }
+            .menuListLi :nth-child(n):link {
+                font:var(--font2);
+                text-decoration: none;
+            }
+        }
+    }
+}
 }
 
-
-
+    // .menuListLi :nth-child(n):visited {
+    //     font:var(--font2);
+    //     text-decoration: none;
+    //     color: black;
+    // }
+    // .menuListLi.li :nth-child(n):active {
+    //     font:var(--font2);
+    //     text-decoration: none;
+    //     color: black;
+    // }
