@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import ModalSigningIn from './ModalSigningIn'
+
 import ClickAwayListener from '@mui/base/ClickAwayListener'
+import ModalSigningIn from './ModalSigningIn'
+import ModalConnexion from './ModalConnexion'
 
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { BsPersonCircle } from 'react-icons/bs'
@@ -17,6 +19,8 @@ const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
   // XXXXXXXXXXXXXXXXXXXXXX STATE modal signing in XXXXXXXXXXXXXXXXXXXX
   const [registrationIsOpen, setRegistrationIsOpen] = useState(false)
+  // XXXXXXXXXXXXXXXXXXXXXX STATE modal connexion XXXXXXXXXXXXXXXXXXXX
+  const [connexionIsOpen, setConnexionsetIsOpen] = useState(false)
 
   const handleClickAway = () => {
     setIsOpen(false)
@@ -35,17 +39,25 @@ const BurgerMenu = () => {
               style={{ display: isOpen ? 'block' : 'none' }}
             >
               <div className='menuListLi'>
-                <Link to='/connexion'>
-                  <li onClick={() => setIsOpen(false)}>
-                    {' '}
+                {/* Modale de connexion ci-dessous */}
+                <div>
+                  <li
+                    onClick={() => {
+                      setConnexionsetIsOpen(true)
+                      setIsOpen(false)
+                    }}
+                  >
                     <BsPersonCircle className='iconeMenu' />
                     Connexion
                   </li>
-                </Link>
-                {/* XXXXXXXXXXXXXXXXX lien clicKable modal XXXXXXXXXXXXXXXXXXXXXX */}
+                  <ModalConnexion
+                    open={connexionIsOpen}
+                    onClose={() => setConnexionsetIsOpen(false)}
+                  ></ModalConnexion>
+                </div>
+                {/* Modale d'inscription ci-dessous */}
                 <div>
                   <li
-                    // style={{ font: 'var(--font2)' }}
                     onClick={() => {
                       setRegistrationIsOpen(true)
                       setIsOpen(false)
