@@ -1,0 +1,21 @@
+.reviewsBlock{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--third-color);
+    width:20vw;
+    height: 30px;
+    padding: 30px;
+    .firstReview{
+        background-color: aqua;
+        width: 35%;
+    }
+    .secondReview{
+        background-color: pink;
+        width: 35%;
+    }
+    .logoArrow{
+        scale: 2;
+        width: 10%;
+    }
+}

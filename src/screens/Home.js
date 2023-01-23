@@ -1,16 +1,18 @@
 import Service from '../components/Service'
 import { Link } from 'react-router-dom'
+import Reviews from '../components/Reviews'
 // import 'airbnb-js-shims'
 
 const Home = () => {
   return (
     <div>
+      {/* ----------------------- Banner du site -------------------- */}
       <img
         className='banner'
         src={require('../assets/img/banner_resize.png')}
         alt='banner du site'
       ></img>
-
+      {/* ----------------------- Les catégories -------------------- */}
       <section id='home-cardService'>
         <Link to='/conquer' className='linkCardService'>
           <Service
@@ -55,6 +57,8 @@ const Home = () => {
           />
         </Link>
       </section>
+      {/* ----------------------- les Reviews -------------------- */}
+      <Reviews />
     </div>
   )
 }
