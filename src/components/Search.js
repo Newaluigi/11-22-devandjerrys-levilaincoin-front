@@ -1,36 +1,32 @@
 // import { useState } from 'react';
-import { useState, useEffect } from 'react';
-import axios from "axios";
-import SearchList from './SearchList';
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import SearchList from './SearchList'
 
 // const Search = (props) => {
 //   const { search, setSearch } = props;
-  const Search = () => {
-
+const Search = () => {
   // XXXXXXXXXXXXXXX initial state, full list XXXXXXXXXXXXXXXXX
   const [vilains, setVilains] = useState([])
   // UseEffect
   useEffect(() => {
     axios.get('http://localhost:4242/').then(response => {
-      console.log(response.data);
+      console.log(response.data)
       setVilains(response.data)
     })
-  },[])
+  }, [])
   // XXXXXXXXXXXXXXXX state of the vilain List display  XXXXXXXXXXXXXXXXXXXXXXXXXX
-  const [search, setSearch] = useState("");
-  const vilainsDisplayed = vilains;
+  const [search, setSearch] = useState('')
+  const vilainsDisplayed = vilains
 
   // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  const [isGlassDisplayed, setIsGlassDisplayed] = useState("");
-  const [isInputDisplayed, setisInputDisplayed] = useState('');
+  const [isGlassDisplayed, setIsGlassDisplayed] = useState('')
+  const [isInputDisplayed, setisInputDisplayed] = useState('')
 
-  const handleClickGlass = (e) =>{
-
-    setIsGlassDisplayed("none");
-    setisInputDisplayed("initial");
-    
-
+  const handleClickGlass = e => {
+    setIsGlassDisplayed('none')
+    setisInputDisplayed('initial')
   }
 
   return (
@@ -40,16 +36,23 @@ import SearchList from './SearchList';
         src={require('../assets/img/glass.png')}
         alt='loupe'
         onClick={handleClickGlass}
-        style= {{display: isGlassDisplayed}}
+        style={{ display: isGlassDisplayed }}
       />
-            <input className="inputSearch"
-                value={search}
-                type="text"
-                placeholder="Recherche"
-                onChange={(e) => setSearch(e.target.value)}
-                style= {{display: isInputDisplayed}}
-            />
-            <SearchList search={search} vilainsDisplayed={vilainsDisplayed} setSearch={setSearch} setIsGlassDisplayed={setIsGlassDisplayed} setisInputDisplayed={setisInputDisplayed}/>
+      <input
+        className='inputSearch'
+        value={search}
+        type='text'
+        placeholder='Recherche'
+        onChange={e => setSearch(e.target.value)}
+        style={{ display: isInputDisplayed }}
+      />
+      <SearchList
+        search={search}
+        vilainsDisplayed={vilainsDisplayed}
+        setSearch={setSearch}
+        setIsGlassDisplayed={setIsGlassDisplayed}
+        setisInputDisplayed={setisInputDisplayed}
+      />
     </div>
   )
 }

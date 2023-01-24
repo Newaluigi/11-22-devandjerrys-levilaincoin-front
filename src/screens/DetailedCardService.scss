@@ -80,6 +80,9 @@
     text-align: center;
     justify-content: flex-end;
     height: 100px;
+    // .commentAndCalendar{
+    //     background-color: pink;
+    // }
            .desc2{
             color: var(--main-color);
             font-size: smaller;
@@ -98,7 +101,6 @@
         p{
             font-style: italic;  
         }
-
     }
     .ratingStar{
         grid-column: 1;

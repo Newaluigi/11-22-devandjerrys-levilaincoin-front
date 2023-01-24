@@ -1,38 +1,29 @@
-
+/*mobile*/
+@media (max-width: 600px) { 
 /* DIV ENTIERE DU FOOTER */
 .lvcFooter {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    position:fixed;
-    bottom:0px;
-    height:5vh;
+    height:8vh;
     width:100%;
-    z-index: 1;
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(37, 40, 42, 0.75);
+    border-radius: 12px;
 }
-
 /* DIV COMPRENANT LES BOUTONS TEAM & RESPONSABILITY */
 .footerButton {
     display: flex;
     flex-direction: row;
+    align-items: baseline;
 }
 
 /* IMAGES APPLI MOBILE */
-.logoAppliMobil {
-    height: 40px;
-    width: auto;
-    margin: 10px;
-}
-
-
-/* * * * * MEDIA QUERIES * * * * */
-/*mobile*/
-@media (max-width: 600px) { 
 .footerButton {
         display: none;
     }
-.logoAppliMobil {
+.logoStore {
     display: none;
 }
 .glassPicture{
@@ -45,6 +36,40 @@
 
 /*desktop*/
 @media (min-width: 600px) { 
+/* DIV ENTIERE DU FOOTER */
+.lvcFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height:8vh;
+    width:100%;
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(37, 40, 42, 0.75);
+    border-radius: 12px;
+}
+/* DIV COMPRENANT LES BOUTONS TEAM & RESPONSABILITY */
+.footerButton {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+/* IMAGES APPLI MOBILE */
+.logoStore {
+    padding: 10px;
+    .logoStore1{
+        width: 160px;
+        height: 50px;
+        padding-right: 10px;
+        object-fit: cover;
+    }
+    .logoStore2{
+        width: 160px;
+        height: 50px;
+        padding-left: 10px;
+        object-fit: cover;
+    }
+}
 .searchModuleFooter {
         display: none;
     }
@@ -60,5 +85,5 @@
     }
     .glassPicture{
         scale: initial;
-       }
     }
+}
