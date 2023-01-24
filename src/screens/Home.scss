@@ -1,35 +1,90 @@
-.banner {
-    width: 100%;
-    height: 20vh;
+.allElements{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  img {
+    width: 50%;
+    height: 100vh;
+  }
+  .rightContent{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    #home-cardService::-webkit-scrollbar {
+      display: none;
+    }
+    #home-cardService {
+      overflow: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 50vh;
+      margin: 30px;
+      &:hover .cardService-Img{
+        filter: blur(3px);
+      }
+    
+    .cardService:hover .cardService-Img {
+      animation-name : blurEffect;
+      animation-duration: 1.5s;
+      animation-fill-mode: forwards;
+      @keyframes blurEffect{
+        0%{
+          filter: blur(3px);
+        }
+        100%{
+          filter: blur(0);
+        }
+      }
+    }
+    .cardService:hover .cardService-Desc {
+      animation-name : textEffect;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      @keyframes textEffect {
+        0%{
+          background-color: var(--main-color);
+          color: var(--third-color);
+          font-weight: bold;
+        }
+        100%{
+          background-color: black;
+          color: rgb(247, 111, 73);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  }
 }
 
-.rightContent{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
+// Essai de select une cardservice et créer le blur sur les autres cardService-img où le hover n'est pas
+
+
+
+
+
+
+
 
 // .cardService:hover .cardService-Img {
-//   //   animation-name : blurEffect;
-//   //   animation-duration: 1.5s;
-//   //   animation-fill-mode: forwards;
-//   //   @keyframes blurEffect{
-//   //     0%{
-//   //       filter: blur(0);
-//   //     }
-//   //     100%{
-//   //       filter: blur(2.5px);
-//   //     }
-//   // }
+//     animation-name : blurEffect;
+//     animation-duration: 1.5s;
+//     animation-fill-mode: forwards;
+//     @keyframes blurEffect{
+//       0%{
+//         filter: blur(0);
+//       }
+//       100%{
+//         filter: blur(2.5px);
+//       }
+//   }
 //   opacity: 1;
 //   filter: blur(0px);
 //   transform: scale(1.5);
 //   }
-#home-cardService::-webkit-scrollbar {
-  display: none;
-}
-
-
-// #home-cardService:hover :nth-child(2){
-//   background-color: pink;
-// }

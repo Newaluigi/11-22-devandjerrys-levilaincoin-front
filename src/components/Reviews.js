@@ -10,11 +10,17 @@ import RandomReview from './RandomReview'
 const Reviews = () => {
   const [vilainInfo1, setVilainInfo1] = useState([])
   const [vilainInfo2, setVilainInfo2] = useState([])
-  function getRandomInt() {
+  const [userInfo1, setUserInfo1] = useState([])
+  const [userInfo2, setUserInfo2] = useState([])
+  const [isLoading1, setIsLoading1] = useState(false)
+  const [isLoading2, setIsLoading2] = useState(false)
+
+  const getRandomInt = () => {
     const min = Math.ceil(1)
     const max = Math.floor(62)
     return Math.floor(Math.random() * (max - min) + 1)
   }
+
   useEffect(() => {
     axios
       .get(`http://localhost:4242/selection/id/${getRandomInt()}`)
@@ -24,18 +30,46 @@ const Reviews = () => {
       .then(response => setVilainInfo2(response.data))
   }, [])
 
+  useEffect(() => {
+    axios
+      .get('https://randomuser.me/api?nat=en')
+      .then(
+        res =>
+          console.log(res.data.results[0]) || setUserInfo1(res.data.results[0])
+      )
+      .then(res => setIsLoading1(true))
+    axios
+      .get('https://randomuser.me/api?nat=en')
+      .then(
+        res =>
+          console.log(res.data.results[0]) || setUserInfo2(res.data.results[0])
+      )
+      .then(res => setIsLoading2(true))
+  }, [])
+
   return (
     <div className='reviewsBlock'>
-      <h1>2 Commentaires</h1>
+      <h1>17 Commentaires</h1>
       {/*-----------1ere review ------------ */}
       <div className='reviewsAndArrow'>
         <div className='randomReviews'>
           <div className='randomReview1'>
             <div className='randomReviewProfile1'>
-              <BiLogInCircle className='randomReviewImage1' />
+              {console.log(
+                'aaaaaaaaaa',
+                isLoading1 ? userInfo1.picture.thumbnail : <div>Loading</div>
+              )}
+              <img
+                src={isLoading1 ? userInfo1.picture.thumbnail : null}
+                style={{ width: '35px', height: '35px' }}
+              />
               <div className='randomReviewInformations1'>
-                <h2>firstName</h2>
-                <h3>Date</h3>
+                <h2>
+                  {isLoading1 ? userInfo1.name.first : null}
+                  {<br />}
+                  {isLoading1 ? userInfo1.name.last : null}
+                </h2>
+                <div>date random </div>
               </div>
             </div>
             <div className='reviewFromApi'>
@@ -54,10 +88,17 @@ const Reviews = () => {
           {/*-----------2e review ------------ */}
           <div className='randomReview2'>
             <div className='randomReviewProfile2'>
-              <BiLogInCircle className='randomReviewImage2' />
+              <img
+                src={isLoading2 ? userInfo2.picture.thumbnail : null}
+                style={{ width: '35px', height: '35px' }}
+              />{' '}
               <div className='randomReviewInformations2'>
-                <h2>firstName</h2>
-                <h3>Date</h3>
+                <h2>
+                  {isLoading2 ? userInfo2.name.first : null}
+                  {<br />}
+                  {isLoading2 ? userInfo2.name.last : null}
+                </h2>{' '}
+                <div>date random </div>
               </div>
             </div>
             <div className='reviewFromApi'>
