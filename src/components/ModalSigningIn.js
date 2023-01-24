@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { v1 as uuidv1 } from 'uuid'
 import axios from 'axios'
 import ReactDOM from 'react-dom'
+import logo from '../assets/img/leVilainCoinLogo.png'
+import { SlClose } from 'react-icons/sl'
+
 const ModalSigningIn = ({ open, children, onClose }) => {
   const [customers, setCustomers] = useState([])
 
@@ -28,19 +31,19 @@ const ModalSigningIn = ({ open, children, onClose }) => {
         lastName: lastName,
         email: email,
         password: password,
-        passwordConfirmation: passwordConfirmation,
+        passwordConfirmation: passwordConfirmation
       }
       // merging useState vilain with temp useState (on fusionne )
       let profile = [newProfile, ...customers]
-     
+
       // setting useState with new profile
       setCustomers(profile)
-      console.log(profile+"   "+typeof profile.id)
+      console.log(profile + '   ' + typeof profile.id)
       // clearing input field (on vide les temporary states)
       setId()
       setFirstName()
-      setLastName ()
-      setEmail ()
+      setLastName()
+      setEmail()
       setPassword()
       setPasswordConfirmation()
       // writing on server file
@@ -52,7 +55,7 @@ const ModalSigningIn = ({ open, children, onClose }) => {
   const saveJson = updateCustomers => {
     // api url
     const url = 'http://localhost:4242/write/customers'
-   
+
     axios.post(url, updateCustomers).then(Response => {
       console.log('incoming')
     })
@@ -66,44 +69,43 @@ const ModalSigningIn = ({ open, children, onClose }) => {
       <div className='modalStyle'>
         {children}
         <div className='form'>
+          <div className='boxLogo'>
+            <img src={logo} alt='logo' className='logo' />
+          </div>
           <h1>Inscription</h1>
-          <h1>Who are you?</h1>
-          <br />
           <input
             placeholder='Firstname'
             onChange={e => setFirstName(e.target.value)}
             value={firstName || ''}
           />
-          <br />
           <input
             placeholder='Lastname'
             onChange={e => setLastName(e.target.value)}
             value={lastName || ''}
           />
-          <br />
           <input
             placeholder='email'
             onChange={e => setEmail(e.target.value)}
             value={email || ''}
           />
-          <br />
           <input
             placeholder='Password'
             onChange={e => setPassword(e.target.value)}
             value={password || ''}
           />
-          <br />
           <input
             placeholder='Password confirmation'
             onChange={e => setPasswordConfirmation(e.target.value)}
             value={passwordConfirmation || ''}
           />
-          <br />
           {/*pas de paramètre à cette fonction. Elle sera exécuté sur onClick mais elle ne cible rien dans le HTML*/}
-          <button onClick={populateProfile}>Submit</button>
+          <button className='crossModaleDevenirVilain' onClick={onClose}>
+            <SlClose />
+          </button>
         </div>
-
-        <button onClick={onClose}>Close Modal</button>
+        <button className='modaleButton' onClick={populateProfile}>
+          Submit
+        </button>
       </div>
     </>,
     //VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV

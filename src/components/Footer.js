@@ -24,8 +24,7 @@ const Footer = () => {
         <VilainButton />
       </div>
       <div className='searchModuleFooter'>
-      <Search/>
-      
+        <Search />
       </div>
     </div>
   )
