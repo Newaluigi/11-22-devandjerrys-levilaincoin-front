@@ -3,22 +3,22 @@ import ModalResponsability from './ModalResponsability'
 
 const ResponsabilityButton = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [devVilainIsOpen, setDevVilainIsOpen] = useState(false)
+  const [responsabilityIsOpen, setResponsabilityIsOpen] = useState(false)
   return (
     <div>
       <div style={{ display: isOpen ? 'block' : 'none' }}></div>
       <div
         className='boutonResponsability'
         onClick={() => {
-          setDevVilainIsOpen(true)
+          setResponsabilityIsOpen(true)
           setIsOpen(false)
         }}
       >
         Irresponsabilité
       </div>
       <ModalResponsability
-        open={devVilainIsOpen}
-        onClose={() => setDevVilainIsOpen(false)}
+        open={responsabilityIsOpen}
+        onClose={() => setResponsabilityIsOpen(false)}
       ></ModalResponsability>
     </div>
   )
