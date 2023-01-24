@@ -25,21 +25,16 @@ const Nanny = () => {
             professionnel qui saura les hanter jusqu'à la fin de leurs jours et
             fera la joie de leur futur psy.
           </p>
-          <img
-            src={require('../assets/img/nanny.png')}
-            alt='nanny'
-            // details='Bad nounou'
-          />
+          <img src={require('../assets/img/nanny.png')} alt='nanny' />
         </div>
       </div>
       <div className='posts'>
         {vilainInfo1
-          ? vilainInfo1.map(vilainInfo1 => {
+          ? vilainInfo1.map(vilainInfo => {
               return (
                 <DisplayVilainServicePage
-                  vilainInfo1={vilainInfo1}
-                  key={vilainInfo1.id}
-                  // key={vilainInfo1.name}
+                  vilainInfo1={vilainInfo}
+                  key={vilainInfo.id}
                 />
               )
             })
