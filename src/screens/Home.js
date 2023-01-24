@@ -1,6 +1,5 @@
 import Service from '../components/Service'
 import { Link } from 'react-router-dom'
-// import 'airbnb-js-shims'
 
 const Home = () => {
   return (
