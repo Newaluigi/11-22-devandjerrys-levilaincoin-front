@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
 
 import { HiArrowNarrowRight } from 'react-icons/hi'
-import { BiLogInCircle } from 'react-icons/bi'
 
 import RandomReview from './RandomReview'
+import Rating from './Rating'
 
 const Reviews = () => {
   const [vilainInfo1, setVilainInfo1] = useState([])
@@ -15,11 +14,23 @@ const Reviews = () => {
   const [isLoading1, setIsLoading1] = useState(false)
   const [isLoading2, setIsLoading2] = useState(false)
 
-  const [resetReview, setResetReview] = useState(false)
+  const getData = () => {
+    axios
+      .get('https://randomuser.me/api?nat=en')
+      .then(res => setUserInfo1(res.data.results[0]))
+      .then(setIsLoading1(true))
 
-  // const randomClick = () => {
-  //   setResetReview(true)
-  // }
+    axios
+      .get('https://randomuser.me/api?nat=en')
+      .then(res => setUserInfo2(res.data.results[0]))
+      .then(setIsLoading2(true))
+    axios
+      .get(`http://localhost:4242/selection/id/${getRandomInt()}`)
+      .then(response => setVilainInfo1(response.data))
+    axios
+      .get(`http://localhost:4242/selection/id/${getRandomInt()}`)
+      .then(response => setVilainInfo2(response.data))
+  }
 
   const getRandomInt = () => {
     const min = Math.ceil(1)
@@ -28,51 +39,20 @@ const Reviews = () => {
   }
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:4242/selection/id/${getRandomInt()}`)
-      .then(response => setVilainInfo1(response.data))
-    axios
-      .get(`http://localhost:4242/selection/id/${getRandomInt()}`)
-      .then(response => setVilainInfo2(response.data))
+    getData()
   }, [])
-
-  useEffect(() => {
-    axios
-      .get('https://randomuser.me/api?nat=en')
-      .then(res => {
-        if (resetReview !== 'false') {
-          setUserInfo1(res.data.results[0])
-        } else {
-          resetReview === 'false'
-          setUserInfo1(res.data.results[0])
-          console.log(resetReview)
-        }
-      })
-      .then(res => setIsLoading1(true))
-
-    axios
-      .get('https://randomuser.me/api?nat=en')
-      .then(res => {
-        if (resetReview !== 'false') {
-          setUserInfo2(res.data.results[0])
-        } else {
-          resetReview === 'false'
-          setUserInfo2(res.data.results[0])
-          console.log(resetReview)
-        }
-      })
-      .then(res => setIsLoading2(true))
-  }, [setResetReview])
 
   return (
     <div className='reviewsBlock'>
       <h1>17 Commentaires</h1>
+      <Rating />
       {/*-----------1ere review ------------ */}
       <div className='reviewsAndArrow'>
         <div className='randomReviews'>
           <div className='randomReview1'>
             <div className='randomReviewProfile1'>
               <div className='randomReviewImage1'>
+                {' '}
                 <img
                   src={isLoading1 ? userInfo1.picture.thumbnail : null}
                   style={{ width: '35px', height: '35px' }}
@@ -133,10 +113,11 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-        <button onClick={setResetReview} style={{ padding: '10px' }}>
-          Button
-        </button>
-        <HiArrowNarrowRight className='logoArrow' style={{ padding: '10px' }} />
+        <HiArrowNarrowRight
+          onClick={getData}
+          className='logoArrow'
+          style={{ padding: '10px' }}
+        />
       </div>
     </div>
   )

@@ -7,8 +7,13 @@ const Home = () => {
     <div className='allElements'>
       {/* ----------------------- Banner du site -------------------- */}
       <img
-        className='banner'
+        className='bannerMobile'
         src={require('../assets/img/banner_resize.png')}
+        alt='banner du site'
+      ></img>
+      <img
+        className='bannerDesktop'
+        src={require('../assets/img/banner.png')}
         alt='banner du site'
       ></img>
       {/* ----------------------- Les catégories -------------------- */}
