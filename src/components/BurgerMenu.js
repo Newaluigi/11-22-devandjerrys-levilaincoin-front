@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import ClickAwayListener from '@mui/base/ClickAwayListener'
 import ModalSigningIn from './ModalSigningIn'
 import ModalConnexion from './ModalConnexion'
+import ModalResponsability from './ModalResponsability'
 
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { BsPersonCircle } from 'react-icons/bs'
@@ -21,6 +22,8 @@ const BurgerMenu = () => {
   const [registrationIsOpen, setRegistrationIsOpen] = useState(false)
   // XXXXXXXXXXXXXXXXXXXXXX STATE modal connexion XXXXXXXXXXXXXXXXXXXX
   const [connexionIsOpen, setConnexionsetIsOpen] = useState(false)
+  // XXXXXXXXXXXXXXXXXXXXXX STATE modal connexion XXXXXXXXXXXXXXXXXXXX
+  const [responsabilityIsOpen, setResponsabilityIsOpen] = useState(false)
 
   const handleClickAway = () => {
     setIsOpen(false)
@@ -77,12 +80,23 @@ const BurgerMenu = () => {
                     Notre équipe
                   </li>
                 </Link>
-                <Link to='/#popup'>
-                  <li onClick={() => setIsOpen(false)}>
+                {/* Modale responsabilité ci-dessous */}
+                <div>
+                  <li
+                    onClick={() => {
+                      setResponsabilityIsOpen(true)
+                      setIsOpen(false)
+                    }}
+                  >
                     <MdOutlineLibraryBooks className='iconeMenu' />
                     iResponsabilité
                   </li>
-                </Link>
+                  <ModalResponsability
+                    open={responsabilityIsOpen}
+                    onClose={() => setResponsabilityIsOpen(false)}
+                  ></ModalResponsability>
+                </div>
+
                 <Link to='/'>
                   <li onClick={() => setIsOpen(false)}>
                     <AiOutlineHome className='iconeMenu' />
