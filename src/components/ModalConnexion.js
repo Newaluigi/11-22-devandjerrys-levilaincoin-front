@@ -4,6 +4,7 @@ import axios from 'axios'
 import ReactDOM from 'react-dom'
 import logo from '../assets/img/leVilainCoinLogo.png'
 import { SlClose } from 'react-icons/sl'
+import { Link } from 'react-router-dom'
 
 const ModalConnexion = ({ open, children, onClose }) => {
   const [customers, setCustomers] = useState([])
@@ -83,10 +84,11 @@ const ModalConnexion = ({ open, children, onClose }) => {
             <SlClose />
           </button>
         </div>
-
-        <button className='modaleButton' onClick={populateProfile}>
+        <Link to='/UserProfilePage'>
+        <button className='modaleButton' onClick= {onClose}>
           SE CONNECTER
         </button>
+        </Link>
       </div>
     </>,
     //VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
