@@ -19,12 +19,17 @@ reviewsBlock
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--third-color);
-    padding: 0px 10px 10px 30px;
-    max-width: 35vw;
-    min-height :15vh;
+    background-color: var(--background-color);
+    color: white;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    padding: 0px 10px 10px 20px;
+    max-width: 30vw;
+    max-height :20vh;
     h1{
-        color: green;
+        color: var(--main-color);
+        margin: 0;
+        font-size: 20px;
     }
     .reviewsAndArrow{
         display: flex;
@@ -33,58 +38,104 @@ reviewsBlock
         .logoArrow{
             scale: 3;
             width: 10%;
+            padding-right: 5px;
         }
         .randomReviews{
             display: flex;
             flex-direction: row;
-        // ---------1ere review------------
+            padding: 0px 15px 0px 0px;
+            // ---------1ere review------------
             .randomReview1{
-                border: 2px solid black;
-                width: 40%;
-                height: 200px;
+                // border: 2px solid black;
+                width: 55%;
+                height: 17vh;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+                .reviewFromApi::-webkit-scrollbar {
+                    display: none;
+                }
                 .reviewFromApi{
-                    padding: 10px;
+                    padding: 0px 5px 5px 15px;
+                    width: fit-content;
+                    height: fit-content;
+                    overflow: auto;
+                    font-style: italic;
+                    p{
+                        margin: 5px 0px 0px 0px;
+                    }
                 }
                 .randomReviewProfile1{
                     display: flex;
                     flex-direction:row ;
                     align-items: center;
                     .randomReviewImage1{
-                    scale: 2;
-                    padding: 15px;
+                    scale: 1.5;
+                    padding: 15px 10px 0px 15px;
+                        img{
+                            border-radius: 50%;
+                        }
                     }
                     .randomReviewInformations1{
                         display: flex;
                         flex-direction: column;
+                        align-items: center;
+                        h2{
+                            scale:0.7;
+                            margin: 0;
+                        }
+                        p{
+                            margin:0;
+                            scale: 0.8;
+                        }
                     }
                 }
             }   
 
     // ---------2e review------------
             .randomReview2{
-                border: 2px solid black;
-                width: 40%;
-                height: 200px;
+                // border: 2px solid black;
+                width: 55%;
+                height: 17vh;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+                .reviewFromApi::-webkit-scrollbar {
+                    display: none;
+                }
                 .reviewFromApi{
-                    padding: 10px;
+                    padding: 0px 5px 5px 15px;
+                    width: fit-content;
+                    height: fit-content;
+                    overflow: auto;
+                    font-style: italic;
+                    p{
+                        margin: 5px 0px 0px 0px;
+                    }
                 }
                 .randomReviewProfile2{
                     display: flex;
                     flex-direction:row ;
                     align-items: center;
                     .randomReviewImage2{
-                    scale: 2;
-                    padding: 15px;
-                    }
+                        scale: 1.5;
+                        padding: 15px 10px 0px 15px;
+                            img{
+                                border-radius: 50%;
+                            }
+                        }
                     .randomReviewInformations2{
                         display: flex;
                         flex-direction: column;
+                        align-items: center;
+                        h2{
+                            scale:0.7;
+                            margin: 0;
+                        }
+                        p{
+                            margin:0;
+                            scale: 0.8;
+                        }
                     }
                 }
             }

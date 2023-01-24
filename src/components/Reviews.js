@@ -15,6 +15,12 @@ const Reviews = () => {
   const [isLoading1, setIsLoading1] = useState(false)
   const [isLoading2, setIsLoading2] = useState(false)
 
+  const [resetReview, setResetReview] = useState(false)
+
+  // const randomClick = () => {
+  //   setResetReview(true)
+  // }
+
   const getRandomInt = () => {
     const min = Math.ceil(1)
     const max = Math.floor(62)
@@ -33,19 +39,30 @@ const Reviews = () => {
   useEffect(() => {
     axios
       .get('https://randomuser.me/api?nat=en')
-      .then(
-        res =>
-          console.log(res.data.results[0]) || setUserInfo1(res.data.results[0])
-      )
+      .then(res => {
+        if (resetReview !== 'false') {
+          setUserInfo1(res.data.results[0])
+        } else {
+          resetReview === 'false'
+          setUserInfo1(res.data.results[0])
+          console.log(resetReview)
+        }
+      })
       .then(res => setIsLoading1(true))
+
     axios
       .get('https://randomuser.me/api?nat=en')
-      .then(
-        res =>
-          console.log(res.data.results[0]) || setUserInfo2(res.data.results[0])
-      )
+      .then(res => {
+        if (resetReview !== 'false') {
+          setUserInfo2(res.data.results[0])
+        } else {
+          resetReview === 'false'
+          setUserInfo2(res.data.results[0])
+          console.log(resetReview)
+        }
+      })
       .then(res => setIsLoading2(true))
-  }, [])
+  }, [setResetReview])
 
   return (
     <div className='reviewsBlock'>
@@ -55,21 +72,19 @@ const Reviews = () => {
         <div className='randomReviews'>
           <div className='randomReview1'>
             <div className='randomReviewProfile1'>
-              {console.log(
-                'aaaaaaaaaa',
-                isLoading1 ? userInfo1.picture.thumbnail : <div>Loading</div>
-              )}
-              <img
-                src={isLoading1 ? userInfo1.picture.thumbnail : null}
-                style={{ width: '35px', height: '35px' }}
-              />
+              <div className='randomReviewImage1'>
+                <img
+                  src={isLoading1 ? userInfo1.picture.thumbnail : null}
+                  style={{ width: '35px', height: '35px' }}
+                />
+              </div>
               <div className='randomReviewInformations1'>
                 <h2>
                   {isLoading1 ? userInfo1.name.first : null}
                   {<br />}
                   {isLoading1 ? userInfo1.name.last : null}
                 </h2>
-                <div>date random </div>
+                <p>Avril 2021</p>
               </div>
             </div>
             <div className='reviewFromApi'>
@@ -88,17 +103,20 @@ const Reviews = () => {
           {/*-----------2e review ------------ */}
           <div className='randomReview2'>
             <div className='randomReviewProfile2'>
-              <img
-                src={isLoading2 ? userInfo2.picture.thumbnail : null}
-                style={{ width: '35px', height: '35px' }}
-              />{' '}
+              <div className='randomReviewImage2'>
+                {' '}
+                <img
+                  src={isLoading2 ? userInfo2.picture.thumbnail : null}
+                  style={{ width: '35px', height: '35px' }}
+                />
+              </div>
               <div className='randomReviewInformations2'>
                 <h2>
                   {isLoading2 ? userInfo2.name.first : null}
                   {<br />}
                   {isLoading2 ? userInfo2.name.last : null}
                 </h2>{' '}
-                <div>date random </div>
+                <p>Décembre 2019</p>
               </div>
             </div>
             <div className='reviewFromApi'>
@@ -115,7 +133,10 @@ const Reviews = () => {
             </div>
           </div>
         </div>
-        <HiArrowNarrowRight className='logoArrow' />
+        <button onClick={setResetReview} style={{ padding: '10px' }}>
+          Button
+        </button>
+        <HiArrowNarrowRight className='logoArrow' style={{ padding: '10px' }} />
       </div>
     </div>
   )
