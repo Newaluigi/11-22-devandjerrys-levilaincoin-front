@@ -1,13 +1,29 @@
 import { useState } from 'react'
-import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
-import ModalSigningIn from './ModalSigningIn'
+
 import ClickAwayListener from '@mui/base/ClickAwayListener'
+import ModalSigningIn from './ModalSigningIn'
+import ModalConnexion from './ModalConnexion'
+import ModalResponsability from './ModalResponsability'
+
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { BsPersonCircle } from 'react-icons/bs'
+import { BiLogInCircle } from 'react-icons/bi'
+// logo LogOut non utilisé mais dispo si besoin
+import { BiLogOutCircle } from 'react-icons/bi'
+import { RiTeamLine } from 'react-icons/ri'
+import { MdOutlineLibraryBooks } from 'react-icons/md'
+import { AiOutlineHome } from 'react-icons/ai'
+import { SlClose } from 'react-icons/sl'
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
   // XXXXXXXXXXXXXXXXXXXXXX STATE modal signing in XXXXXXXXXXXXXXXXXXXX
   const [registrationIsOpen, setRegistrationIsOpen] = useState(false)
+  // XXXXXXXXXXXXXXXXXXXXXX STATE modal connexion XXXXXXXXXXXXXXXXXXXX
+  const [connexionIsOpen, setConnexionsetIsOpen] = useState(false)
+  // XXXXXXXXXXXXXXXXXXXXXX STATE modal connexion XXXXXXXXXXXXXXXXXXXX
+  const [responsabilityIsOpen, setResponsabilityIsOpen] = useState(false)
 
   const handleClickAway = () => {
     setIsOpen(false)
@@ -17,7 +33,7 @@ const BurgerMenu = () => {
     <ClickAwayListener onClickAway={handleClickAway}>
       <div className='menuBurger'>
         <button className='menuButton' onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? 'X' : <GiHamburgerMenu />}
+          {isOpen ? <SlClose style={{ color: '#FFF' }} /> : <GiHamburgerMenu />}
         </button>
         <nav>
           <div className='menuListDiv'>
@@ -26,18 +42,31 @@ const BurgerMenu = () => {
               style={{ display: isOpen ? 'block' : 'none' }}
             >
               <div className='menuListLi'>
-                <Link to='/connexion'>
-                  <li onClick={() => setIsOpen(false)}>Connexion</li>
-                </Link>
-                {/* XXXXXXXXXXXXXXXXX lien clicKable modal XXXXXXXXXXXXXXXXXXXXXX */}
+                {/* Modale de connexion ci-dessous */}
                 <div>
                   <li
-                    style={{ font: 'var(--font2)' }}
+                    onClick={() => {
+                      setConnexionsetIsOpen(true)
+                      setIsOpen(false)
+                    }}
+                  >
+                    <BsPersonCircle className='iconeMenu' />
+                    Connexion
+                  </li>
+                  <ModalConnexion
+                    open={connexionIsOpen}
+                    onClose={() => setConnexionsetIsOpen(false)}
+                  ></ModalConnexion>
+                </div>
+                {/* Modale d'inscription ci-dessous */}
+                <div>
+                  <li
                     onClick={() => {
                       setRegistrationIsOpen(true)
                       setIsOpen(false)
                     }}
                   >
+                    <BiLogInCircle className='iconeMenu' />
                     Inscription
                   </li>
                   <ModalSigningIn
@@ -46,13 +75,33 @@ const BurgerMenu = () => {
                   ></ModalSigningIn>
                 </div>
                 <Link to='/notreequipe'>
-                  <li onClick={() => setIsOpen(false)}>Notre équipe</li>
+                  <li onClick={() => setIsOpen(false)}>
+                    <RiTeamLine className='iconeMenu' />
+                    Notre équipe
+                  </li>
                 </Link>
-                <Link to='/#popup'>
-                  <li onClick={() => setIsOpen(false)}>iResponsabilité</li>
-                </Link>
+                {/* Modale responsabilité ci-dessous */}
+                <div>
+                  <li
+                    onClick={() => {
+                      setResponsabilityIsOpen(true)
+                      setIsOpen(false)
+                    }}
+                  >
+                    <MdOutlineLibraryBooks className='iconeMenu' />
+                    iResponsabilité
+                  </li>
+                  <ModalResponsability
+                    open={responsabilityIsOpen}
+                    onClose={() => setResponsabilityIsOpen(false)}
+                  ></ModalResponsability>
+                </div>
+
                 <Link to='/'>
-                  <li onClick={() => setIsOpen(false)}>Home</li>
+                  <li onClick={() => setIsOpen(false)}>
+                    <AiOutlineHome className='iconeMenu' />
+                    Home
+                  </li>
                 </Link>
               </div>
             </ul>

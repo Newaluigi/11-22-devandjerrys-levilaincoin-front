@@ -55,6 +55,18 @@
   }
 }
 // Essai de select une cardservice et créer le blur sur les autres cardService-img où le hover n'est pas
+#home-cardService {
+  position: absolute;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 59%;
+  margin: 30px;
+  &:hover .cardService .cardService-Img{
+    opacity: .5;
+    filter: blur(3px);
+  }
 
 
 .cardService:hover {
@@ -88,4 +100,4 @@
       font-weight: bold;
     }
   }
-}
+}}
