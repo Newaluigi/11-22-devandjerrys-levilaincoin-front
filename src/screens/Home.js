@@ -1,8 +1,6 @@
 import Service from '../components/Service'
 // import { useState } from 'react'
 import { Link } from 'react-router-dom'
-// import 'airbnb-js-shims'
-// const [isHovered, setIsHovered] = useState(false)
 
 const Home = () => {
   return (

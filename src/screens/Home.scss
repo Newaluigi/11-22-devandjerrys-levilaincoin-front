@@ -5,6 +5,22 @@
     height: 20vh;
 }
 
+// .cardService:hover .cardService-Img {
+//   //   animation-name : blurEffect;
+//   //   animation-duration: 1.5s;
+//   //   animation-fill-mode: forwards;
+//   //   @keyframes blurEffect{
+//   //     0%{
+//   //       filter: blur(0);
+//   //     }
+//   //     100%{
+//   //       filter: blur(2.5px);
+//   //     }
+//   // }
+//   opacity: 1;
+//   filter: blur(0px);
+//   transform: scale(1.5);
+//   }
 #home-cardService::-webkit-scrollbar {
   display: none;
 }
