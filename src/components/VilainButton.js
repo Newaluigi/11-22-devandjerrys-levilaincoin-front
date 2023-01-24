@@ -5,29 +5,16 @@ import ModalDevenirVilain from './ModalDevenirVilain'
 // import { redirect, useNavigate } from 'react-router-dom'
 
 const VilainButton = () => {
-  // const navigate = useNavigate()
-  let audio1 = new Audio(son1)
-
-  const start = () => {
-    audio1.play()
-    // navigate('/NewVilain.js')
-  }
-  const [isOpen, setIsOpen] = useState(false)
   const [devVilainIsOpen, setDevVilainIsOpen] = useState(false)
+  let audio1 = new Audio(son1)
+  const handleClick = () => {
+    audio1.play()
+    setDevVilainIsOpen(true)
+  }
   return (
     <>
       <div className='containBtn'>
-        {/* <Link to='/newvilain' style={{ textDecoration: 'none' }}> */}
-        <div style={{ display: isOpen ? 'block' : 'none' }}></div>
-        <button
-          onClick={start}
-          onClick={() => {
-            setDevVilainIsOpen(true)
-            setIsOpen(false)
-          }}
-          type='button'
-          className='mainBtn'
-        >
+        <button onClick={handleClick} type='button' className='mainBtn'>
           <img
             src={require('../assets/img/icone1.jpg')}
             alt='icone +'
@@ -39,17 +26,34 @@ const VilainButton = () => {
           open={devVilainIsOpen}
           onClose={() => setDevVilainIsOpen(false)}
         ></ModalDevenirVilain>
-        {/* </Link> */}
       </div>
     </>
   )
 }
 
-// return (
-//   <>
-//     <div className='containBtn'>
-//       <Link to='/newvilain' style={{ textDecoration: 'none' }}>
-//         <button onClick={start} type='button' className='mainBtn'>
+////////// ANCIEN CODE /////////////
+// const VilainButton = () => {
+//   // const navigate = useNavigate()
+//   let audio1 = new Audio(son1)
+//   const start = () => {
+//     audio1.play()
+//     // navigate('/NewVilain.js')
+//   }
+//   const [isOpen, setIsOpen] = useState(false)
+//   const [devVilainIsOpen, setDevVilainIsOpen] = useState(false)
+//   return (
+//     <>
+//       <div className='containBtn'>
+//         <div style={{ display: isOpen ? 'block' : 'none' }}></div>
+//         <button
+//           onClick={start}
+//           onClick={() => {
+//             setDevVilainIsOpen(true)
+//             setIsOpen(false)
+//           }}
+//           type='button'
+//           className='mainBtn'
+//         >
 //           <img
 //             src={require('../assets/img/icone1.jpg')}
 //             alt='icone +'
@@ -57,9 +61,14 @@ const VilainButton = () => {
 //           />
 //           <p className='textBtn'>Devenir vilain</p>
 //         </button>
-//       </Link>
-//     </div>
-//   </>
-// )
+//         <ModalDevenirVilain
+//           open={devVilainIsOpen}
+//           onClose={() => setDevVilainIsOpen(false)}
+//         ></ModalDevenirVilain>
+//         {/* </Link> */}
+//       </div>
+//     </>
+//   )
+// }
 
 export default VilainButton

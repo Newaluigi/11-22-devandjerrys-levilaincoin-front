@@ -22,7 +22,7 @@ const ModalDevenirVilain = ({ open, children, onClose }) => {
           <input placeholder='Achievements' />
 
           {/*pas de paramètre à cette fonction. Elle sera exécuté sur onClick mais elle ne cible rien dans le HTML*/}
-          <button className='crossModaleButtonDevenirVilain' onClick={onClose}>
+          <button className='crossModaleDevenirVilain' onClick={onClose}>
             <SlClose />
           </button>
         </div>
