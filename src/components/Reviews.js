@@ -19,7 +19,6 @@ const Reviews = () => {
       .get('https://randomuser.me/api?nat=en')
       .then(res => setUserInfo1(res.data.results[0]))
       .then(res => setIsLoading1(true))
-
     axios
       .get('https://randomuser.me/api?nat=en')
       .then(res => setUserInfo2(res.data.results[0]))
