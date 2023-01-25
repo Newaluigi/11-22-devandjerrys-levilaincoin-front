@@ -1,0 +1,14 @@
+.user{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(255, 0, 81);
+    color: rgb(17, 16, 16);
+}
+
+.favoriteField{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
