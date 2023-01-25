@@ -117,11 +117,7 @@ const DetailedCardService = props => {
       <div className='comment'>
         <h2>COMMENTAIRES</h2>
         <hr></hr>
-        <p>
-          {'"'}
-          {props.vilainInfo1.comments}
-          {'"'}
-        </p>
+        <p>{props.vilainInfo1.comments}</p>
       </div>
       <div className='ratingStar'>
         <Rating star={props.vilainInfo1.rating} />
@@ -129,11 +125,12 @@ const DetailedCardService = props => {
       <div className='calendarCard'>
         <h2>RESERVER</h2>
         <hr></hr>
-        <CalendarFromScratch />
+        <CalendarFromScratch price={props.vilainInfo1.price} />
       </div>
       <div className='price'>
         <p>{props.vilainInfo1.price}</p>
       </div>
+      <button className='contactButton'>Contacter ce Vilain</button>
     </div>
   )
 }
