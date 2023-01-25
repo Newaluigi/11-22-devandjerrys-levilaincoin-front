@@ -12,7 +12,7 @@ import SearchList from './SearchList';
   // UseEffect
   useEffect(() => {
     axios.get('http://localhost:4242/').then(response => {
-      console.log(response.data);
+      // console.log(response.data);
       setVilains(response.data)
     })
   },[])

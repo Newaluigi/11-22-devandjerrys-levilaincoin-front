@@ -41,8 +41,11 @@ const ModalConnexion = ({ open, children, onClose }) => {
             <SlClose />
           </button>
         </div>
-
-        <button className='modaleButton'>SE CONNECTER</button>
+        <Link to='/UserProfilePage'>
+        <button className='modaleButton' onClick= {onClose}>
+          SE CONNECTER
+        </button>
+        </Link>
       </div>
     </>,
     //VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
