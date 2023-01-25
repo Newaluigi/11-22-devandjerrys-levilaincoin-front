@@ -48,7 +48,7 @@ export default class CalendarFromScratch extends Component {
                         <span></span>
                         <span></span>
                     </div>
-                    </div>
+                </div>
                 Au <p className='DateSelected'>{this.state.date[1].toLocaleDateString()}</p>
             </div>
         ): null}

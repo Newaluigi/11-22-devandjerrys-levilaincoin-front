@@ -31,7 +31,9 @@ const App = () => {
   }, []);
   return (
     <div className='App'>
-      <Header />
+      <div className='headerFromApp'>     
+        <Header />
+      </div>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/newvilain' element={<NewVilain />} />
@@ -48,7 +50,10 @@ const App = () => {
         <Route path='/login' element={user?.email ? <Navigate to="/UserPage" /> : <Login />}/>
         <Route path='/UserPage' element={user?.email ? <UserPage user={user} /> : <Navigate to="/landing" />}/>
       </Routes>
-      <Footer />
+      <div className='footerFromApp'>
+        <Footer />
+      </div>
+
     </div>
   )
 }

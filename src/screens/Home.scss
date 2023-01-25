@@ -1,21 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Balthazar&display=swap%27');
 
-@media (min-width:600px){
+.headerFromApp{
+  display: none;
+}
+.footerFromApp{
+  display: none;
+}
 
+@media (min-width:600px){
   .allElements{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     .firstElement{
-      height: 1000px;
-      width: 100%;
+      .elementsHeader{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        .buttonHome{
+          position: absolute;
+          right: 10px;
+        }
+      }
       background-image: 
       linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(2,4,6,1) 100%),
       url('../assets/img/background.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      height: 1000px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -42,28 +58,99 @@
         font-family: 'Balthazar', serif;
         margin: 0;
         filter: drop-shadow(0 0 0.75rem black);
+        padding-bottom: 50px;
       }
       .arrowEffect{
         padding-top: 25px;
         scale: 5;
         color: white;
       }
+      .globalIndicator{
+        margin-top: 100px;
+        display:flex;
+        height: 5vh;
+        justify-content:center;
+        align-items:center;
+        font-family:sans-serif;
+        scale: 1.8;
+        .indicator{
+          position:relative;
+          width:10px;
+          height:10px;
+          transform:rotate(45deg);
+          span{
+            position:absolute;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            box-sizing:border-box;
+            border:none;
+            border-bottom:3px solid #fff;
+            border-right:3px solid #fff;
+            animation:animate 1s linear infinite;
+            &:nth-child(1){
+            top:-30px;
+            left:-30px;
+            animation-delay:0s;
+            }
+            &:nth-child(2){
+            top:-15px;
+            left:-15px;
+            animation-delay:0.2s;
+            }
+            &:nth-child(3){
+            top:0;
+            left:0;
+            animation-delay:0.4s;
+            }
+            &:nth-child(4){
+            top:15px;
+            left:15px;
+            animation-delay:0.6s;
+            }
+            &:nth-child(5){
+            top:30px;
+            left:30px;
+            animation-delay:0.8s;
+            }
+          }
+        }
+      }
     }
     .secondElement{
-      height: 1000px;
+      height: 1500px;
       width: 100%;
       background: linear-gradient(180deg, rgba(2,4,6,1) 0%, rgba(12,19,23,1) 45%, rgba(37,51,55,1) 100%);
-      .titleService{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .titleService {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         color: white;
+        margin: 0;
+        font-size: 45px;
+        filter: drop-shadow(0 0 0.75rem black);
+        font-family: 'Balthazar', serif;
+        :nth-child(2){
+          display: flex;
+          flex-direction: row;
+          color: var(--main-color);
+        }
       }
       .rightContent{
-        width: 50%;
-        height: 100%;
+        height: 70%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         flex-wrap: nowrap;
         flex-direction: column;
+        .selectionReviews{
+          scale: 2;
+        }
         #home-cardService::-webkit-scrollbar {
           display: none;
         }
@@ -108,6 +195,12 @@
             }
           }
         }
+      }
+      .footerFromHome{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 100px;
       }
     }
   }
