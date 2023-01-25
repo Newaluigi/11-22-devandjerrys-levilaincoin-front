@@ -18,12 +18,11 @@ const Reviews = () => {
     axios
       .get('https://randomuser.me/api?nat=en')
       .then(res => setUserInfo1(res.data.results[0]))
-      .then(setIsLoading1(true))
-
+      .then(res => setIsLoading1(true))
     axios
       .get('https://randomuser.me/api?nat=en')
       .then(res => setUserInfo2(res.data.results[0]))
-      .then(setIsLoading2(true))
+      .then(res => setIsLoading2(true))
     axios
       .get(`http://localhost:4242/selection/id/${getRandomInt()}`)
       .then(response => setVilainInfo1(response.data))
@@ -44,7 +43,7 @@ const Reviews = () => {
 
   return (
     <div className='reviewsBlock'>
-      <h1>17 Commentaires</h1>
+      <h1>295 Commentaires</h1>
       <Rating />
       {/*-----------1ere review ------------ */}
       <div className='reviewsAndArrow'>
