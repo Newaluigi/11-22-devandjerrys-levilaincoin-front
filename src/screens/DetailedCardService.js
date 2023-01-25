@@ -23,7 +23,7 @@ const DetailedCardService = props => {
         setVilainInfoA(response.data[0])
       })
       .then(() => setIsLoading(true))
-  }, [])
+  }, [props.params])
   useEffect(() => {
     axios
       .get(`http://localhost:4242/selection/id/${getRandomInt()}`)
@@ -31,7 +31,7 @@ const DetailedCardService = props => {
         setVilainInfoB(response.data[0])
       })
       .then(() => setIsLoading(true))
-  }, [])
+  }, [props.params])
 
   return (
     <div className='Card-item'>

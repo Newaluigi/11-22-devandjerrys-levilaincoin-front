@@ -23,7 +23,12 @@ const Profile = () => {
       <div className='posts'>
         {vilainInfo1
           ? vilainInfo1.map(vilainInfo1 => {
-              return <DetailedCardService vilainInfo1={vilainInfo1} />
+              return (
+                <DetailedCardService
+                  vilainInfo1={vilainInfo1}
+                  params={params}
+                />
+              )
             })
           : null}
       </div>
