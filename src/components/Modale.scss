@@ -32,10 +32,19 @@
     h2 {
         font-size: 12px;
     }
-    input {
+    input,
+    textarea,
+    select {
         margin: 10px 0px;
         width: 200px;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1px 2px;
     }
+    select {
+        width: 207px;
+        color: grey;
+  }
 }
 
 .modaleButton {
@@ -149,6 +158,6 @@
         font-size: 14px;
         text-align: justify;
         margin: 5px;
-    padding: 0px;
+        padding: 0px;
 }
     }

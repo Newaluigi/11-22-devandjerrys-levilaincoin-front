@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Rating from '../components/Rating'
 import DisplayVilainServicePage from '../components/DisplayVilainServicePage'
+import ContactButton from '../components/ContactButton'
 
 const DetailedCardService = props => {
   let vilainFav = true
@@ -130,7 +131,10 @@ const DetailedCardService = props => {
       <div className='price'>
         <p>{props.vilainInfo1.price}</p>
       </div>
-      <button className='contactButton'>Contacter ce Vilain</button>
+      <div className='contactButton'>
+        <ContactButton />
+      </div>
+      {/* <button className='contactButton'>Contacter ce Vilain</button> */}
     </div>
   )
 }
