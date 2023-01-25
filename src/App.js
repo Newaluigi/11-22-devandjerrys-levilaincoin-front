@@ -48,7 +48,6 @@ const App = () => {
         <Route path='/login' element={user?.email ? <Navigate to="/UserPage" /> : <Login />}/>
         <Route path='/UserPage' element={user?.email ? <UserPage user={user} /> : <Navigate to="/landing" />}/>
       </Routes>
-
       <Footer />
     </div>
   )

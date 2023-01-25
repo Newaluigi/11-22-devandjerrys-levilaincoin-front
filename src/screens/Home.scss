@@ -1,80 +1,212 @@
-.allElements{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  .bannerMobile{
-    display: none;
-  }
-  .bannerDesktop {
-    width: 50%;
-    height: 100%;
-  }
-  .rightContent{
-    width: 50%;
-    height: 100%;
+@media (min-width:600px){
+
+  .allElements{
+    background-image: url('../assets/img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    #home-cardService::-webkit-scrollbar {
+    flex-direction: row;
+    justify-content: center;
+    .bannerDesktop{
       display: none;
     }
-    #home-cardService {
-      overflow: auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      height: 70vh;
-      margin: 30px;
-      &:hover .cardService-Img{
-        filter: blur(3px);
-      }
-      .cardService:hover .cardService-Img {
-        animation-name : blurEffect;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
-        @keyframes blurEffect{
-          0%{
-            filter: blur(3px);
-          }
-          100%{
-            filter: blur(0);
-          }
-        }
-      }
-      .cardService:hover .cardService-Desc {
-        animation-name : textEffect;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-        @keyframes textEffect {
-          0%{
-            background-color: var(--main-color);
-            color: var(--third-color);
-            font-weight: bold;
-          }
-          100%{
-            background-color: black;
-            color: rgb(247, 111, 73);
-            font-weight: bold;
-          }
-        }
-      }
+    .bannerMobile{
+      display: none;
     }
-    .reviewsBlock{
+    .rightContent{
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      #home-cardService::-webkit-scrollbar {
+        display: none;
+      }
+      #home-cardService {
+        overflow: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 70vh;
+        margin: 30px;
+        &:hover .cardService-Img{
+          filter: blur(3px);
+        }
+        .cardService:hover .cardService-Img {
+          animation-name : blurEffect;
+          animation-duration: 1.5s;
+          animation-fill-mode: forwards;
+          @keyframes blurEffect{
+            0%{
+              filter: blur(3px);
+            }
+            100%{
+              filter: blur(0);
+            }
+          }
+        }
+        .cardService:hover .cardService-Desc {
+          animation-name : textEffect;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+          @keyframes textEffect {
+            0%{
+              background-color: var(--main-color);
+              color: var(--third-color);
+              font-weight: bold;
+            }
+            100%{
+              background-color: black;
+              color: rgb(247, 111, 73);
+              font-weight: bold;
+            }
+          }
+        }
+      }
     }
   }
 }
 
-@media (max-width:600px){
-  .reviewsBlock{
-    display: none;
-  }
-  .bannerDesktop{
-    display: none;
-  }
-  .bannerMobile{
-    width: 100%;
-    height: 10vh;
-  }
-}
+
+// @media (min-width: 600px){
+//   .allElements{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     .bannerMobile{
+//       display: none;
+//     }
+//     .bannerDesktop {
+//       width: 50%;
+//       object-fit: cover;
+//     }
+//     .rightContent{
+//       width: 50%;
+//       height: 100%;
+//       display: flex;
+//       justify-content: flex-end;
+//       align-items: center;
+//       flex-wrap: nowrap;
+//       flex-direction: column;
+//       #home-cardService::-webkit-scrollbar {
+//         display: none;
+//       }
+//       #home-cardService {
+//         overflow: auto;
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: center;
+//         height: 70vh;
+//         margin: 30px;
+//         &:hover .cardService-Img{
+//           filter: blur(3px);
+//         }
+//         .cardService:hover .cardService-Img {
+//           animation-name : blurEffect;
+//           animation-duration: 1.5s;
+//           animation-fill-mode: forwards;
+//           @keyframes blurEffect{
+//             0%{
+//               filter: blur(3px);
+//             }
+//             100%{
+//               filter: blur(0);
+//             }
+//           }
+//         }
+//         .cardService:hover .cardService-Desc {
+//           animation-name : textEffect;
+//           animation-duration: 0.5s;
+//           animation-fill-mode: forwards;
+//           @keyframes textEffect {
+//             0%{
+//               background-color: var(--main-color);
+//               color: var(--third-color);
+//               font-weight: bold;
+//             }
+//             100%{
+//               background-color: black;
+//               color: rgb(247, 111, 73);
+//               font-weight: bold;
+//             }
+//           }
+//         }
+//       }
+//       .reviewsBlock{
+//       }
+//     }
+//   }
+// }
+
+// @media (max-width:600px){
+//   .allElements{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     .bannerMobile{
+//       width: 100%;
+//       height: 10vh;
+//     }
+//     .bannerDesktop {
+//       display: none;
+//     }
+//     .rightContent{
+//       width: 50%;
+//       height: 100%;
+//       display: flex;
+//       justify-content: flex-end;
+//       align-items: center;
+//       flex-wrap: nowrap;
+//       flex-direction: column;
+//       #home-cardService::-webkit-scrollbar {
+//         display: none;
+//       }
+//       #home-cardService {
+//         overflow: auto;
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: center;
+//         height: 70vh;
+//         margin: 30px;
+//         &:hover .cardService-Img{
+//           filter: blur(3px);
+//         }
+//         .cardService:hover .cardService-Img {
+//           animation-name : blurEffect;
+//           animation-duration: 1.5s;
+//           animation-fill-mode: forwards;
+//           @keyframes blurEffect{
+//             0%{
+//               filter: blur(3px);
+//             }
+//             100%{
+//               filter: blur(0);
+//             }
+//           }
+//         }
+//         .cardService:hover .cardService-Desc {
+//           animation-name : textEffect;
+//           animation-duration: 0.5s;
+//           animation-fill-mode: forwards;
+//           @keyframes textEffect {
+//             0%{
+//               background-color: var(--main-color);
+//               color: var(--third-color);
+//               font-weight: bold;
+//             }
+//             100%{
+//               background-color: black;
+//               color: rgb(247, 111, 73);
+//               font-weight: bold;
+//             }
+//           }
+//         }
+//       }
+//       .reviewsBlock{
+//         display: none;
+//       }
+//     }
+//   }
+// }
