@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import DetailedCardService from '../screens/DetailedCardService'
 
-const GrosPlan = () => {
+const Profile = () => {
   const params = useParams()
 
   const [vilainInfo1, setVilainInfo1] = useState([])
@@ -13,7 +13,7 @@ const GrosPlan = () => {
       .then(response => {
         // axios.get(`http://localhost:4242/selection/name/${params.nameVilain}`).then(response => {
         // console.log(params.nameVilain);
-        setVilainInfo1(response.data)      
+        setVilainInfo1(response.data)
         console.log(params)
       })
   }, [params])
@@ -31,4 +31,4 @@ const GrosPlan = () => {
   )
 }
 
-export default GrosPlan
+export default Profile
