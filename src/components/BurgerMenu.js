@@ -76,7 +76,7 @@ const BurgerMenu = () => {
                     onClose={() => setRegistrationIsOpen(false)}
                   ></ModalSigningIn>
                 </div>
-                <Link to='/notreequipe'>
+                <Link to='/team'>
                   <li onClick={() => setIsOpen(false)}>
                     <RiTeamLine className='iconeMenu' />
                     Notre équipe
