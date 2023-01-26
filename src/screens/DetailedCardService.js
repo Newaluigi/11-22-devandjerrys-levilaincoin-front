@@ -122,7 +122,7 @@ const DetailedCardService = props => {
         <p>{props.vilainInfo1.comments}</p>
       </div>
       <div className='ratingStar'>
-        <Rating start={props.vilainInfo1.rating} />
+        <Rating star={props.vilainInfo1.rating} />
       </div>
       <div className='calendarCard'>
         <h2>RESERVER</h2>
