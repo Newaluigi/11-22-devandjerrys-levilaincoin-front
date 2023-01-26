@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     scale: 0.9;
-    width: 40vh;
+    width: 42vh;
     .Date{
         border: double var(--main-color);
         padding: 10px;
@@ -117,38 +117,49 @@
         
     }
     }
-.ReactButton{
-    background-color: var(--main-color);
-    color: white;
-    scale: 1.5;
+.goButton{
+  color: var(--third-color);
+  font: var(--font2);    
+  background-color: var(--main-color);
+  place-items: center; 
+  border-radius: 4px;
+  border: 1px transparent;
+  margin: 10px;
+  max-height: 40px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
     padding: 10px;
-    position: relative;
-    top: -12px;
-    border-radius: 4px;
-	border: 1px transparent;
-	margin: 10px;
-	max-height: 40px;
-    
-}
+
+   
+    :hover {
+       cursor: pointer;
+       transform: translateY(0.1em)  
+    }
+    :active {
+        transform: translateY(0.2em);
+    }
+    }
 }
 // /* * * * * MEDIA QUERIES * * * * */
 // /*desktop*/
 @media (min-width: 600px) { 
   .Calendar{
      flex-direction: row-reverse;
-    //  position: relative;
-    //  right: 26px;
      .Date{
       justify-content: space-evenly;
+      min-width: 350px
     }
     div{
      
            .react-calendar{
             position: relative;
-            right: 26px;
+            right: 30px;
      }}}
-.ReactButton{
-      top: 166px;
-      right: -205px;
+.goButton{
+  z-index: 1;
+    position: relative;
+    top: 158px;
+    right: -176px;
 }
 }

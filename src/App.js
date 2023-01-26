@@ -18,6 +18,7 @@ import Landing from './screens/Google Auth/Landing'
 import Login from './screens/Google Auth/Login'
 import Signup from './screens/Google Auth/Signup'
 import UserPage from './screens/Google Auth/UserPage'
+import Team from './screens/Team'
 
 const App = () => {
   const [user, setUser] = useState({})
@@ -43,6 +44,7 @@ const App = () => {
         <Route path='/escort' element={<Escort />} />
         <Route path='/nanny' element={<Nanny />} />
         <Route path='/stag' element={<Stag />} />
+        <Route path='/team' element={<Team />} />
         <Route path='/profile/id/:idVilain' element={<Profile />} />
         <Route path='/profile/name/:nameVilain' element={<Profile />} />
         <Route path='/landing' element={user?.email ? <Navigate to="/UserPage" /> : <Landing />}/>

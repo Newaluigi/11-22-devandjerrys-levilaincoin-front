@@ -23,7 +23,7 @@ const DetailedCardService = props => {
         setVilainInfoA(response.data[0])
       })
       .then(() => setIsLoading(true))
-  }, [])
+  }, [props.params])
   useEffect(() => {
     axios
       .get(`http://localhost:4242/selection/id/${getRandomInt()}`)
@@ -31,7 +31,7 @@ const DetailedCardService = props => {
         setVilainInfoB(response.data[0])
       })
       .then(() => setIsLoading(true))
-  }, [])
+  }, [props.params])
 
   return (
     <div className='Card-item'>
@@ -118,20 +118,17 @@ const DetailedCardService = props => {
       <div className='comment'>
         <h2>COMMENTAIRES</h2>
         <hr></hr>
-        <p>
-          {'"'}
-          {props.vilainInfo1.comments}
-          {'"'}
-        </p>
+        <p>{props.vilainInfo1.comments}</p>
       </div>
       <div className='calendarCard'>
         <h2>RESERVER</h2>
         <hr></hr>
-        <CalendarFromScratch />
+        <CalendarFromScratch price={props.vilainInfo1.price} />
       </div>
       <div className='price'>
         <p>{props.vilainInfo1.price}</p>
       </div>
+      <button className='contactButton'>Contacter ce Vilain</button>
     </div>
   )
 }

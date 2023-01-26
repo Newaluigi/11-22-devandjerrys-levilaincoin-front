@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import DisplayVilainServicePage from '../components/DisplayVilainServicePage'
+import { HiArrowLeft } from 'react-icons/hi'
 
 const Escort = () => {
   // State réupération des infos de la catégorie concernée
@@ -14,22 +15,31 @@ const Escort = () => {
 
   return (
     <div className='page-Service'>
-      <Link to='/'>
-        <p> retour </p>
-      </Link>
+      <div className='willBeBack'>
+        <Link to='/' style={{ textDecoration: 'none' }}>
+          <HiArrowLeft className='iconeBack' />{' '}
+          <span className='beBack'> retour </span>
+        </Link>
+      </div>
       <div className='serviceDescription'>
-        <h2>Choisissez votre prestataire pour vous escorter</h2>
+        <hr className='shine2'></hr>
+        <h2 className='headingDescription'>
+          Choisissez votre prestataire pour vous escorter
+        </h2>
         <div className='descriptionImg'>
-          <p>
+          <span className='tag-wrap'>
+            <img
+              src={require('../assets/img/escort.png')}
+              alt='escort'
+              className='descImg'
+            />
+          </span>
+          <p className='descriptionText'>
             Vous avez été très vilain ? Louez les services d'un superméchant !
             Il saura vous punir avec sévérité !
           </p>
-          <img
-            src={require('../assets/img/escort.png')}
-            alt='escort'
-            // details='Escort vilain'
-          />
         </div>
+        <hr className='shine1'></hr>
       </div>
       <div className='posts'>
         {vilainInfo1

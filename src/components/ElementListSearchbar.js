@@ -37,7 +37,7 @@ const ElementListSearchbar = props => {
         onClick={closeSearchList}
         ref={searchResult}
       >
-        <Link to={`/profile/id/${idVilain}`}>
+        <Link to={`/profile/id/${idVilain}`} style={{ textDecoration: 'none' }}>
           <div className='selection'>
             <div className='vilainName'>{vilainsDisplayed.name}</div>
             <img
