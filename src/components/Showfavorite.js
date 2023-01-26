@@ -11,7 +11,9 @@ const ShowFavorite = props => {
 
         <div className="favDisplay">
             <DisplayVilainServicePage vilainInfo1={props.vilainInfo1} />
+            <div className="heart">
             <FavoriteShowFavorite isFavorite={props.isFavorite} changeIsFavorite={props.changeIsFavorite} />
+            </div>
             {/* {console.log(tab)} */}
         </div>
     )
