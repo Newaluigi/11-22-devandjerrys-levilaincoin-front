@@ -13,9 +13,9 @@
     padding: 2px;
    
     .vilainName{
-        color: antiquewhite; 
+        color: var(--secondary-color); 
         &:hover{
-            color: aqua;  
+            color: var(--main-color);  
           }
        
     }

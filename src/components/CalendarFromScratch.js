@@ -37,8 +37,8 @@ export default class CalendarFromScratch extends Component {
         value={this.state.date}
         />
         </div>
-        {/* <p className='paragraphe'>Date choisie : {this.state.date.toLocaleDateString()}</p> */}
-        <button className='ReactButton' onClick={this.validation}>GO</button>
+      
+        <button className='goButton' onClick={this.validation}>GO</button>
         {this.state.showDate ? (
             <div className='Date'>
                 Du <p className='DateSelected'>{this.state.date[0].toLocaleDateString()}</p>
@@ -50,8 +50,14 @@ export default class CalendarFromScratch extends Component {
                     </div>
                 </div>
                 Au <p className='DateSelected'>{this.state.date[1].toLocaleDateString()}</p>
+    <div className='summary'>
+    {`${this.props.price.substring(0, this.props.price.length - 1)*
+         ( this.state.date[1].getTime() / 86400000 - this.state.date[0].getTime() / 86400000).toFixed(0)}$
+         pour ${(this.state.date[1].getTime() / 86400000 - this.state.date[0].getTime() / 86400000).toFixed(0)} jours`}
+        </div>
             </div>
         ): null}
+  
       </div>
     )
   }

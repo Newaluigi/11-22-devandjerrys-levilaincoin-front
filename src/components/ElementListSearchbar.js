@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
 import CustomHookClickOutside from './CustomHookClickOutside'
+import { useRef } from 'react'
+import CustomHookClickOutside from './CustomHookClickOutside'
 
 const ElementListSearchbar = props => {
   const {
@@ -10,7 +12,16 @@ const ElementListSearchbar = props => {
     setisInputDisplayed
   } = props
   const idVilain = vilainsDisplayed.id
+const ElementListSearchbar = props => {
+  const {
+    vilainsDisplayed,
+    setSearch,
+    setIsGlassDisplayed,
+    setisInputDisplayed
+  } = props
+  const idVilain = vilainsDisplayed.id
 
+  const searchResult = useRef()
   const searchResult = useRef()
 
   // XXXXXXXXXXX Click  on selected character==> go to profile page XXXXXXXXXXXXXXXXXXX
@@ -37,7 +48,7 @@ const ElementListSearchbar = props => {
         onClick={closeSearchList}
         ref={searchResult}
       >
-        <Link to={`/profile/id/${idVilain}`}>
+        <Link to={`/profile/id/${idVilain}`} style={{ textDecoration: 'none' }}>
           <div className='selection'>
             <div className='vilainName'>{vilainsDisplayed.name}</div>
             <img
