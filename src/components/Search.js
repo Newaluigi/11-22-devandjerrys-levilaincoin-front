@@ -11,7 +11,6 @@ const Search = () => {
   // UseEffect
   useEffect(() => {
     axios.get('http://localhost:4242/').then(response => {
-      console.log(response.data)
       setVilains(response.data)
     })
   }, [])
@@ -24,7 +23,7 @@ const Search = () => {
   const [isGlassDisplayed, setIsGlassDisplayed] = useState('')
   const [isInputDisplayed, setisInputDisplayed] = useState('')
 
-  const handleClickGlass = e => {
+  const handleClickGlass = () => {
     setIsGlassDisplayed('none')
     setisInputDisplayed('initial')
   }

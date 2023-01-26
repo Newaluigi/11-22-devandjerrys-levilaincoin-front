@@ -1,7 +1,8 @@
-import React from 'react'
+
+import React, {useState} from 'react'
 
 function Favorite() {
-  const [isFavorite, setIsFavorite] = React.useState()
+  const [isFavorite, setIsFavorite] = useState()
   const handleClickFavorite = () => {
     setIsFavorite(!isFavorite)
   }
