@@ -12,6 +12,7 @@ const ContactButton = () => {
         onClick={() => {
           setContactIsOpen(true)
           setIsOpen(false)
+          window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
         }}
       >
         Contacter ce Vilain

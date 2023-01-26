@@ -48,6 +48,7 @@ const BurgerMenu = () => {
                     onClick={() => {
                       setConnexionsetIsOpen(true)
                       setIsOpen(false)
+                      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
                     }}
                   >
                     <BsPersonCircle className='iconeMenu' />
@@ -64,6 +65,7 @@ const BurgerMenu = () => {
                     onClick={() => {
                       setRegistrationIsOpen(true)
                       setIsOpen(false)
+                      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
                     }}
                   >
                     <BiLogInCircle className='iconeMenu' />
@@ -86,6 +88,7 @@ const BurgerMenu = () => {
                     onClick={() => {
                       setResponsabilityIsOpen(true)
                       setIsOpen(false)
+                      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
                     }}
                   >
                     <MdOutlineLibraryBooks className='iconeMenu' />

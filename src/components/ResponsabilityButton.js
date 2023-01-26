@@ -4,6 +4,7 @@ import ModalResponsability from './ModalResponsability'
 const ResponsabilityButton = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [responsabilityIsOpen, setResponsabilityIsOpen] = useState(false)
+
   return (
     <div>
       <div style={{ display: isOpen ? 'block' : 'none' }}></div>
@@ -12,6 +13,7 @@ const ResponsabilityButton = () => {
         onClick={() => {
           setResponsabilityIsOpen(true)
           setIsOpen(false)
+          window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
         }}
       >
         Irresponsabilité
