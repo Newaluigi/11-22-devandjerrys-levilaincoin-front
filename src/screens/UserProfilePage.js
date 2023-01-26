@@ -33,7 +33,7 @@ const UserProfilePage = () => {
     <div className='pageUser'>
         <div className='divTitre'>
       <h1 className="orderId1">Vos coordonnées</h1>
-      <h1 className="orderId2">Favoris</h1>
+      <h1 className="orderId2 mobile">Favoris</h1>
       </div>
       <div className='userAndFavoriteField'>    
         <div className='user'>
@@ -51,6 +51,7 @@ const UserProfilePage = () => {
             })
             : null}
         </div>
+        <h1 className="orderId4">Favoris</h1>
         <div className='favoriteField'>
           {vilainInfo1
             ? vilainInfo1.map(vilainInfo1 => {
@@ -67,7 +68,7 @@ const UserProfilePage = () => {
         </div>
       </div>
       <div className='divTitre'>
-      <h1 className="orderId2">Historique</h1>
+      <h1 className="orderId3">Historique</h1>
       </div>
       <div className='orderHistory'>
         {tabHisto

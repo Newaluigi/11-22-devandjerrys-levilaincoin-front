@@ -396,4 +396,8 @@ font-weight: bold;
     flex-wrap: wrap;
     justify-content: center;
 }
-
+@media (max-width: 600px) {
+    .vilain1 {
+        margin-right: 15px;
+    }
+}
