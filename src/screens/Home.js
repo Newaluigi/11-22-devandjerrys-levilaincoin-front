@@ -1,5 +1,6 @@
 import Service from '../components/Service'
-// import { useState } from 'react'
+import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Reviews from '../components/Reviews'
 import Header from '../components/Header'
@@ -20,16 +21,7 @@ import ResponsabilityButton from '../components/ResponsabilityButton'
 const Home = () => {
   return (
     <div className='allElements'>
-      {/* <Header className='headerFromHome' /> */}
-
       <div className='firstElement'>
-        <div className='elementsHeader'>
-          <VilainButton className='buttonHome' />
-          <div style={{ margin: '0 660px' }}></div>
-          <Search />
-          <div style={{ margin: '0 20px' }}></div>
-          <BurgerMenu />
-        </div>
         <div className='titleHome'>
           {' '}
           <h1 className='titleHome'>BIENVENUE EN ENFER</h1>
@@ -39,7 +31,10 @@ const Home = () => {
           className='lineHome'
           src={require('../assets/img/separateur.png')}
         />
-        <h2 className='subTitleHome'> - Soudoyer pour rester cacher - </h2>
+        <h2 className='subTitleHome'>
+          {' '}
+          - Soudoyez-nous pour garder l'anonymat -{' '}
+        </h2>
         <div className='globalIndicator'>
           <div className='indicator'>
             <span></span>
@@ -105,23 +100,6 @@ const Home = () => {
 
           {/* ----------------------- les Reviews -------------------- */}
           <Reviews className='sectionReviews' />
-        </div>
-        <div className='footerFromHome'>
-          <div className='logoStore'>
-            <img
-              className='logoStore1'
-              src={require('../assets/img/appstorebis.png')}
-              alt='Télécharger application mobile sur Apple Store'
-            />
-            <img
-              className='logoStore2'
-              src={require('../assets/img/googleplaybis.png')}
-              alt='Télécharger application mobile sur Google Play'
-            />
-          </div>
-          <div style={{ padding: '0 500px' }}></div>
-          <TeamButton />
-          <ResponsabilityButton />
         </div>
       </div>
     </div>
