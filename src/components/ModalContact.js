@@ -1,18 +1,12 @@
 import React, { useState } from 'react'
-// import axios from 'axios'
 import ReactDOM from 'react-dom'
 import logo from '../assets/img/leVilainCoinLogo.png'
 import { SlClose } from 'react-icons/sl'
-import { Link } from 'react-router-dom'
 
-const ModalConnexion = ({ open, children, onClose }) => {
+const ModalContact = ({ open, children, onClose }) => {
   const [name, setName] = useState()
-
-  // useEffect(() => {
-  //   axios.get('http://localhost:4242/customers').then(response => {
-  //     setCustomers(response.data)
-  //   })
-  // }, [])
+  const [email, setEmail] = useState()
+  const [message, setMessage] = useState()
 
   // Conditionne l'affichage du Modal
   if (!open) return null
@@ -26,26 +20,27 @@ const ModalConnexion = ({ open, children, onClose }) => {
             <img src={logo} alt='logo' className='logo' />
           </div>
           <input
-            placeholder='&#x1F4E7; email'
+            placeholder='Nom'
             onChange={e => setName(e.target.value)}
             value={name || ''}
           />
           <input
-            type={'password'}
-            placeholder='&#x1F512; password'
-            // onChange={e => setOccupation(e.target.value)}
-            // value={password || ''}
+            placeholder='email'
+            onChange={e => setEmail(e.target.value)}
+            value={email || ''}
+          />
+          <textarea
+            placeholder='Précisez les dates et le contexte de votre demande'
+            onChange={e => setMessage(e.target.value)}
+            value={message || ''}
           />
           {/*pas de paramètre à cette fonction. Elle sera exécuté sur onClick mais elle ne cible rien dans le HTML*/}
           <button className='crossModaleButton' onClick={onClose}>
             <SlClose />
           </button>
         </div>
-        <Link to='/UserProfilePage'>
-        <button className='modaleButton' onClick= {onClose}>
-          SE CONNECTER
-        </button>
-        </Link>
+
+        <button className='modaleButton'>ENVOYER</button>
       </div>
     </>,
     //VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
@@ -54,4 +49,4 @@ const ModalConnexion = ({ open, children, onClose }) => {
   )
 }
 
-export default ModalConnexion
+export default ModalContact

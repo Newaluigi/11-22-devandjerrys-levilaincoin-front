@@ -15,11 +15,20 @@ const ModalDevenirVilain = ({ open, children, onClose }) => {
             <img src={logo} alt='logo' className='logo' />
           </div>
           <h1>Je veux devenir prestataire</h1>
-          <input placeholder='Firstname' />
-          <input placeholder='Lastname' />
+          <input placeholder='Prénom' />
+          <input placeholder='Nom' />
           <input placeholder='Email' />
-          <input placeholder='Occupation' />
-          <input placeholder='Achievements' />
+          {/* <input type='select' multiple='non' placeholder='Type de prestation' /> */}
+          <select>
+            <option placeholder=''>--Type de prestation--</option>
+            <option value='Conquer'>Conquérir le monde</option>
+            <option value='Escort'>Escort Vilain</option>
+            <option value='Birthday'>Fête d'anniversaire</option>
+            <option value='Nanny'>Bad nounou</option>
+            <option value='Stag'>EVG et EVJF</option>
+            <option value='Destroy'>Dégradation</option>
+          </select>
+          <textarea placeholder='Votre fierté' />
 
           {/*pas de paramètre à cette fonction. Elle sera exécuté sur onClick mais elle ne cible rien dans le HTML*/}
           <button className='crossModaleDevenirVilain' onClick={onClose}>
@@ -27,7 +36,7 @@ const ModalDevenirVilain = ({ open, children, onClose }) => {
           </button>
         </div>
 
-        <button className='modaleButton'>SE CONNECTER</button>
+        <button className='modaleButton'>SOUMETTRE</button>
       </div>
     </>,
     //VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
