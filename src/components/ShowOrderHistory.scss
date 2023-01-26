@@ -1,0 +1,35 @@
+.orders {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+
+    .histoPicture {
+        margin-right: 8px;
+        border-radius: 12px;
+    }
+
+    .histoText {
+      color: rgba(181, 184, 189, 0.3);;  
+    }
+
+   
+    .histoStar {
+        margin: 20px;
+        color: rgba(251, 96, 18, 0.68);
+    }
+    .orderId {
+        margin: 20px;
+        width: 80%;
+    }
+
+}
+@media (max-width: 600px) {
+    .orders{
+        width: 90%;
+        flex-direction: column;
+    }
+}
