@@ -2,7 +2,7 @@
     scale: 3;
     border: none;
     color: var(--main-color);
-    background-color: var(--background-color);
+    background-color: transparent;
     cursor: pointer;
 
 }
@@ -15,17 +15,17 @@ ul{
     .menuListDiv{
         position: absolute;
         opacity: 0.8;
-        scale: 1.6;
+        scale: 1.4;
         right: 59px;
         top: 129px;
         backdrop-filter: blur(16px) saturate(180%);
         -webkit-backdrop-filter: blur(16px) saturate(180%);
-        background-color: var(--background-color);
-        border-radius: 12px;
-        border: 2px solid var(--third-color);
-        z-index: 1;
+        background-color: transparent;
+        // z-index: 1;
         .menuList{
             margin: 0;
+            border-radius: 12px;
+            border: 2px solid var(--third-color);
             .menuListLi{
                 list-style: none;
             }
@@ -84,7 +84,6 @@ ul{
     //     color: black;
     // }
 
-
 /*--------------CSS du menuBurger en MOBILE----------*/
 @media screen and (max-width: 600px) {
 .menuBurgerFooter{
@@ -92,14 +91,18 @@ ul{
         position: absolute;
         opacity: 0.8;
         scale: 1.5;
-        bottom: 176px;
-        left: 60px;
-        backdrop-filter: blur(16px) saturate(180%);
+        bottom: 100px;
+        left: 20px;
+        width: 182px;
         background-color: var(--background-color);
+        backdrop-filter: blur(16px) saturate(180%);
         border-radius: 12px;
-        border: 2px solid var(--third-color);
         .menuList{
-            .menuListLi{
+            border: 2px solid var(--third-color);
+            margin: 0;
+            border-radius: 12px;
+
+            .menuListLi{ 
                 list-style: none;
             }
             li{

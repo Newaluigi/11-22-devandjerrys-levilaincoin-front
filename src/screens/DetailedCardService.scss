@@ -3,6 +3,7 @@
   }
 
 .Card-item {
+
     font-style: var(--font2);
     font-size: small;
     color: var(--third-color);
@@ -82,6 +83,9 @@
     text-align: center;
     justify-content: flex-end;
     height: 100px;
+    // .commentAndCalendar{
+    //     background-color: pink;
+    // }
            .desc2{
             color: var(--main-color);
             font-size: smaller;
@@ -101,13 +105,11 @@
         p{
             font-style: italic;  
         }
-
     }
     .ratingStar{
         grid-column: 1;
         grid-row: 1;
         display: flex;
-        
         color: gold;
         svg{
             height: 2em;

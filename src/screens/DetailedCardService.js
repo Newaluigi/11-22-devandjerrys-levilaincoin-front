@@ -115,6 +115,7 @@ const DetailedCardService = props => {
           {'"'}
         </div>
       </div>
+      <div></div>
       <div className='comment'>
         <h2>COMMENTAIRES</h2>
         <hr></hr>
