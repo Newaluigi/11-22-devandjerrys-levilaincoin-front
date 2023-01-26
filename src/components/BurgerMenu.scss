@@ -2,7 +2,7 @@
     scale: 3;
     border: none;
     color: var(--main-color);
-    background-color: var(--background-color);
+    background-color: transparent;
     cursor: pointer;
 
 }
@@ -15,7 +15,7 @@ ul{
     .menuListDiv{
         position: absolute;
         opacity: 0.8;
-        scale: 1.6;
+        scale: 1.4;
         right: 59px;
         top: 129px;
         backdrop-filter: blur(16px) saturate(180%);
