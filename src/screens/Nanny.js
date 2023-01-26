@@ -34,7 +34,7 @@ const Nanny = () => {
               className='descImg'
             />
           </span>
-          <p>
+          <p className='descriptionText'>
             Vous souhaitez garder vos petits montres ? Faites appel à un monstre
             professionnel qui saura les hanter jusqu'à la fin de leurs jours et
             fera la joie de leur futur psy.
