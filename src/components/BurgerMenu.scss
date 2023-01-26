@@ -20,7 +20,7 @@ ul{
         top: 129px;
         backdrop-filter: blur(16px) saturate(180%);
         -webkit-backdrop-filter: blur(16px) saturate(180%);
-        background-color: var(--background-color);
+        background-color: transparent;
         border-radius: 12px;
         border: 2px solid var(--third-color);
         z-index: 1;
@@ -95,7 +95,7 @@ ul{
         bottom: 176px;
         left: 60px;
         backdrop-filter: blur(16px) saturate(180%);
-        background-color: var(--background-color);
+        background-color: transparent;
         border-radius: 12px;
         border: 2px solid var(--third-color);
         .menuList{

@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
 :root {
-  --background-color: #25282A;
+  // --background-color:linear-gradient(180deg, rgba(12,19,23,1)  0%, rgba(37,51,55,1) 100%);
+  --background-color: rgba(12,19,23,1);
   --main-color: rgb(251, 96, 18);
   --secondary-color: #97A2A8;
   --third-color: #FFF;
@@ -10,7 +11,7 @@
   --font3: 'HelpMe';
 }
 body {
-  background-color: var(--background-color);
+  background: linear-gradient(180deg, rgba(12,19,23,1)  0%, rgba(37,51,55,1) 100%);
 }
 
 // .allElements{

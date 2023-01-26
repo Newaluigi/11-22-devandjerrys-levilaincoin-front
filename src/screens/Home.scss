@@ -1,31 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Balthazar&display=swap%27');
 
-.headerFromApp{
-  display: none;
-}
-.footerFromApp{
-  display: none;
-}
-
 @media (min-width:600px){
   .allElements{
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
 
     .firstElement{
-      .elementsHeader{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        .buttonHome{
-          position: absolute;
-          right: 10px;
-        }
-      }
       background-image: 
       linear-gradient(180deg, rgba(0,0,0,0) 80%, rgba(2,4,6,1) 100%),
+      linear-gradient(360deg, rgba(0,0,0,0) 80%, rgba(12,19,23,1) 100%),
       url('../assets/img/background.png');
       background-repeat: no-repeat;
       background-size: cover;
@@ -121,7 +104,8 @@
     .secondElement{
       height: 1500px;
       width: 100%;
-      background: linear-gradient(180deg, rgba(2,4,6,1) 0%, rgba(12,19,23,1) 45%, rgba(37,51,55,1) 100%);
+      background: 
+      linear-gradient(180deg, rgba(2,4,6,1) 0%, rgba(12,19,23,1) 25%, rgba(37,51,55,1) 100%,);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -142,7 +126,7 @@
         }
       }
       .rightContent{
-        height: 70%;
+        height: 65%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -159,11 +143,13 @@
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
-          height: 70vh;
+          height: 80vh;
+          width: 60%;
           margin: 30px;
           &:hover .cardService-Img{
             filter: blur(3px);
           }
+
           .cardService:hover .cardService-Img {
             animation-name : blurEffect;
             animation-duration: 1.5s;
@@ -188,8 +174,9 @@
                 font-weight: bold;
               }
               100%{
-                background-color: black;
-                color: rgb(247, 111, 73);
+                background-color: rgba(12,19,23,1) ;
+                border: 1px solid var(--main-color) ;
+                color: var(--main-color);
                 font-weight: bold;
               }
             }
