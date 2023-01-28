@@ -3,7 +3,10 @@ import React, {useState} from 'react'
 
 function FavoriteShowFavorite(props) {
 
-
+const changeFavStatus = () =>{
+  console.log("change")
+  props.changeFavoriteStatus(!props.changeFavorite)
+}
 
 
   return (
@@ -12,7 +15,10 @@ function FavoriteShowFavorite(props) {
       <div
         id='favorite'
         className={props.isFavorite ? 'isFavorite' : 'notFavorite'}
-        onClick={(e)=>props.changeIsFavorite(!props.isFavorite)}
+        onClick={(e)=>{
+          props.changeIsFavorite(!props.isFavorite)
+          changeFavStatus()
+        }}
               />
     </div>
   )

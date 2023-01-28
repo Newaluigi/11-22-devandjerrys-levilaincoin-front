@@ -8,23 +8,23 @@ const UserProfilePage = () => {
   const [users, setUsers] = useState([])
   // const [vilainInfo1, setVilainInfo1] = useState([])
   const [tabHistos, setTabHistos] = useState([])
-  const [changeFavorite, setChangeFavorite] = useState()
+  const [changeFavorite, setChangeFavorite] = useState(true)
   // favoupas
   // const favoupas = vilainInfo1.favorite;
 
 
-  useEffect(() => {
-    const tab = JSON.parse(localStorage.getItem('favVilain1'));
-    // setVilainInfo1(tab);
-    // localStorage.setItem('favorite', [1,3 ,5] ); 
-  }, [])
+  // useEffect(() => {
+  //   const tab = JSON.parse(localStorage.getItem('favVilain1'));
+  //   // setVilainInfo1(tab);
+  //   // localStorage.setItem('favorite', [1,3 ,5] ); 
+  // }, [])
 
   useEffect(() => {
     const tabHistos = JSON.parse(localStorage.getItem('histo'));
     setTabHistos(tabHistos);
-    // console.log(tabHistos);
+    console.log(tabHistos);
     // localStorage.setItem('favorite', [1,3 ,5] ); 
-  }, [])
+  }, [changeFavorite])
 
   useEffect(() => {
     const users = JSON.parse(localStorage.getItem('users'));
@@ -55,7 +55,6 @@ const UserProfilePage = () => {
             : null}
         </div>
         <h1 className="orderId4">Favoris</h1>
-        {console.log(tabHistos.favorite)}
         <div className='favoriteField'>
           {tabHistos
             ?
@@ -65,9 +64,8 @@ const UserProfilePage = () => {
                   <ShowFavorite
                     vilainInfo1={vilainInfo}
                     key={vilainInfo.id}
-                    // isFavorite={isFavorite}
-                    // changeIsFavorite={event => setIsFavorite(event)}
-                    changeFavorite={event => setChangeFavorite(event)}
+                    changeFavorite={changeFavorite}
+                    changeFavoriteStatus={event => setChangeFavorite(event)}
                     userFavorite={vilainInfo.favorite}
                   />
                 )
@@ -78,6 +76,7 @@ const UserProfilePage = () => {
       <div className='divTitre'>
         <h1 className="orderId3">Historique</h1>
       </div>
+      {console.log(changeFavorite)}
       <div className='orderHistory'>
         {tabHistos
           ? tabHistos.map(tabHistos => {

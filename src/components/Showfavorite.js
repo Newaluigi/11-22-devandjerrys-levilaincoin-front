@@ -7,19 +7,22 @@ import DisplayVilainServicePage from "./DisplayVilainServicePage";
 const ShowFavorite = props => {
 
     // recup info local storage
- const [isFavorite, setIsFavorite] = useState("isFavorite")
+    const [isFavorite, setIsFavorite] = useState("isFavorite")
 
     return (
 
         <div className="favDisplay">
             <DisplayVilainServicePage vilainInfo1={props.vilainInfo1} />
             <div className="heart">
-            {/* <FavoriteShowFavorite isFavorite={props.userFavorite} changeIsFavorite={props.changeIsFavorite} /> */}
-            <FavoriteShowFavorite isFavorite={isFavorite} changeIsFavorite={event => setIsFavorite(event)} 
-            // changeFavorite={event => setChangeFavorite(event)}
-            />
+                <FavoriteShowFavorite
+                    isFavorite={isFavorite}
+                    changeIsFavorite={event => setIsFavorite(event)}
+                    changeFavorite={props.changeFavorite}
+                    changeFavoriteStatus={props.changeFavoriteStatus}
+                    vilainInfo1={props.vilainInfo1}
+                />
             </div>
-            {console.log(props.userFavorite )}
+            {/* {console.log(props.userFavorite )} */}
         </div>
     )
 }
