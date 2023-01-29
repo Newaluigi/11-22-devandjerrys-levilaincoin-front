@@ -3,24 +3,28 @@ import React, {useState, useEffect} from 'react'
 
 function FavoriteShowFavorite(props) {
 
-  const [tabHistos, setTabHistos] = useState([])
+  const [tabHistorics, setTabHistorics] = useState([])
   const [displayed, setDisplayed] = useState(props.vilainInfo1)
   useEffect(() => {
-    const tabHistos = JSON.parse(localStorage.getItem('histo'));
-    setTabHistos(tabHistos);
-    // console.log(tabHistos);
-    // localStorage.setItem('favorite', [1,3 ,5] ); 
+    const tabHistorics = JSON.parse(localStorage.getItem('histo'));
+    setTabHistorics(tabHistorics);
+    // console.log(tabHistorics);
   }, [])
 
 const changeFavStatus = () =>{
-  // this line changes the state that trigger the useEffect reload on UserProfilePage
-  props.changeFavoriteStatus(!props.changeFavorite);
-  // Here's the change of the favorite status in the imported database tabHistos
-  // at first change the fav status in vilainInfo1 which is the component character
+  // Here's the change of the favorite status in the imported database tabHistorics
+  // at first, change the fav status in vilainInfo1 which is the component character
   displayed.favorite=(!props.changeFavorite);
+
   // console.log(displayed);
-  // Now change THIS character fav status in the main database using .map
-  tabHistos.map((tabHisto)=>{tabHisto.id===displayed.id? tabHisto.favorite=displayed.favorite:null})
+  // Now change THIS character fav status in the main state database "tabHistorics" using .map
+  tabHistorics.map((tabHisto)=>{tabHisto.id===displayed.id? tabHisto.favorite=displayed.favorite:null})
+
+  // Now overwriting of the "tabHistorics" localstorage
+  localStorage.setItem('histo', JSON.stringify(tabHistorics));
+  // setTabHistorics(tabHistorics) 
+
+
 
 // tabHistos.map((tabHisto)=>{console.log(tabHisto.id);
 //   console.log(displayed.id); })
@@ -31,7 +35,9 @@ const changeFavStatus = () =>{
   // console.log(props.vilainInfo1[2]);
   // console.log(props.userHisto[0].id);
   // console.log(tabHistos[2]);
-  console.log(tabHistos);
+  // console.log(tabHistorics);
+    // this line changes the state that trigger the useEffect reload on UserProfilePage
+    props.changeFavoriteStatus(!props.changeFavorite);
 }
 
 
