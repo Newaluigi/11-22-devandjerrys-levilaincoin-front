@@ -13,6 +13,7 @@ const ShowOrderHistory = (props) => {
                 </div>
                 <p className="orderId">Date: {histoDate}</p>
                 <p className="orderId">Prix: {histoPrice}</p>
+                
             </div>
         </div>
 

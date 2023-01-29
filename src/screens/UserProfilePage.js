@@ -13,7 +13,8 @@ const UserProfilePage = () => {
   useEffect(() => {
     const tabHistos = JSON.parse(localStorage.getItem('histo'));
     setTabHistos(tabHistos);
-    console.log(tabHistos);
+    setChangeFavorite(true);
+    // console.log(tabHistos);
     console.log(changeFavorite); 
   }, [changeFavorite])
 
