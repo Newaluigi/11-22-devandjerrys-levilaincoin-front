@@ -6,7 +6,7 @@ import ShowOrderHistory from '../components/ShowOrderHistory'
 
 const UserProfilePage = () => {
   const [users, setUsers] = useState([])
-  // const [vilainInfo1, setVilainInfo1] = useState([])
+  const [vilainInfo1, setVilainInfo1] = useState([])
   const [tabHistos, setTabHistos] = useState([])
   const [changeFavorite, setChangeFavorite] = useState(true)
 
@@ -15,7 +15,7 @@ const UserProfilePage = () => {
     setTabHistos(tabHistos);
     setChangeFavorite(true);
     // console.log(tabHistos);
-    console.log(changeFavorite); 
+    // console.log(changeFavorite); 
   }, [changeFavorite])
 
   useEffect(() => {
@@ -72,16 +72,24 @@ const UserProfilePage = () => {
       {/* {console.log(changeFavorite)} */}
       <div className='orderHistory'>
         {tabHistos
-          ? tabHistos.map(tabHistos => {
+          ? tabHistos.map(tabHisto => {
             return (
               <ShowOrderHistory
-                key={tabHistos.id}
-                histoName={tabHistos.name}
-                histoRating={tabHistos.rating}
-                histoPrice={tabHistos.montant}
-                histoDate={tabHistos.date}
-                histoPicture={tabHistos.images.sm} 
-                histoIsFav={tabHistos.favorite}/>
+                key={tabHisto.id}
+                histoName={tabHisto.name}
+                histoRating={tabHisto.rating}
+                histoPrice={tabHisto.montant}
+                histoDate={tabHisto.date}
+                histoPicture={tabHisto.images.sm} 
+                histoIsFav={tabHisto.favorite}
+                // gestion favori
+                vilainInfo1={tabHisto}
+                changeFavorite={changeFavorite}
+                changeFavoriteStatus={event => setChangeFavorite(event)}
+                userHisto={tabHisto}
+                />
+
+                
             )
           })
           : null}

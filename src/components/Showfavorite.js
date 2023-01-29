@@ -7,7 +7,7 @@ import DisplayVilainServicePage from "./DisplayVilainServicePage";
 const ShowFavorite = props => {
 
     // recup info local storage
-    const [isFavorite, setIsFavorite] = useState(true)
+    const [isFavorite, setIsFavorite] = useState(props.vilainInfo1.favorite)
     
     return (
 

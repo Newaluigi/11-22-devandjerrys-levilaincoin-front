@@ -5,6 +5,7 @@ function FavoriteShowFavorite(props) {
 
   const [tabHistorics, setTabHistorics] = useState([])
   const [displayed, setDisplayed] = useState(props.vilainInfo1)
+
   useEffect(() => {
     const tabHistorics = JSON.parse(localStorage.getItem('histo'));
     setTabHistorics(tabHistorics);
@@ -15,7 +16,7 @@ function FavoriteShowFavorite(props) {
     // at first, change the fav status in vilainInfo1 which is the component character
     displayed.favorite = (!props.changeFavorite);
 
-    // console.log(displayed);
+    console.log(props.vilainInfo1);
     // Now change THIS character fav status in the main state database "tabHistorics" using .map
     tabHistorics.map((tabHisto) => { tabHisto.id === displayed.id ? tabHisto.favorite = displayed.favorite : null })
 
