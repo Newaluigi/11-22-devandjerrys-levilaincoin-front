@@ -20,9 +20,10 @@ const ShowFavorite = props => {
                     changeFavorite={props.changeFavorite}
                     changeFavoriteStatus={props.changeFavoriteStatus}
                     vilainInfo1={props.vilainInfo1}
+                    userHisto={props.userHisto}
                 />
             </div>
-            {/* {console.log(props.userFavorite )} */}
+            {/* {console.log(props.userHisto )} */}
         </div>
     )
 }

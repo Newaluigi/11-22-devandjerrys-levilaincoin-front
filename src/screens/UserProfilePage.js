@@ -22,7 +22,7 @@ const UserProfilePage = () => {
   useEffect(() => {
     const tabHistos = JSON.parse(localStorage.getItem('histo'));
     setTabHistos(tabHistos);
-    console.log(tabHistos);
+    // console.log(tabHistos);
     // localStorage.setItem('favorite', [1,3 ,5] ); 
   }, [changeFavorite])
 
@@ -67,6 +67,7 @@ const UserProfilePage = () => {
                     changeFavorite={changeFavorite}
                     changeFavoriteStatus={event => setChangeFavorite(event)}
                     userFavorite={vilainInfo.favorite}
+                    userHisto={tabHistos}
                   />
                 )
               })
@@ -76,7 +77,7 @@ const UserProfilePage = () => {
       <div className='divTitre'>
         <h1 className="orderId3">Historique</h1>
       </div>
-      {console.log(changeFavorite)}
+      {/* {console.log(changeFavorite)} */}
       <div className='orderHistory'>
         {tabHistos
           ? tabHistos.map(tabHistos => {
