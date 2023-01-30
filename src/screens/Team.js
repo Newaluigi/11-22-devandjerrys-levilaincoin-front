@@ -186,7 +186,7 @@ function Team() {
           id="email"
           placeholder="michel.drucker@caramail.fr"
           onChange={(e) => setEmail(e.target.value)}
-        />
+        test/>
       </label>
       </form> */}
 
