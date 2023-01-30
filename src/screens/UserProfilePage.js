@@ -10,13 +10,15 @@ const UserProfilePage = () => {
   const [tabHistos, setTabHistos] = useState([])
   const [changeFavorite, setChangeFavorite] = useState(true)
 
+  // const [isFavorite, setIsFavorite] = useState()
+
   useEffect(() => {
     const tabHistos = JSON.parse(localStorage.getItem('histo'));
     setTabHistos(tabHistos);
     setChangeFavorite(true);
     // console.log(tabHistos);
     // console.log(changeFavorite); 
-  }, [changeFavorite])
+  }, [changeFavorite, tabHistos.favorite])
 
   useEffect(() => {
     const users = JSON.parse(localStorage.getItem('users'));
@@ -71,8 +73,10 @@ const UserProfilePage = () => {
       </div>
       {/* {console.log(changeFavorite)} */}
       <div className='orderHistory'>
-        {tabHistos
-          ? tabHistos.map(tabHisto => {
+        {tabHistos ?
+        //  tabHistos.filter((tabHisto) => tabHisto.favorite === true)
+        //  .map(tabHisto => {
+           tabHistos.map(tabHisto => {
             return (
               <ShowOrderHistory
                 key={tabHisto.id}
@@ -84,9 +88,12 @@ const UserProfilePage = () => {
                 histoIsFav={tabHisto.favorite}
                 // gestion favori
                 vilainInfo1={tabHisto}
-                changeFavorite={changeFavorite}
+                changeFavorite={tabHisto.favorite}
+                // changeFavorite={changeFavorite}
                 changeFavoriteStatus={event => setChangeFavorite(event)}
                 userHisto={tabHisto}
+                // isFavorite={setIsFavorite(tabHisto.favorite)}
+                // changeIsFavorite={event => setIsFavorite(event)}
                 />
 
                 
