@@ -107,7 +107,7 @@ function Team() {
                 <img src={require('../assets/img/team5.jpg')} alt='destroy' />
                 <div className='team-content'>
                   <h3 className='title'>Crazylia</h3>
-                  <span className='post'>Web Desaignant</span>
+                  <span className='post'>Web Leader</span>
                   <ul className='social'>
                     <li>
                       <a href='https://www.linkedin.com/in/cecilia-caillaud/'>
@@ -175,6 +175,9 @@ function Team() {
             Ne manquez pas les prochaines vilainies : inscrivez-vous à notre
             newsletter !
           </h3>
+          <form className=''>
+            <input className='userMail' type='text' placeholder='Mail' />
+          </form>
           <div className='button-container'>
             {/* <form>            Email :
         <input
@@ -183,7 +186,7 @@ function Team() {
           id="email"
           placeholder="michel.drucker@caramail.fr"
           onChange={(e) => setEmail(e.target.value)}
-        />
+        test/>
       </label>
       </form> */}
 

@@ -164,7 +164,7 @@ flex-direction: row;
     z-index: 1;
     position: relative;
     margin: 50px;
-    max-width: 350px;
+    max-width: 320px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -276,7 +276,7 @@ flex-direction: row;
     align-items: center;
     flex-direction: column;
 }
-  .newsletter h3 {
+.newsletter h3 {
     color: rgb(251, 96, 18);
     font-family: var(--font1);
     margin: 4rem;
@@ -284,7 +284,22 @@ flex-direction: row;
     text-align: center;
     
   }
-  .newsletter input {
+
+.newsletter input {
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    background: var(--main-color);
+    outline: none;
+    font-size: 1.2rem;
+    border: currentColor 0.125em solid;
+    border-color: var(--main-color);
+    text-shadow: 
+    0 0 0.125em hsl(0 0% 100% / 0.5),
+    0 0 0.125em currentColor;
+    box-shadow: 0 0 0.5em 0 var(--secondary-color);
+  }
+
+  .newsletter input:hover {
     
     padding: 1rem 2rem;
     border-radius: 3rem;
@@ -298,14 +313,16 @@ flex-direction: row;
     0 0 0.125em currentColor;
     box-shadow: 0 0 0.5em 0 var(--secondary-color);
   }
+
   .button-container button {
     border-radius: 3rem;
     color: var(--third-color);
     padding: 1rem 2rem;
+    margin-bottom: 20px;
     font-size: 1.2rem;
     outline: none;
     cursor: pointer;
-    background: var(--background-color);
+    background: var(--main-color);
     margin-top: 3rem;
     margin-left: 10px;
     text-shadow: 2px 2px 5px rgba(12, 12, 12, 0.6);
@@ -316,7 +333,18 @@ flex-direction: row;
     0 0 0.125em currentColor;
     box-shadow: 0 0 0.5em 0 var(--main-color);
   }
-  input::placeholder {
+
+  .button-container button:hover {
+    background: var(--background-color);
+    border-color: var(--background-color);
     color: var(--main-color);
+
+  }
+
+  input::placeholder {
+    color: var(--third-color);
     text-shadow: 2px 2px 5px rgba(12, 12, 12, 0.6);
+  }
+  input::placeholder:hover {
+    color: var(--main-color);
   }
