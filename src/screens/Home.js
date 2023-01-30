@@ -20,6 +20,12 @@ import TeamButton from '../components/TeamButton'
 import ResponsabilityButton from '../components/ResponsabilityButton'
 
 const Home = () => {
+  const handleClick = () => {
+    window.scrollTo({
+      top: document.querySelector('.secondElement').offsetTop,
+      behavior: 'smooth'
+    })
+  }
   return (
     <div className='allElements'>
       <div className='firstElement'>
@@ -36,7 +42,7 @@ const Home = () => {
           {' '}
           - Soudoyez-nous pour garder l'anonymat -{' '}
         </h2>
-        <div className='globalIndicator'>
+        <div className='globalIndicator' onClick={handleClick}>
           <div className='indicator'>
             <span></span>
             <span></span>
