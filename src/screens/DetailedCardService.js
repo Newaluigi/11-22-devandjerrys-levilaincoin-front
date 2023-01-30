@@ -36,7 +36,7 @@ const DetailedCardService = props => {
 
   return (
     <div className='Card-item'>
-      {console.log('vilainInfoA', vilainInfoA)}
+      {/* {console.log('vilainInfoA', vilainInfoA)} */}
       <div className='favorite'>
         <Favorite isFavorite={vilainFav} />
       </div>

@@ -14,6 +14,7 @@ const ShowOrderHistory = (props) => {
 
     useEffect(() => {
         setIsFavorite(userHisto.favorite)
+        console.log("userHistofav change");
     }, [userHisto])
 
 
@@ -22,7 +23,7 @@ const ShowOrderHistory = (props) => {
         <div className="orders">
             <img className="histoPicture" src={histoPicture} alt={histoName} />
             <div className="histoText">
-                {console.log(userHisto.favorite)}
+                {/* {console.log(userHisto.favorite)} */}
                 <p className="orderId">Nom:{histoName}</p>
                 <div className="histoStar">
                     <Rating star={histoRating} />
