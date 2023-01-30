@@ -15,8 +15,9 @@ function FavoriteShowFavorite(props) {
     // Here's the change of the favorite status in the imported database tabHistorics
     // at first, change the fav status in vilainInfo1 which is the component character
     displayed.favorite = (!props.changeFavorite);
-
-    console.log(props.vilainInfo1);
+// console.log(props.changeFavorite);
+//     console.log(displayed);
+//     console.log(displayed.favorite);
     // Now change THIS character fav status in the main state database "tabHistorics" using .map
     tabHistorics.map((tabHisto) => { tabHisto.id === displayed.id ? tabHisto.favorite = displayed.favorite : null })
 
@@ -25,7 +26,8 @@ function FavoriteShowFavorite(props) {
 
     // tabHistos[0].favorite = (!props.changeFavorite);
     // console.log(props.vilainInfo1);
-    props.changeFavoriteStatus(!props.changeFavorite);
+    props.changeFavoriteStatus(!props.isFavorite);
+    console.log(props.changeFavoriteStatus());
   }
 
 
