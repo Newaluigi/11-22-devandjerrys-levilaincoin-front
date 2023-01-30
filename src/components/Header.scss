@@ -5,12 +5,10 @@
 }
 
 .headerElements {
-
     @extend %center;
     width: 100%;
     height: 100%;
-    justify-content: space-between;
-
+    justify-content: space-around;
     .image1 {
         width: 10vh;
         height: 4vh;
@@ -21,6 +19,7 @@
         display: flex;
         width: 150px;
         height: 50px;
+        margin-left: 10px;
     }
 }
 
