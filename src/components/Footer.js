@@ -7,11 +7,18 @@ import VilainButton from './VilainButton'
 const Footer = () => {
   return (
     <div className='lvcFooter'>
-      <img
-        className='logoAppliMobil'
-        src={require('../assets/img/appliMobil.png')}
-        alt='Télécharger application mobile'
-      />
+      <div className='logoStore'>
+        <img
+          className='logoStore1'
+          src={require('../assets/img/appstorebis.png')}
+          alt='Télécharger application mobile sur Apple Store'
+        />
+        <img
+          className='logoStore2'
+          src={require('../assets/img/googleplaybis.png')}
+          alt='Télécharger application mobile sur Google Play'
+        />
+      </div>
       <div className='footerButton'>
         <TeamButton />
         <ResponsabilityButton />
