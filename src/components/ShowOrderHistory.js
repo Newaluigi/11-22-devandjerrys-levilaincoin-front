@@ -5,20 +5,24 @@ import React, { useState, useEffect} from 'react'
 
 const ShowOrderHistory = (props) => {
 
-    // useEffect(() => {
-    //     setIsFavorite(userHisto.favorite)
-    // }, [])
+
 
 
 
     const { histoRating, histoName, histoPrice, histoPicture, histoDate, changeFavorite, changeFavoriteStatus, userHisto } = props
     const [isFavorite, setIsFavorite] = useState(userHisto.favorite)
+
+    useEffect(() => {
+        setIsFavorite(userHisto.favorite)
+    }, [userHisto])
+
+
     return (
 
         <div className="orders">
             <img className="histoPicture" src={histoPicture} alt={histoName} />
             <div className="histoText">
-                {/* {console.log(userHisto)} */}
+                {console.log(userHisto.favorite)}
                 <p className="orderId">Nom:{histoName}</p>
                 <div className="histoStar">
                     <Rating star={histoRating} />

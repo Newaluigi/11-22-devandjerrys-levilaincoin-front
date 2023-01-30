@@ -74,9 +74,9 @@ const UserProfilePage = () => {
       {/* {console.log(changeFavorite)} */}
       <div className='orderHistory'>
         {tabHistos ?
-        //  tabHistos.filter((tabHisto) => tabHisto.favorite === true)
-        //  .map(tabHisto => {
-           tabHistos.map(tabHisto => {
+         tabHistos.filter((tabHisto) => tabHisto.favorite !== null)
+         .map(tabHisto => {
+          //  tabHistos.map(tabHisto => {
             return (
               <ShowOrderHistory
                 key={tabHisto.id}
@@ -93,14 +93,15 @@ const UserProfilePage = () => {
                 changeFavoriteStatus={event => setChangeFavorite(event)}
                 userHisto={tabHisto}
                 // isFavorite={setIsFavorite(tabHisto.favorite)}
-                // changeIsFavorite={event => setIsFavorite(event)}
-                />
-
-                
+                // changeIsFavorite={event => setIsFavorite(event)}    
+                /> 
+                        
             )
           })
           : null}
+                
       </div>
+      
     </div>
   )
 }
