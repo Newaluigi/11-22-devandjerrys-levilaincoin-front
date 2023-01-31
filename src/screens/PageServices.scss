@@ -9,25 +9,17 @@
 
 //******************** BANNIERE ***************************
 
-//TEXTES
-
 .serviceDescription {
     color: white;
     display: flex;
     align-items: center;
     flex-direction: column;
-    // p {
-    //     font-size: 14px;
-    // }
-    img {
-        margin: auto;
-        width: 220px;
-    }
+    margin: 20px;
     margin-bottom: 50px;
 }
-// .descriptionText{
-//     font-size: larger;
-// }
+
+
+// TITRE
 
 .headingDescription {
     font-size: 30px;
@@ -37,33 +29,17 @@
     animation: fadeIn 2.5s linear forwards;
     margin-bottom: 50px;
     margin-top: -6px;
-    text-align: center;
+    // text-align: center;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
- @keyframes fadeIn {
-      0% {
-          opacity: 0
-      }
-      100% {
-          opacity: 1;
-      }
-}
-
-@media screen and (min-width: 600px) {
-    .headingDescription {
-    font-size: 42px;
-    }
-    .serviceDescription {
-        img {
-            width: 420px;
-        }
-    }
-    .descriptionText {
-        text-align: match-parent;
-        font-size: 30px;
-        padding-left: 20px;
-        padding-left: 25px;
-}}
 
 // VIGNETTE
 
@@ -75,20 +51,24 @@
     grid-gap: 23px;
     justify-items: center;
     align-items: center;
-
-    p {
-        text-align: center;
-        font-size: 15px;
-        padding-left: 42px;
+    img {
+        width: 220px;
     }
 }
-
 .descImg{
-
     clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
 }
 .tag-wrap {
     filter: drop-shadow(rgb(0, 0, 10) 2px 2px 14px);
+}
+
+// DESCRIPTIF
+
+.descriptionText {
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 50px;
+    font-size: 80%;
 }
 
 
@@ -99,8 +79,8 @@ hr {
     max-width: 100%;
     background-position: 50%;
     box-sizing: border-box;
-  }
-  .shine1 {
+}
+.shine1 {
     height: 20px;
     width: 115%;
     background-image: radial-gradient(
@@ -108,9 +88,8 @@ hr {
       hsla(22, 93%, 47%, 0.899),
       hsla(27, 100%, 44%, 0));
     position: relative; 
-  }
-  
-  .shine1::before {
+}
+.shine1::before {
     height: 1px;
     position: absolute;
     top: -1px;
@@ -123,7 +102,7 @@ hr {
       hsla(0, 0%, 0%, 0));
   }
 
-  .shine2 {
+.shine2 {
     height: 20px;
     width: 115%;
     background-image: radial-gradient(
@@ -132,9 +111,8 @@ hr {
       hsla(27, 100%, 44%, 0));
     position: relative; 
     transform: rotate(180deg);
-  }
-  
-  .shine2::before {
+}
+.shine2::before {
     height: 1px;
     position: absolute;
     top: -1px;
@@ -145,8 +123,8 @@ hr {
       hsla(0, 0%, 0%, 0),
       hsla(0, 0%, 0%, 0.75) 50%,
       hsla(0, 0%, 0%, 0));
+}
 
-  }
 
 //BACK ARROW
 .willBeBack{
@@ -154,7 +132,6 @@ hr {
     text-decoration: none;
     opacity: 0.6;
 }
-
 .willBeBack:hover{
     opacity: 1;
 }
@@ -179,6 +156,32 @@ hr {
 .iconeBack:hover{
     opacity: 1;
 }
+
+//RESPONSIVE
+
+
+@media (min-width: 600px) {
+
+    .descriptionText {
+        font-size: 25px;
+    }
+
+    .descriptionImg {
+        // width: 80%;
+        // margin: auto;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // grid-gap: 23px;
+        // justify-items: center;
+        // align-items: center;
+        img {
+            width: 420px;
+        }
+    }
+
+}
+
+
 
 //******************** CARD ***************************
 
@@ -398,8 +401,8 @@ font-weight: bold;
     flex-wrap: wrap;
     justify-content: center;
 }
-@media (max-width: 600px) {
-    .vilain1 {
-        margin-right: 15px;
-    }
-}
+// @media (max-width: 600px) {
+//     .vilain1 {
+//         margin-right: 15px;
+//     }
+// }

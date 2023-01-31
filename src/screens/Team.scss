@@ -1,5 +1,5 @@
 //******************** BANNIERE ***************************
-.serviceDescription {
+.teamDescription {
     color: white;
     display: flex;
     align-items: center;
@@ -8,7 +8,7 @@
         font-size: 14px;
     }
 }
-.descriptionText{
+.teamText{
     font-size: larger;
     margin : 10px;
     text-align: center;
@@ -36,12 +36,7 @@
     .headingDescription {
     font-size: 42px;
     }
-    .serviceDescription {
-        img {
-            width: 420px;
-        }
-    }
-    .descriptionText {
+    .teamText {
 
         font-size: 30px;
         padding-left: 20px;
