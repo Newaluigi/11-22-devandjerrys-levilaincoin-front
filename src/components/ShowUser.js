@@ -9,7 +9,7 @@ const ShowUser = (props) => {
             <p className="detail">Nom: {userLastName}</p>
             <p className="detail">Email: {userEmail}</p>
             <p className="detail">Téléphone: {userPhone}</p>
-           <button className="modifyDetail">Modifier</button>
+           {/* <button className="modifyDetail">Modifier</button> */}
         </div>
     )
 }

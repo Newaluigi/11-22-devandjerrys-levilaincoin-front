@@ -25,6 +25,17 @@ const BurgerMenu = () => {
   // XXXXXXXXXXXXXXXXXXXXXX STATE modal connexion XXXXXXXXXXXXXXXXXXXX
   const [responsabilityIsOpen, setResponsabilityIsOpen] = useState(false)
 
+const [motDePasse, setMotDePasse] = useState("")
+
+const onCloseOk =()=>{
+  if(motDePasse === "123456"){
+  setConnexionsetIsOpen(false)
+  setMotDePasse("")
+  }else{
+    alert('Identifiants et/ou mot de passe incorrect(s)')
+  }
+}
+
   const handleClickAway = () => {
     setIsOpen(false)
   }
@@ -56,8 +67,13 @@ const BurgerMenu = () => {
                   </li>
                   <ModalConnexion
                     open={connexionIsOpen}
-                    onClose={() => setConnexionsetIsOpen(false)}
+                    onCloseOk={onCloseOk} 
+                    leMotDePasse={setMotDePasse}
+                    motDePasse={motDePasse}
+                    setConnexionsetIsOpen={setConnexionsetIsOpen}
                   ></ModalConnexion>
+                  {console.log(motDePasse)}
+                  {/* onClose={() => setConnexionsetIsOpen(false)} */}
                 </div>
                 {/* Modale d'inscription ci-dessous */}
                 <div>
