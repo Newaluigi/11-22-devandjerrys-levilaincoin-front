@@ -166,7 +166,7 @@ hr {
 .row{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 // flex-direction: row;
 // justify-content: center;
 // align-items: center;
@@ -282,12 +282,16 @@ hr {
 //******************** NEWSLETTER ***************************
 
 .news {
-    margin: 90px;
+    // margin: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid rgb(251, 96, 18);
-    border-radius: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: rgba(251, 96, 18, 0.68);
+    max-width: 400px;
+    min-width: 280px;
 }
 .newsletter {
     width: 100%;
@@ -297,8 +301,8 @@ hr {
     flex-direction: column;
 }
 .newsletter h3 {
-    color: rgb(251, 96, 18);
-    font-family: var(--font1);
+    color: #25282A;
+    // font-family: var(--font1);
     margin: 4rem;
     font-size: 1.2rem;
     text-align: center;
@@ -311,53 +315,63 @@ hr {
     background: var(--main-color);
     outline: none;
     font-size: 1.2rem;
-    border: currentColor 0.125em solid;
-    border-color: var(--main-color);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     text-shadow: 
     0 0 0.125em hsl(0 0% 100% / 0.5),
     0 0 0.125em currentColor;
-    box-shadow: 0 0 0.5em 0 var(--secondary-color);
+    max-width: 190px;
   }
 
   .newsletter input:hover {
     
-    padding: 1rem 2rem;
-    border-radius: 3rem;
-    background: var(--background-color);
-    outline: none;
-    font-size: 1.2rem;
-    border: currentColor 0.125em solid;
-    border-color: var(--main-color);
-    text-shadow: 
-    0 0 0.125em hsl(0 0% 100% / 0.5),
-    0 0 0.125em currentColor;
+    // padding: 1rem 2rem;
+    // border-radius: 3rem;
+    // background: var(--background-color);
+    // outline: none;
+    // font-size: 1.2rem;
+    // border: currentColor 0.125em solid;
+    // border-color: var(--main-color);
+    // text-shadow: 
+    // 0 0 0.125em hsl(0 0% 100% / 0.5),
+    // 0 0 0.125em currentColor;
     box-shadow: 0 0 0.5em 0 var(--secondary-color);
   }
 
   .button-container button {
-    border-radius: 3rem;
-    color: var(--third-color);
-    padding: 1rem 2rem;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    outline: none;
-    cursor: pointer;
-    background: var(--main-color);
-    margin-top: 3rem;
-    margin-left: 10px;
-    text-shadow: 2px 2px 5px rgba(12, 12, 12, 0.6);
-    border: currentColor 0.125em solid;
-    border-color: var(--main-color);
-    text-shadow: 
-    0 0 0.125em hsl(0 0% 100% / 0.5),
-    0 0 0.125em currentColor;
-    box-shadow: 0 0 0.5em 0 var(--main-color);
+    // border-radius: 3rem;
+    // color: var(--third-color);
+    // padding: 1rem 2rem;
+    // margin-bottom: 20px;
+    // font-size: 1.2rem;
+    // outline: none;
+    // cursor: pointer;
+    // background: var(--main-color);
+    // margin-top: 3rem;
+    // margin-left: 10px;
+    // text-shadow: 2px 2px 5px rgba(12, 12, 12, 0.6);
+    // border: currentColor 0.125em solid;
+    // border-color: var(--main-color);
+    // text-shadow: 
+    // 0 0 0.125em hsl(0 0% 100% / 0.5),
+    // 0 0 0.125em currentColor;
+    // box-shadow: 0 0 0.5em 0 var(--main-color);
+    min-height: 50px;
+margin: 20px;
+background-color: #fb6012;
+color: #25282A;
+border-radius: 12px;
+border: 1px solid rgba(209, 213, 219, 0.3);
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+font-weight: bold;
   }
 
   .button-container button:hover {
     background: var(--background-color);
     border-color: var(--background-color);
     color: var(--main-color);
+    cursor: pointer;
 
   }
 
@@ -368,3 +382,9 @@ hr {
   input::placeholder:hover {
     color: var(--main-color);
   }
+
+.newsContainer {
+    display: flex;
+    justify-content: center;
+    margin: 70px;
+}
