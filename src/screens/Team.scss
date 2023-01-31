@@ -16,12 +16,24 @@
 }
 .headingDescription {
     font-size: 30px;
-    color: #d6420a;
-    text-shadow: 1px 1px 0px black;
+    // color: #d6420a;
+    // text-shadow: 1px 1px 0px black;
     mix-blend-mode: screen;
     animation: fadeIn 2.5s linear forwards;
-    margin-bottom: 50px;
-    margin-top: -6px;
+    // Modif Cécilia
+    // margin-bottom: 50px;
+    // margin-top: -6px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 45px;
+    // filter: drop-shadow(0 0 0.75rem rgb(233, 93, 37));
+    filter: drop-shadow(5px 9px 13px rgb(238, 75, 21));
+    font-family: 'Balthazar', serif;
+    /////
     text-align: center;
 }
  @keyframes fadeIn {
@@ -35,6 +47,10 @@
 @media screen and (min-width: 600px) {
     .headingDescription {
     font-size: 42px;
+    // Ajout Cécilia 
+    margin-bottom: 0px;
+    margin-top: 50px;
+    /////
     }
     .teamText {
 
