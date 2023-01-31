@@ -37,22 +37,23 @@ const App = () => {
         <Header />
       </div>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/newvilain' element={<NewVilain />} />
-        <Route path='/birthday' element={<Birthday />} />
-        <Route path='/conquer' element={<Conquer />} />
-        <Route path='/destroy' element={<Destroy />} />
-        <Route path='/escort' element={<Escort />} />
-        <Route path='/nanny' element={<Nanny />} />
-        <Route path='/stag' element={<Stag />} />
-        <Route path='/team' element={<Team />} />
-        <Route path='/profile/id/:idVilain' element={<Profile />} />
-        <Route path='/profile/name/:nameVilain' element={<Profile />} />
-        <Route path='/userprofilepage' element={<UserProfilePage/>}/>
-        <Route path='/landing' element={user?.email ? <Navigate to="/UserPage" /> : <Landing />}/>
-        <Route path='/sign up' element={user?.email ? <Navigate to="/UserPage" /> : <Signup />}/>
-        <Route path='/login' element={user?.email ? <Navigate to="/UserPage" /> : <Login />}/>
-        <Route path='/UserPage' element={user?.email ? <UserPage user={user} /> : <Navigate to="/landing" />}/>
+        {/* <ScrollToTop /> */}
+            <Route path='/' element={<Home />} />
+            <Route path='/newvilain' element={<NewVilain />} />
+            <Route path='/birthday' element={<Birthday />} />
+            <Route path='/conquer' element={<Conquer />} />
+            <Route path='/destroy' element={<Destroy />} />
+            <Route path='/escort' element={<Escort />} />
+            <Route path='/nanny' element={<Nanny />} />
+            <Route path='/stag' element={<Stag />} />
+            <Route path='/team' element={<Team />} />
+            <Route path='/profile/id/:idVilain' element={<Profile />} />
+            <Route path='/profile/name/:nameVilain' element={<Profile />} />
+            <Route path='/userprofilepage' element={<UserProfilePage/>}/>
+            <Route path='/landing' element={user?.email ? <Navigate to="/UserPage" /> : <Landing />}/>
+            <Route path='/sign up' element={user?.email ? <Navigate to="/UserPage" /> : <Signup />}/>
+            <Route path='/login' element={user?.email ? <Navigate to="/UserPage" /> : <Login />}/>
+            <Route path='/UserPage' element={user?.email ? <UserPage user={user} /> : <Navigate to="/landing" />}/>
       </Routes>
       <div className='footerFromApp'>
         <Footer />

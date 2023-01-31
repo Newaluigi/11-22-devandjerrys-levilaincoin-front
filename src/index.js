@@ -5,6 +5,8 @@ import App from './App'
 import { BrowserRouter } from 'react-router-dom'
 // import reportWebVitals from './reportWebVitals'
 
+import ScrollToTop from './components/ScrollToTop'
+
 export { default as Landing } from './screens/Google Auth/Landing'
 export { default as Login } from './screens/Google Auth/Login'
 export { default as Signup } from './screens/Google Auth/Signup'
@@ -14,6 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <App />
     </BrowserRouter>
   </React.StrictMode>
