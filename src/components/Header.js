@@ -12,9 +12,9 @@ const Header = () => {
       <div className='containButtonHeader'>
         <VilainButton />
       </div>
-      <Link to='/' className='logoFromHeader'>
+      {/* <Link to='/' className='logoFromHeader'>
         <img src={img1} alt='image_du_site' className='image1' />
-      </Link>
+      </Link> */}
       <Link to='/' className='logoFromHeader2'>
         <img
           src={require('../assets/img/leVilainCoinLogo.png')}
@@ -22,11 +22,15 @@ const Header = () => {
           className='image2'
         />
       </Link>
-      <div className='searchModuleHeader'>
-        <Search />
-      </div>
-      <div className='menuBurgerHeader'>
-        <BurgerMenu />
+      {/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */}
+      <div className='searchBurger'>
+        {/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */}
+        <div className='searchModuleHeader'>
+          <Search />
+        </div>
+        <div className='menuBurgerHeader'>
+          <BurgerMenu />
+        </div>
       </div>
     </div>
   )

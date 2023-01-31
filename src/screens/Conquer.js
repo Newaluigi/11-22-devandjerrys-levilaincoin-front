@@ -23,10 +23,10 @@ const Conquer = () => {
         </Link>
       </div>
       <div className='serviceDescription'>
-        <hr className='shine2'></hr>
         <h2 className='headingDescription'>
-          Choisissez votre prestataire pour conquérir le monde
+          - Choisissez votre prestataire pour conquérir le monde -
         </h2>
+        <hr className='shine2'></hr>
         <div className='descriptionImg'>
           <span className='tag-wrap'>
             <img

@@ -47,12 +47,20 @@ function Team() {
                   <span className='post'>Dev Dark-end</span>
                   <ul className='social'>
                     <li>
-                      <a href='https://www.linkedin.com/in/moana-vetea/'>
+                      <a
+                        href='https://www.linkedin.com/in/moana-vetea/'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
                         <FaLinkedinIn className='socialIcon' />
                       </a>
                     </li>
                     <li>
-                      <a href='https://github.com/MoXvetea'>
+                      <a
+                        href='https://github.com/MoXvetea'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
                         <FaGithub className='socialIcon' />
                       </a>
                     </li>
@@ -68,12 +76,20 @@ function Team() {
                   <span className='post'>CSS killer</span>
                   <ul className='social'>
                     <li>
-                      <a href='https://www.linkedin.com/in/david-oviedo/'>
+                      <a
+                        href='https://www.linkedin.com/in/david-oviedo/'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
                         <FaLinkedinIn className='socialIcon' />
                       </a>
                     </li>
                     <li>
-                      <a href='https://github.com/D4ve-Code'>
+                      <a
+                        href='https://github.com/D4ve-Code'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
                         <FaGithub className='socialIcon' />
                       </a>
                     </li>
@@ -89,12 +105,20 @@ function Team() {
                   <span className='post'>Code warrior</span>
                   <ul className='social'>
                     <li>
-                      <a href='https://www.linkedin.com/in/mariontassy/'>
+                      <a
+                        href='https://www.linkedin.com/in/mariontassy/'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
                         <FaLinkedinIn className='socialIcon' />
                       </a>
                     </li>
                     <li>
-                      <a href='https://github.com/Noiramd31'>
+                      <a
+                        href='https://github.com/Noiramd31'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
                         <FaGithub className='socialIcon' />
                       </a>
                     </li>
@@ -110,12 +134,20 @@ function Team() {
                   <span className='post'>Web Leader</span>
                   <ul className='social'>
                     <li>
-                      <a href='https://www.linkedin.com/in/cecilia-caillaud/'>
+                      <a
+                        href='https://www.linkedin.com/in/cecilia-caillaud/'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
                         <FaLinkedinIn className='socialIcon' />
                       </a>
                     </li>
                     <li>
-                      <a href='https://github.com/CCeciliaDev'>
+                      <a
+                        href='https://github.com/CCeciliaDev'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
                         <FaGithub className='socialIcon' />
                       </a>
                     </li>
@@ -137,7 +169,11 @@ function Team() {
                       <FaLinkedinIn className='socialIcon' />
                     </li>
                     <li>
-                      <a href='https://github.com/RoadRiders'>
+                      <a
+                        href='https://github.com/RoadRiders'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
                         <FaGithub className='socialIcon' />
                       </a>
                     </li>
@@ -153,12 +189,20 @@ function Team() {
                   <span className='post'>Web Desaigne</span>
                   <ul className='social'>
                     <li>
-                      <a href='https://www.linkedin.com/in/alexandre-levillain/'>
+                      <a
+                        href='https://www.linkedin.com/in/alexandre-levillain/'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
                         <FaLinkedinIn className='socialIcon' />
                       </a>
                     </li>
                     <li>
-                      <a href='https://github.com/Newaluigi'>
+                      <a
+                        href='https://github.com/Newaluigi'
+                        target='_blank'
+                        rel='noreferrer'
+                      >
                         <FaGithub className='socialIcon' />
                       </a>
                     </li>
