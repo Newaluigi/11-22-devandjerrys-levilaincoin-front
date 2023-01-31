@@ -22,10 +22,10 @@ const Destroy = () => {
         </Link>
       </div>
       <div className='serviceDescription'>
-        <hr className='shine2'></hr>
         <h2 className='headingDescription'>
-          Choisissez votre prestataire pour détruire
+          - Choisissez votre prestataire pour détruire -
         </h2>
+        <hr className='shine2'></hr>
         <div className='descriptionImg'>
           <span className='tag-wrap'>
             <img
