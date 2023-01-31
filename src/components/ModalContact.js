@@ -15,7 +15,7 @@ const ModalContact = ({ open, children, onClose }) => {
       <div className='overlayModal'></div>
       <div className='modalStyle'>
         {children}
-        <div className='form'>
+        <form className='form' method='post'>
           <div className='boxLogo'>
             <img src={logo} alt='logo' className='logo' />
           </div>
@@ -38,9 +38,11 @@ const ModalContact = ({ open, children, onClose }) => {
           <button className='crossModaleButton' onClick={onClose}>
             <SlClose />
           </button>
-        </div>
+        </form>
 
-        <button className='modaleButton'>ENVOYER</button>
+        <button className='modaleButton' onClick={onClose}>
+          ENVOYER
+        </button>
       </div>
     </>,
     //VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
