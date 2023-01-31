@@ -213,17 +213,18 @@ function Team() {
           </div>
         </div>
       </div>
-      <div className='news'>
-        <div className='newsletter'>
-          <h3>
-            Ne manquez pas les prochaines vilainies : inscrivez-vous à notre
-            newsletter !
-          </h3>
-          <form className=''>
-            <input className='userMail' type='text' placeholder='Mail' />
-          </form>
-          <div className='button-container'>
-            {/* <form>            Email :
+      <div className='newsContainer'>
+        <div className='news'>
+          <div className='newsletter'>
+            <h3>
+              Ne manquez pas les prochaines vilainies : inscrivez-vous à notre
+              newsletter!
+            </h3>
+            <form className=''>
+              <input className='userMail' type='text' placeholder='Mail' />
+            </form>
+            <div className='button-container'>
+              {/* <form>            Email :
         <input
           type="email"
           name="email"
@@ -234,7 +235,8 @@ function Team() {
       </label>
       </form> */}
 
-            <button onClick={() => onPressSubmit()}>Submit</button>
+              <button onClick={() => onPressSubmit()}>Submit</button>
+            </div>
           </div>
         </div>
       </div>
