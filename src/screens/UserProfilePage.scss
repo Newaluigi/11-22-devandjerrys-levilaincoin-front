@@ -19,9 +19,6 @@
     flex-direction: column;
     width: 20%;
     height: 80%;
-    // background-color: rgba(251, 96, 18, 0.68);
-    // color: rgb(17, 16, 16);
-    // margin-top:60px;
     padding: 30px;
     border: 1px;
     background-color: var(#25282A);
@@ -40,9 +37,9 @@
     width: 70%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    // overflow: auto;
-    // flex-wrap: wrap-reverse;
+    justify-content: flex-start;
+    overflow: auto;
+    // flex-wrap: wrap;
     border: 1px solid rgba(209, 213, 219, 0.3);
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -57,20 +54,28 @@
 }
 
 .orderId1 {
-    text-shadow: rgba(212, 211, 211, 0.3) -10px 19px 68px;
+    color: white;
+    filter: drop-shadow(0 0 0.75rem black);
+    // font-family: 'Balthazar', serif;
     margin: 0;
     width: 30%;
 }
 .orderId2{
-    text-shadow: rgba(212, 211, 211, 0.3) -10px 19px 68px;
+    color: white;
+    filter: drop-shadow(0 0 0.75rem black);
+    // font-family: 'Balthazar', serif;
     margin: 0;
 }
 .orderId3 {
-    text-shadow: rgba(212, 211, 211, 0.3) -10px 19px 68px;
+    color: white;
+    filter: drop-shadow(0 0 0.75rem black);
+    // font-family: 'Balthazar', serif;
     margin: 0;
 }
 .orderId4{
-    text-shadow: rgba(212, 211, 211, 0.3) -10px 19px 68px;
+    color: white;
+    filter: drop-shadow(0 0 0.75rem black);
+    // font-family: 'Balthazar', serif;
     display: none;
 }
 
@@ -78,7 +83,7 @@
     overflow: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 80%;
     height: 40vh;
     margin: 30px;
@@ -90,10 +95,9 @@
 .orderHistory::-webkit-scrollbar {
     display: none;
 }
-// .favoriteField::-webkit-scrollbar {
-//     display: none;
-// }
-
+.favoriteField::-webkit-scrollbar{
+    background: transparent;
+}
 
 @media (max-width: 600px) {
 
@@ -113,7 +117,6 @@
             display: flex;
             justify-content: flex-start;
             height: 60vh;
-            // overflow: scroll;
         }
 
     }
