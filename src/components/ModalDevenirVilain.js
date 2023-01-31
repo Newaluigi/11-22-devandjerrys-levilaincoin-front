@@ -18,6 +18,7 @@ const ModalDevenirVilain = ({ open, children, onClose }) => {
           <input placeholder='Prénom' />
           <input placeholder='Nom' />
           <input placeholder='Email' />
+          <input placeholder='Votre prix' />
           {/* <input type='select' multiple='non' placeholder='Type de prestation' /> */}
           <select>
             <option placeholder=''>--Type de prestation--</option>

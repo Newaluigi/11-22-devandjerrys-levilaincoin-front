@@ -13,7 +13,7 @@ const ModalConnexion = ({ open, children, onClose, onCloseOk, leMotDePasse, motD
   if (!open) return null
   return ReactDOM.createPortal(
     <>
-      <div className='overlayModal'></div>
+      <div className='overlayModalConnexion'></div>
       <div className='modalStyle' >
         {children}
         <div className='form'>

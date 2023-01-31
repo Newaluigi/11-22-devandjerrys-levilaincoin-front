@@ -10,10 +10,11 @@
 .inputSearch {
     color: var(--third-color);
     background-color: transparent;
+    
 }
 
 .glassPicture {
-    height: 20px;
+    height: 40px;
     width: auto;
 }
 @media (min-width: 600px) { 
@@ -24,6 +25,9 @@
         // flex-direction: row;
         // justify-content: flex-end;     
     }
+    // .inputSearch {
+    //     display: none;
+    // }
 }
 @media (max-width: 599px) {
     .inputSearch{
