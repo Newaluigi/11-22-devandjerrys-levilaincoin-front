@@ -22,10 +22,10 @@ const Birthday = () => {
         </Link>
       </div>
       <div className='serviceDescription'>
-        <hr className='shine2'></hr>
         <h2 className='headingDescription'>
-          Choisissez votre prestataire pour un anniversaire
+          - Choisissez votre prestataire pour un anniversaire -
         </h2>
+        <hr className='shine2'></hr>
         <div className='descriptionImg'>
           <span className='tag-wrap'>
             <img

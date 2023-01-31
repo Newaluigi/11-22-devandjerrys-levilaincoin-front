@@ -23,10 +23,10 @@ function Team() {
           <span className='beBack'> retour </span>
         </Link>
       </div>
-      <div className='serviceDescription'>
+      <div className='teamDescription'>
         <hr className='shine2'></hr>
         <h2 className='headingDescription'>Notre vilaine équipe !</h2>
-        <div className='descriptionText'>
+        <div className='teamText'>
           Nous avons à coeur de proposer un service qui mettra le chaos dans
           votre quotidien... Nous sommes trop dangereux pour être présents dans
           le catalogue du site. Mais nous proposons des créations web

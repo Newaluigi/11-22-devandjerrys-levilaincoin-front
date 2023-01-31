@@ -5,6 +5,8 @@ import axios from 'axios'
 import Rating from '../components/Rating'
 import DisplayVilainServicePage from '../components/DisplayVilainServicePage'
 import ContactButton from '../components/ContactButton'
+import { Link } from 'react-router-dom'
+import { HiArrowLeft } from 'react-icons/hi'
 
 const DetailedCardService = props => {
   let vilainFav = true
@@ -36,7 +38,6 @@ const DetailedCardService = props => {
 
   return (
     <div className='Card-item'>
-      {console.log('vilainInfoA', vilainInfoA)}
       <div className='favorite'>
         <Favorite isFavorite={vilainFav} />
       </div>
