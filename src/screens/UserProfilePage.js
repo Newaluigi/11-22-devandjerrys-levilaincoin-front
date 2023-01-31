@@ -68,7 +68,7 @@ const UserProfilePage = () => {
             : null}
         </div>
       </div>
-      <div className='divTitre'>
+      <div className='divTitre bas'>
         <h1 className="orderId3">Historique</h1>
       </div>
       {/* {console.log(changeFavorite)} */}

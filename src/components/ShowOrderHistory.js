@@ -27,7 +27,7 @@ const ShowOrderHistory = (props) => {
             <div className="histoText">
             <Link className="linkVilain" to={`/profile/id/${idVilain}`}>
                 {/* {console.log(vilainInfo1.favorite)} */}
-                <p className="orderId">Nom:{histoName}</p>
+                <p className="orderId vilainName">{histoName}</p>
                 <div className="histoStar">
                     <Rating star={histoRating} />
                 </div>
