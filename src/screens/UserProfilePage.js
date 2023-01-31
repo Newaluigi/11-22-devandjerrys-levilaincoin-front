@@ -15,7 +15,7 @@ const UserProfilePage = () => {
   useEffect(() => {
     const tabHistos = JSON.parse(localStorage.getItem('histo'));
     setTabHistos(tabHistos);
-    setChangeFavorite(true);
+    setChangeFavorite(true)
     // console.log(tabHistos);
     // console.log(changeFavorite); 
   }, [changeFavorite, tabHistos.favorite])
@@ -60,81 +60,57 @@ const UserProfilePage = () => {
                     key={vilainInfo.id}
                     changeFavorite={changeFavorite}
                     changeFavoriteStatus={event => setChangeFavorite(event)}
-                    userFavorite={vilainInfo.favorite}
-                    userHisto={tabHistos}
+                    // userFavorite={vilainInfo.favorite}
+                    // userHisto={tabHistos}
                   />
                 )
               })
             : null}
         </div>
       </div>
-      <div className='divTitre'>
+      <div className='divTitre bas'>
         <h1 className="orderId3">Historique</h1>
       </div>
       {/* {console.log(changeFavorite)} */}
       <div className='orderHistory'>
         {tabHistos ?
-         tabHistos.filter((tabHisto) => tabHisto.favorite !== null)
-         .map(tabHisto => {
-          //  tabHistos.map(tabHisto => {
-            return (
-              <ShowOrderHistory
-                key={tabHisto.id}
-                histoName={tabHisto.name}
-                histoRating={tabHisto.rating}
-                histoPrice={tabHisto.montant}
-                histoDate={tabHisto.date}
-                histoPicture={tabHisto.images.sm} 
-                histoIsFav={tabHisto.favorite}
-                // gestion favori
-                vilainInfo1={tabHisto}
-                changeFavorite={tabHisto.favorite}
-                // changeFavorite={changeFavorite}
-                changeFavoriteStatus={event => setChangeFavorite(event)}
-                userHisto={tabHisto}
+          tabHistos.filter((tabHisto) => tabHisto.favorite !== null)
+            .map(tabHisto => {
+              //  tabHistos.map(tabHisto => {
+              return (
+                <ShowOrderHistory
+
+                  // histoIsFav={tabHisto.favorite}
+                  vilainInfo1={tabHisto}
+                  changeFavorite={tabHisto.favorite}
+                  changeFavoriteStatus={event => setChangeFavorite(event)}
+                  // userHisto={tabHisto}
+
+
+
+
+
+
+
+                  key={tabHisto.id}
+                  histoName={tabHisto.name}
+                  histoRating={tabHisto.rating}
+                  histoPrice={tabHisto.montant}
+                  histoDate={tabHisto.date}
+                  histoPicture={tabHisto.images.sm}
+
                 // isFavorite={setIsFavorite(tabHisto.favorite)}
                 // changeIsFavorite={event => setIsFavorite(event)}    
-                /> 
-                        
-            )
-          })
+                />
+
+              )
+            })
           : null}
-                
+
       </div>
-      
+
     </div>
   )
 }
 
 export default UserProfilePage;
-
-
-{/* <ShowFavorite
-vilainInfo1={vilainInfo1}
-key={vilainInfo1.id}
-isFavorite={isFavorite}
-changeIsFavorite={event => setIsFavorite(event)}
-// fav?
-userFavorite={users.favorite}
-/> */}
-
-
-
-// {tabHistos
-//   ? tabHistos.map(vilainInfo => {
-//     return (
-//       tabHistos[0].favorite ? tabHistos.map(vilainInfo => {
-//         return (
-//           <ShowFavorite
-//             vilainInfo1={vilainInfo}
-//             key={vilainInfo.id}
-//             // isFavorite={isFavorite}
-//             // changeIsFavorite={event => setIsFavorite(event)}
-//             // fav?
-//             userFavorite={vilainInfo.favorite}
-//           />
-//         )
-//       }) : null
-//      )
-//    })
-//    : null} 
