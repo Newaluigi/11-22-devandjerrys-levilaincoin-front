@@ -12,6 +12,7 @@ ul{
 }
 /* ----------CSS du menuburger en DESKTOP------------*/
 @media screen and (min-width: 601px) {
+  
     .menuListDiv{
         position: absolute;
         opacity: 0.8;
@@ -21,7 +22,7 @@ ul{
         backdrop-filter: blur(16px) saturate(180%);
         -webkit-backdrop-filter: blur(16px) saturate(180%);
         background-color: transparent;
-        // z-index: 1;
+        z-index: 1;
         .menuList{
             margin: 0;
             border-radius: 12px;

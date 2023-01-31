@@ -1,4 +1,5 @@
 import { HiArrowNarrowRight } from 'react-icons/hi'
+import { useState } from 'react'
 
 const Service = ({ img, details, alt }) => {
   return (
