@@ -244,3 +244,35 @@
         
         }
     }}
+
+    
+//BACK ARROW
+.willBeBack{
+    margin-top: 50px;
+    text-decoration: none;
+    opacity: 0.6;
+}
+.willBeBack:hover{
+    opacity: 1;
+}
+// .beBack:hover{
+//     opacity: 1;
+// }
+
+.beBack {
+    color :rgb(251, 96, 18);
+    text-decoration: none;
+    font: var(--font2);
+    margin-left: 50px;
+    // opacity: 0.6;
+}
+.iconeBack{
+    scale: 3;
+    width: 10%;
+
+    // opacity: 0.6;
+    color : rgb(251, 96, 18)
+}
+.iconeBack:hover{
+    opacity: 1;
+}
