@@ -248,32 +248,57 @@
 
     
 //BACK ARROW
-.willBeBack{
+.willBeBack2{
     margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
     text-decoration: none;
     opacity: 0.6;
+    // display: flex;
+    // display: inline-block;
+    // display: grid;
+    // grid-template-columns: 50% 50%;
+    // display :inline;
 }
-.willBeBack:hover{
+.willBeBack2:hover{
     opacity: 1;
 }
 // .beBack:hover{
 //     opacity: 1;
 // }
 
-.beBack {
-    color :rgb(251, 96, 18);
-    text-decoration: none;
-    font: var(--font2);
-    margin-left: 50px;
-    // opacity: 0.6;
-}
-.iconeBack{
-    scale: 3;
-    width: 10%;
-
+// .beBack2 {
+//     color :rgb(251, 96, 18);
+//     text-decoration: none;
+//     font: var(--font2);
+//     margin-left: 0px;
+//     // opacity: 0.6;
+// }
+.iconeBack2{
+    scale: 4;
+    // width: 30%;
+    // padding-right: 20px;
     // opacity: 0.6;
     color : rgb(251, 96, 18)
 }
-.iconeBack:hover{
+.iconeBack2:hover{
     opacity: 1;
+}
+
+.backButton {
+    margin-left: 50px;
+    background-color: transparent;
+    border: none;
+    width: 10%;
+    color: rgb(251, 96, 18);
+    // font-size: 22px;
+}
+
+.backButton:hover {
+cursor: pointer;
+}
+.batou{
+    font-size: 20px;
+    // justify-content: center;
+    // align-items: center;
 }

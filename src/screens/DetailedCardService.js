@@ -40,14 +40,14 @@ const DetailedCardService = props => {
 
   return (
     <div>
-      <div className='willBeBack'>
+      <div className='willBeBack2'>
         <button className='backButton' onClick={() => history(-1)}>
-          {' '}
+          <HiArrowLeft className='iconeBack2' /> <p className='batou'>retour</p>
         </button>
-        <Link to='/conquer' style={{ textDecoration: 'none' }}>
-          <HiArrowLeft className='iconeBack' />{' '}
-          <span className='beBack'> retour </span>
-        </Link>
+        {/* <Link to='/conquer' style={{ textDecoration: 'none' }}>
+        <HiArrowLeft className='iconeBack' />{' '}
+        <span className='beBack'> retour </span>
+        </Link> */}
       </div>
       <div className='Card-item'>
         <div className='favorite'>
@@ -150,13 +150,6 @@ const DetailedCardService = props => {
         </div>
         {/* <button className='contactButton'>Contacter ce Vilain</button> */}
       </div>
-      <form className=''>
-        <input
-          type='button'
-          value='Go one step back'
-          onClick='history.back()'
-        />
-      </form>
     </div>
   )
 }
