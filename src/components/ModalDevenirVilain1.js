@@ -8,7 +8,7 @@ import { SlClose } from 'react-icons/sl'
 const ModalDevenirVilain1 = ({ open, children, onClose }) => {
   // Conditionne l'affichage du Modal
   if (!open) return null
-
+  const [customers, setCustomers] = useState([])
   const [vilains, setVilains] = useState([])
 
   const [id, setId] = useState([])
@@ -16,6 +16,8 @@ const ModalDevenirVilain1 = ({ open, children, onClose }) => {
   const [lastName, setLastName] = useState()
   const [email, setEmail] = useState()
   const [price, setPrice] = useState()
+  const [occupation, setOccupation] = useState()
+  const [achievements, setAchievements] = useState()
   const [password, setPassword] = useState()
   const [passwordConfirmation, setPasswordConfirmation] = useState()
 
@@ -29,20 +31,23 @@ const ModalDevenirVilain1 = ({ open, children, onClose }) => {
   // XXXXXXXXXXXXXXXXXXXXXXX  POPULATE PROFILE  XXXXXXXXXXXXXXXXXXXXXXXXXX
   // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   const populateProfile = () => {
-    if (firstName && lastName && email && password && passwordConfirmation) {
+    if (firstName && lastName && email && price && occupation && achievements && password && passwordConfirmation) {
       // create new profile object
       let newProfile = {
         id: uuidv1(),
-        firstName: firstName,
-        lastName: lastName,
+        name: firstName + " " + lastName,
+        // lastName: lastName,
+        price: price,
+        achievements: achievements,
+        occupation: occupation,
         email: email,
         password: password,
         passwordConfirmation: passwordConfirmation
       }
-    
-  
-     // merging useState vilain with temp useState (on fusionne )
-     let profile = [newProfile, ...vilains]
+
+
+      // merging useState vilain with temp useState (on fusionne )
+      let profile = [newProfile, ...vilains]
 
 
       // setting useState with new profile
@@ -74,6 +79,7 @@ const ModalDevenirVilain1 = ({ open, children, onClose }) => {
   return ReactDOM.createPortal(
     <>
       <div className='overlayModal'></div>
+      {console.log(email)}
       <div className='modalStyle'>
         {children}
         <div className='form'>
@@ -83,23 +89,23 @@ const ModalDevenirVilain1 = ({ open, children, onClose }) => {
           <h1>Je veux devenir prestataire</h1>
 
           <input placeholder='Prénom'
-          onChange={e => setFirstName(e.target.value)}
+            onChange={e => setFirstName(e.target.value)}
             value={firstName || ''}
-            />
-          <input placeholder='Nom' 
-             onChange={e => setLastName(e.target.value)}
-             value={lastName || ''}
-           />
-          <input placeholder='Email' 
-              onChange={e => setEmail(e.target.value)}
-              value={email || ''}
-            />
-          <input placeholder='Votre prix' 
-              onChange={e => setPrice(e.target.value)}
-              value={price || ''}
-            />
+          />
+          <input placeholder='Nom'
+            onChange={e => setLastName(e.target.value)}
+            value={lastName || ''}
+          />
+          <input placeholder='Email'
+            onChange={e => setEmail(e.target.value)}
+            value={email || ''}
+          />
+          <input placeholder='Votre prix'
+            onChange={e => setPrice(e.target.value)}
+            value={price || ''}
+          />
           {/* <input type='select' multiple='non' placeholder='Type de prestation' /> */}
-          <select>
+          <select id='selectOccupation' onChange={(e) => setOccupation(e.target.value)}>
             <option placeholder=''>--Type de prestation--</option>
             <option value='Conquer'>Conquérir le monde</option>
             <option value='Escort'>Escort Vilain</option>
@@ -108,9 +114,8 @@ const ModalDevenirVilain1 = ({ open, children, onClose }) => {
             <option value='Stag'>EVG et EVJF</option>
             <option value='Destroy'>Dégradation</option>
           </select>
-          <textarea placeholder='Votre fierté' />
+          <textarea placeholder='Votre fierté' onChange={(e) => setAchievements(e.target.value)} />
 
-          {/*pas de paramètre à cette fonction. Elle sera exécuté sur onClick mais elle ne cible rien dans le HTML*/}
           <button className='crossModaleDevenirVilain' onClick={onClose}>
             <SlClose />
           </button>
