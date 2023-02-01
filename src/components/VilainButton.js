@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import son1 from '../assets/audio/joker1.mp3'
-import ModalDevenirVilain from './ModalDevenirVilain'
+import ModalDevenirVilain1 from './ModalDevenirVilain1'
 // import { Link } from 'react-router-dom'
 // import { redirect, useNavigate } from 'react-router-dom'
 
@@ -23,10 +23,10 @@ const VilainButton = () => {
           />
           <p className='textBtn'>Devenir vilain</p>
         </button>
-        <ModalDevenirVilain
+        <ModalDevenirVilain1
           open={devVilainIsOpen}
           onClose={() => setDevVilainIsOpen(false)}
-        ></ModalDevenirVilain>
+        ></ModalDevenirVilain1>
       </div>
     </>
   )

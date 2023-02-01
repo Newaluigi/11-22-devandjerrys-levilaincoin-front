@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import ShowFavorite from '../components/Showfavorite'
 import ShowUser from '../components/ShowUser'
 import ShowOrderHistory from '../components/ShowOrderHistory'
+import { Link } from 'react-router-dom'
 
 const UserProfilePage = () => {
   const [users, setUsers] = useState([])
@@ -47,6 +48,9 @@ const UserProfilePage = () => {
               )
             })
             : null}
+        <Link className='linkDeconnexion' to={'/'} >
+            <p className='deconnexion'>Déconnexion</p>
+            </Link>
         </div>
         <h1 className="orderId4">Favoris</h1>
         <div className='favoriteField'>

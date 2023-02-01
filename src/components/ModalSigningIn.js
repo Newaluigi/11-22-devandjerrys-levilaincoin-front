@@ -23,7 +23,7 @@ const ModalSigningIn = ({ open, children, onClose }) => {
   // XXXXXXXXXXXXXXXXXXXXXXX  POPULATE PROFILE  XXXXXXXXXXXXXXXXXXXXXXXXXX
   // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   const populateProfile = () => {
-    if (firstName && lastName && email && password && passwordConfirmation) {
+    if (firstName) {
       // create new profile object
       let newProfile = {
         id: uuidv1(),

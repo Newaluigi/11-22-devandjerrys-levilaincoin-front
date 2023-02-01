@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import ModalContact from './ModalContact'
-import son2 from '../assets/audio/waluigi12.wav'
+import son2 from '../assets/audio/Waluigi12.wav'
 
 const ContactButton = () => {
   const [isOpen, setIsOpen] = useState(false)

@@ -4,11 +4,12 @@ import axios from 'axios'
 import ReactDOM from 'react-dom'
 import logo from '../assets/img/leVilainCoinLogo.png'
 import { SlClose } from 'react-icons/sl'
+import nuclearbomb from "../assets/img/nuclear-bomb.svg"
 
 const ModalDevenirVilain1 = ({ open, children, onClose }) => {
   // Conditionne l'affichage du Modal
   if (!open) return null
-
+  // const [customers, setCustomers] = useState([])
   const [vilains, setVilains] = useState([])
 
   const [id, setId] = useState([])
@@ -16,6 +17,8 @@ const ModalDevenirVilain1 = ({ open, children, onClose }) => {
   const [lastName, setLastName] = useState()
   const [email, setEmail] = useState()
   const [price, setPrice] = useState()
+  const [occupation, setOccupation] = useState()
+  const [achievements, setAchievements] = useState()
   const [password, setPassword] = useState()
   const [passwordConfirmation, setPasswordConfirmation] = useState()
 
@@ -23,36 +26,45 @@ const ModalDevenirVilain1 = ({ open, children, onClose }) => {
     // axios.get('http://localhost:4242/customers').then(response => {
     axios.get('http://localhost:4242/').then(response => {
       setVilains(response.data)
+      // setCustomers(response.data)
     })
   }, [])
 
   // XXXXXXXXXXXXXXXXXXXXXXX  POPULATE PROFILE  XXXXXXXXXXXXXXXXXXXXXXXXXX
   // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   const populateProfile = () => {
-    if (firstName && lastName && email && password && passwordConfirmation) {
+    if (firstName) {
       // create new profile object
       let newProfile = {
         id: uuidv1(),
-        firstName: firstName,
+        // firstName: firstName,
+        name: firstName + " " + lastName,
         lastName: lastName,
-        email: email,
-        password: password,
-        passwordConfirmation: passwordConfirmation
+        price: price,
+        achievements: achievements,
+        occupation: occupation,
+        images: {"sm": "../assets/img/nuclear-bomb.svg"}
+        // email: email,
+        // password: password,
+        // passwordConfirmation: passwordConfirmation
       }
-    
-  
-     // merging useState vilain with temp useState (on fusionne )
-     let profile = [newProfile, ...vilains]
+      console.log("eeeeeeeeeeeeeeeeeeeeeeeeeee");
 
+      // merging useState vilain with temp useState (on fusionne )
+      // let profile = [newProfile, ...customers]
+      let profile = [newProfile, ...vilains]
 
+console.log(profile);
       // setting useState with new profile
-      setCustomers(profile)
-      console.log(profile + '   ' + typeof profile.id)
+      setVilains(profile)
       // clearing input field (on vide les temporary states)
       setId()
       setFirstName()
       setLastName()
       setEmail()
+      setPrice()
+      setOccupation()
+      setAchievements()
       setPassword()
       setPasswordConfirmation()
       // writing on server file
@@ -63,7 +75,7 @@ const ModalDevenirVilain1 = ({ open, children, onClose }) => {
   // write to server side Json XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
   const saveJson = updateCustomers => {
     // api url
-    const url = 'http://localhost:4242/write/customers'
+    const url = 'http://localhost:4242/write/villains'
 
     axios.post(url, updateCustomers).then(Response => {
       console.log('incoming')
@@ -74,6 +86,7 @@ const ModalDevenirVilain1 = ({ open, children, onClose }) => {
   return ReactDOM.createPortal(
     <>
       <div className='overlayModal'></div>
+      
       <div className='modalStyle'>
         {children}
         <div className='form'>
@@ -83,40 +96,44 @@ const ModalDevenirVilain1 = ({ open, children, onClose }) => {
           <h1>Je veux devenir prestataire</h1>
 
           <input placeholder='Prénom'
-          onChange={e => setFirstName(e.target.value)}
+            onChange={e => setFirstName(e.target.value)}
             value={firstName || ''}
-            />
-          <input placeholder='Nom' 
-             onChange={e => setLastName(e.target.value)}
-             value={lastName || ''}
-           />
-          <input placeholder='Email' 
-              onChange={e => setEmail(e.target.value)}
-              value={email || ''}
-            />
-          <input placeholder='Votre prix' 
-              onChange={e => setPrice(e.target.value)}
-              value={price || ''}
-            />
+          />
+          {/* {console.log(firstName)}
+          {console.log(email)}
+          {console.log(occupation)}
+          {console.log(achievements)}
+          {console.log(price)} */}
+          <input placeholder='Nom'
+            onChange={e => setLastName(e.target.value)}
+            value={lastName || ''}
+          />
+          <input placeholder='Email'
+            onChange={e => setEmail(e.target.value)}
+            value={email || ''}
+          />
+          <input placeholder='Votre prix'
+            onChange={e => setPrice(e.target.value)}
+            value={price || ''}
+          />
           {/* <input type='select' multiple='non' placeholder='Type de prestation' /> */}
-          <select>
+          <select id='selectOccupation' onChange={(e) => setOccupation(e.target.value)}>
             <option placeholder=''>--Type de prestation--</option>
-            <option value='Conquer'>Conquérir le monde</option>
-            <option value='Escort'>Escort Vilain</option>
-            <option value='Birthday'>Fête d'anniversaire</option>
-            <option value='Nanny'>Bad nounou</option>
-            <option value='Stag'>EVG et EVJF</option>
-            <option value='Destroy'>Dégradation</option>
+            <option value='conquer'>Conquérir le monde</option>
+            <option value='escort'>Escort Vilain</option>
+            <option value='birthday'>Fête d'anniversaire</option>
+            <option value='nanny'>Bad nounou</option>
+            <option value='stag'>EVG et EVJF</option>
+            <option value='destroy'>Dégradation</option>
           </select>
-          <textarea placeholder='Votre fierté' />
+          <textarea placeholder='Votre fierté' onChange={(e) => setAchievements(e.target.value)} />
 
-          {/*pas de paramètre à cette fonction. Elle sera exécuté sur onClick mais elle ne cible rien dans le HTML*/}
           <button className='crossModaleDevenirVilain' onClick={onClose}>
             <SlClose />
           </button>
         </div>
-
-        <button className='modaleButton'>SOUMETTRE</button>
+        {/* <button className='modaleButton' >SOUMETTRE</button> */}
+        <button className='modaleButton' onClick={populateProfile}>SOUMETTRE</button>
       </div>
     </>,
     //VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
