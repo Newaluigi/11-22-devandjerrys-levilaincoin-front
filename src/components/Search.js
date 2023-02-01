@@ -45,6 +45,7 @@ const Search = () => {
         onChange={e => setSearch(e.target.value)}
         style={{ display: isInputDisplayed }}
       />
+      {console.log(vilains)}
       <SearchList
         search={search}
         vilainsDisplayed={vilainsDisplayed}
