@@ -1,12 +1,5 @@
-// import React from 'react'
-// import Favorite from '../components/Favorite'
-
-const NewVilain = () => {
-  // let vilainFav = true
+const NewVliain = () => {
   return
-  // <div>
-  //   <Favorite isFavorite={vilainFav} />{' '}
-  // </div>
 }
 
-export default NewVilain
+export default NewVliain

@@ -235,10 +235,17 @@ function Team() {
       </label>
       </form> */}
 
-              <button onClick={() => onPressSubmit()}>Submit</button>
+              <button onClick={() => onPressSubmit()}>Envoyer</button>
             </div>
           </div>
         </div>
+      </div>
+      <hr className='contactHr'></hr>
+      <p className='contactH'>Contactez-nous !</p>
+      <div className='contacctCtn'>
+        <Link to='/error' style={{ textDecoration: 'none' }}>
+          <button className='contactBtn'>Formulaire</button>
+        </Link>
       </div>
     </div>
   )
