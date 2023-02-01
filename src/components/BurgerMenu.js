@@ -28,7 +28,7 @@ const BurgerMenu = () => {
 const [motDePasse, setMotDePasse] = useState("")
 
 const onCloseOk =()=>{
-  if(motDePasse === "123456"){
+  if(motDePasse === "1234567890"){
   setConnexionsetIsOpen(false)
   setMotDePasse("")
   }else{
@@ -71,9 +71,8 @@ const onCloseOk =()=>{
                     leMotDePasse={setMotDePasse}
                     motDePasse={motDePasse}
                     setConnexionsetIsOpen={setConnexionsetIsOpen}
+                  onClose={() => setConnexionsetIsOpen(false)}
                   ></ModalConnexion>
-                  {console.log(motDePasse)}
-                  {/* onClose={() => setConnexionsetIsOpen(false)} */}
                 </div>
                 {/* Modale d'inscription ci-dessous */}
                 <div>

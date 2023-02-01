@@ -14,6 +14,7 @@ import Nanny from './screens/Nanny'
 import Stag from './screens/Stag'
 import Profile from './components/Profile'
 import UserProfilePage from './screens/UserProfilePage'
+import Error from './screens/Error'
 // XXXXXXXXXXXXXXXXXXXXX   import pour GOOGLE AUTH  XXXXXXXXXXXXXXXXX
 import Landing from './screens/Google Auth/Landing'
 import Login from './screens/Google Auth/Login'
@@ -47,6 +48,7 @@ const App = () => {
             <Route path='/nanny' element={<Nanny />} />
             <Route path='/stag' element={<Stag />} />
             <Route path='/team' element={<Team />} />
+            <Route path='/error' element={<Error />} />
             <Route path='/profile/id/:idVilain' element={<Profile />} />
             <Route path='/profile/name/:nameVilain' element={<Profile />} />
             <Route path='/userprofilepage' element={<UserProfilePage/>}/>
