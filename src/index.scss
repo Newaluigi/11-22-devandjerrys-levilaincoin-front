@@ -7,19 +7,29 @@
 @import "./components/Service.scss";
 @import "./components/BurgerMenu.scss";
 @import "./screens/PageServices.scss";
-@import "./components/Calendar.scss";
 @import "./components/ResponsabilityButton.scss";
 @import "./components/TeamButton.scss";
 @import "./screens/DetailedCardService.scss";
+@import "./components/Favorite.scss";
+@import "./components/CalendarFromScratch.scss";
+@import "./components/SearchList.scss";
+@import "./components/ShowUsers";
+@import "./screens/UserProfilePage.scss";
+@import "./components/Modale.scss";
+@import "./components/Reviews.scss";
+@import "./screens/Team.scss";
+@import "./components/ShowOrderHistory.scss";
+@import "./screens/Error.scss";
+
 
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
 }
 
 code {

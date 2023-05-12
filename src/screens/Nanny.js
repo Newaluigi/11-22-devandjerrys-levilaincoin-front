@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import DisplayVilainServicePage from '../components/DisplayVilainServicePage'
+import { HiArrowLeft } from 'react-icons/hi'
 
 const Nanny = () => {
   // State réupération des infos de la catégorie concernée
@@ -13,46 +15,41 @@ const Nanny = () => {
 
   return (
     <div className='page-Service'>
-      <Link to='/'>
-        <p> retour </p>
-      </Link>
+      <div className='willBeBack'>
+        <Link to='/' style={{ textDecoration: 'none' }}>
+          <HiArrowLeft className='iconeBack' />{' '}
+          <span className='beBack'> retour </span>
+        </Link>
+      </div>
       <div className='serviceDescription'>
-        <h2>Choisissez votre prestataire pour une nounou</h2>
+        <h2 className='headingDescription'>
+          - Choisissez votre prestataire pour une nounou -
+        </h2>
+        <hr className='shine2'></hr>
         <div className='descriptionImg'>
-          <p>
-            Description. Bonbon jujubes danish candy canes macaroon. Tiramisu
-            powder cotton candy bear claw cupcake marzipan croissant shortbread
-            gummi bears. Gummies sweet roll lemon drops halvah toffee. Apple pie
-            jelly-o oat cake macaroon donut.
+          <span className='tag-wrap'>
+            <img
+              src={require('../assets/img/nanny.png')}
+              alt='nanny'
+              className='descImg'
+            />
+          </span>
+          <p className='descriptionText'>
+            Vous souhaitez garder vos petits montres ? Faites appel à un monstre
+            professionnel qui saura les hanter jusqu'à la fin de leurs jours et
+            fera la joie de leur futur psy.
           </p>
-          <img
-            src={require('../assets/img/nanny.png')}
-            alt='nanny'
-            details='Bad nounou'
-          />
         </div>
+        <hr className='shine1'></hr>
       </div>
       <div className='posts'>
         {vilainInfo1
-          ? vilainInfo1.map(vilainInfo1 => {
+          ? vilainInfo1.map(vilainInfo => {
               return (
-                <div className='vilain1' key={vilainInfo1.id}>
-                  <p>
-                    <span>NAME</span> {vilainInfo1.name}
-                  </p>
-                  <br />
-                  <p>
-                    <span>JOB</span> {vilainInfo1.occupation}
-                  </p>
-                  <br />
-                  <p>
-                    <span>ACHIEVEMENTS</span> {vilainInfo1.achievements}
-                  </p>
-                  <br />
-                  <img src={vilainInfo1.images.sm} alt={vilainInfo1.name} />   s
-                  {/* <button onClick={() => deleteProfile(vilainInfo1.id)}> */}
-                  <button>Delete</button>
-                </div>
+                <DisplayVilainServicePage
+                  vilainInfo1={vilainInfo}
+                  key={vilainInfo.id}
+                />
               )
             })
           : null}
@@ -60,5 +57,4 @@ const Nanny = () => {
     </div>
   )
 }
-
 export default Nanny

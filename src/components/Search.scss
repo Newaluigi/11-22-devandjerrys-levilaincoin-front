@@ -1,14 +1,40 @@
 .searchModule {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
     background-color: #25282A;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .inputSearch {
     color: var(--third-color);
-    background-color: var(--background-color)
+    background-color: transparent;
+    
 }
 
 .glassPicture {
-    height: 20px;
+    height: 40px;
     width: auto;
+}
+@media (min-width: 600px) { 
+    .searchModule{
+        display: initial;
+        margin: 0;  
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: flex-end;     
+    }
+    // .inputSearch {
+    //     display: none;
+    // }
+}
+@media (max-width: 599px) {
+    .inputSearch{
+        display: none;
+    }
+    .glassPicture {
+        height: 20px;
+       width: 20px;
+    }
 }

@@ -1,0 +1,45 @@
+.liste{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(20, 20, 20, 0.75);
+    margin-bottom: 30px;
+}
+.selection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2px;
+   
+    .vilainName{
+        color: var(--secondary-color); 
+        &:hover{
+            color: var(--main-color);  
+          }
+       
+    }
+ 
+    a{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+       
+    }
+}
+
+// Mobile
+@media (min-width: 600px) { 
+    .searchModule{
+        display: initial;
+        margin: 0;
+        background-color: transparent;
+    }
+}
+/*Desktop*/
+@media screen and (min-width: 600px){
+    .inputSearch{
+        display: none;
+    }
+}

@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import DisplayVilainServicePage from '../components/DisplayVilainServicePage'
+import { HiArrowLeft } from 'react-icons/hi'
 
 const Stag = () => {
   // State réupération des infos de la catégorie concernée
   const [vilainInfo1, setVilainInfo1] = useState([])
+  // UseEffect
   useEffect(() => {
     axios.get('http://localhost:4242/occupation/stag').then(response => {
       setVilainInfo1(response.data)
@@ -13,46 +16,42 @@ const Stag = () => {
 
   return (
     <div className='page-Service'>
-      <Link to='/'>
-        <p> retour </p>
-      </Link>
+      <div className='willBeBack'>
+        <Link to='/' style={{ textDecoration: 'none' }}>
+          <HiArrowLeft className='iconeBack' />{' '}
+          <span className='beBack'> retour </span>
+        </Link>
+      </div>
       <div className='serviceDescription'>
-        <h2>Choisissez votre prestataire pour un EVG</h2>
+        <h2 className='headingDescription'>
+          - Choisissez votre prestataire pour un EVG/EVJF -
+        </h2>
+        <hr className='shine2'></hr>
         <div className='descriptionImg'>
-          <p>
-            Description. Bonbon jujubes danish candy canes macaroon. Tiramisu
-            powder cotton candy bear claw cupcake marzipan croissant shortbread
-            gummi bears. Gummies sweet roll lemon drops halvah toffee. Apple pie
-            jelly-o oat cake macaroon donut.
+          <span className='tag-wrap'>
+            <img
+              src={require('../assets/img/evjf.png')}
+              alt='stag'
+              className='descImg'
+            />
+          </span>
+          <p className='descriptionText'>
+            Vous souhaitez enterrez la vie de jeune garçon ou de jeune fille
+            d'une connaissance ? Ici nos professionnels les enterreront tout
+            court.
           </p>
-          <img
-            src={require('../assets/img/evjf.png')}
-            alt='stag'
-            details='EVG /EVJF'
-          />
         </div>
+        <hr className='shine1'></hr>
       </div>
       <div className='posts'>
         {vilainInfo1
           ? vilainInfo1.map(vilainInfo1 => {
               return (
-                <div className='vilain1' key={vilainInfo1.id}>
-                  <p>
-                    <span>NAME</span> {vilainInfo1.name}
-                  </p>
-                  <br />
-                  <p>
-                    <span>JOB</span> {vilainInfo1.occupation}
-                  </p>
-                  <br />
-                  <p>
-                    <span>ACHIEVEMENTS</span> {vilainInfo1.achievements}
-                  </p>
-                  <br />
-                  <img src={vilainInfo1.images.sm} alt={vilainInfo1.name} />   
-                  {/* <button onClick={() => deleteProfile(vilainInfo1.id)}> */}
-                  <button>Delete</button>
-                </div>
+                <DisplayVilainServicePage
+                  vilainInfo1={vilainInfo1}
+                  key={vilainInfo1.id}
+                  // key={vilainInfo1.name}
+                />
               )
             })
           : null}

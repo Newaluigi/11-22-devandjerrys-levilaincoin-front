@@ -1,0 +1,165 @@
+.Calendar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scale: 0.9;
+    width: 42vh;
+    .Date{
+        border: double var(--main-color);
+        padding: 10px;
+        font: var(--font2);
+        display: flex;
+        align-self: stretch;
+        flex-direction: column;
+            .DateSelected{
+            font: var(--font2);
+            color: var(--main-color);
+            margin: 0;
+            }
+           .globalIndicator{
+          margin:0;
+          margin-top: 20px;
+          padding:0;
+          display:flex;
+          height: 10vh;
+          justify-content:center;
+          align-items:center;
+          font-family:sans-serif;
+
+          .indicator{
+            position:relative;
+            width:10px;
+            height:10px;
+            transform:rotate(45deg);
+
+            span{
+              position:absolute;
+              left:0;
+              top:0;
+              width:100%;
+              height:100%;
+              box-sizing:border-box;
+              border:none;
+              border-bottom:3px solid #fff;
+              border-right:3px solid #fff;
+              animation:animate 1s linear infinite;
+
+              &:nth-child(1){
+              top:-30px;
+              left:-30px;
+              animation-delay:0s;
+             }
+              &:nth-child(2){
+              top:-15px;
+              left:-15px;
+              animation-delay:0.2s;
+              }
+
+              &:nth-child(3){
+              top:0;
+              left:0;
+              animation-delay:0.4s;
+              }
+
+              &:nth-child(4){
+              top:15px;
+              left:15px;
+              animation-delay:0.6s;
+              }
+              &:nth-child(5){
+              top:30px;
+              left:30px;
+              animation-delay:0.8s;
+              }
+            }
+          }
+        }
+      @keyframes animate{
+        0%{
+          border-color:#fff;
+          transform:translate(0,0);
+        }
+         20%{
+          border-color:#fff;
+           transform:translate(15px,15px);
+        }
+         20.1%,100%{
+          border-color:var(--main-color);
+        }
+      }
+    .react-calendar{
+        border: none;
+        border-radius: 10px;
+
+        .react-calendar__navigation{
+            scale: 1.2;
+        }
+        .react-calendar__month-view{
+           padding-bottom: 20px;
+        }
+        .react-calendar__tile {
+            border-radius: 10px;
+
+        }
+        .react-calendar__tile--active {
+            background: var(--main-color);
+            box-shadow: 5px 5px 12px var(--main-color);
+        }
+        .react-calendar__tile--range {
+            background:var(--main-color);
+            box-shadow: 5px 5px 12px var(--main-color);
+        }
+        .react-calendar__tile--now {
+            background: #FB6012;
+            box-shadow: 5px 5px 12px var(--main-color);
+        }
+        
+    }
+    }
+.goButton{
+  color: var(--third-color);
+  font: var(--font2);    
+  background-color: var(--main-color);
+  place-items: center; 
+  border-radius: 4px;
+  border: 1px transparent;
+  margin: 10px;
+  max-height: 40px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+    padding: 10px;
+
+   
+    :hover {
+       cursor: pointer;
+       transform: translateY(0.1em)  
+    }
+    :active {
+        transform: translateY(0.2em);
+    }
+    }
+}
+// /* * * * * MEDIA QUERIES * * * * */
+// /*desktop*/
+@media (min-width: 600px) { 
+  .Calendar{
+     flex-direction: row-reverse;
+     .Date{
+      justify-content: space-evenly;
+      min-width: 350px
+    }
+    div{
+     
+           .react-calendar{
+            position: relative;
+            right: 30px;
+     }}}
+.goButton{
+  z-index: 1;
+    position: relative;
+    top: 158px;
+    right: -176px;
+}
+}

@@ -1,18 +1,409 @@
-.serviceDescription {
-    h2 {
+// screens Birthday Stag Conquer Escort Nanny Destroy //
 
+// DIV AJOUTÉE UNIQUEMENT SUR LA PAGE BIRTHDAY
+// .divGlobale {
+// display: flex;
+// }
+/////////////////////////
+
+
+//******************** BANNIERE ***************************
+
+.serviceDescription {
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+
+// TITRE
+
+.headingDescription {
+    font-size: 30px;
+    color: #d6420a;
+    text-shadow: 1px 1px 0px black;
+    mix-blend-mode: screen;
+    animation: fadeIn 2.5s linear forwards;
+    margin-bottom: 50px;
+    margin-top: -6px;
+    padding-bottom: 50px;
+    // text-align: center;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0
     }
-    p {
-font-size: 14px;
-    }
-    img {
-        margin: auto;
-        width: 150px;
+    100% {
+        opacity: 1;
     }
 }
+
+
+// VIGNETTE
+
 .descriptionImg {
-    display: flex;
-    flex-direction: row;
     width: 80%;
     margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 23px;
+    justify-items: center;
+    align-items: center;
+    img {
+        width: 220px;
+    }
 }
+.descImg{
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+.tag-wrap {
+    filter: drop-shadow(rgb(0, 0, 10) 2px 2px 14px);
+}
+
+// DESCRIPTIF
+
+.descriptionText {
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 50px;
+    font-size: 80%;
+}
+
+
+// BORDS
+hr {
+    border: 0;
+    margin: 3.35em auto;
+    max-width: 100%;
+    background-position: 50%;
+    box-sizing: border-box;
+}
+.shine1 {
+    height: 20px;
+    width: 115%;
+    background-image: radial-gradient(
+      farthest-side at 50% -50%,
+      hsla(22, 93%, 47%, 0.899),
+      hsla(27, 100%, 44%, 0));
+    position: relative; 
+}
+.shine1::before {
+    height: 1px;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(
+      90deg,
+      hsla(0, 0%, 0%, 0),
+      hsla(0, 0%, 0%, 0.75) 50%,
+      hsla(0, 0%, 0%, 0));
+  }
+
+.shine2 {
+    height: 20px;
+    width: 115%;
+    background-image: radial-gradient(
+      farthest-side at 50% -50%,
+      hsla(22, 93%, 47%, 0.899),
+      hsla(27, 100%, 44%, 0));
+    position: relative; 
+    transform: rotate(180deg);
+}
+.shine2::before {
+    height: 1px;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(
+      90deg,
+      hsla(0, 0%, 0%, 0),
+      hsla(0, 0%, 0%, 0.75) 50%,
+      hsla(0, 0%, 0%, 0));
+}
+
+
+//BACK ARROW
+.willBeBack{
+    margin-top: 50px;
+    text-decoration: none;
+    opacity: 0.6;
+}
+.willBeBack:hover{
+    opacity: 1;
+}
+// .beBack:hover{
+//     opacity: 1;
+// }
+
+.beBack {
+    color :rgb(251, 96, 18);
+    text-decoration: none;
+    font: var(--font2);
+    margin-left: 50px;
+    // opacity: 0.6;
+}
+.iconeBack{
+    scale: 3;
+    width: 10%;
+
+    // opacity: 0.6;
+    color : rgb(251, 96, 18)
+}
+.iconeBack:hover{
+    opacity: 1;
+}
+
+//RESPONSIVE
+
+
+@media (min-width: 600px) {
+
+    .descriptionText {
+        font-size: 25px;
+    }
+
+    .descriptionImg {
+        // width: 80%;
+        // margin: auto;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // grid-gap: 23px;
+        // justify-items: center;
+        // align-items: center;
+        img {
+            width: 420px;
+        }
+    }
+
+}
+
+
+
+//******************** CARD ***************************
+
+.vilain1 {
+    padding: 30px 0 40px;
+    margin: 60px;
+    background-color: var(#25282A);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    max-width: 355px;
+    backdrop-filter: blur(1px) saturate(85%);
+    -webkit-backdrop-filter: blur(1px) saturate(85%);
+    background-color: rgba(251, 96, 18, 0.68);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    z-index: 0;
+}
+
+.vilain1 .picture {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+.vilain1 .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #25282A;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+    
+}
+
+.vilain1:hover .picture::before {
+    height: 100%;
+}
+
+.vilain1 .picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.vilain1 .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+
+.vilain1:hover .picture img {
+    box-shadow: 0 0 0 14px #25282A;
+    transform: scale(0.7);
+}
+
+.vilain1 .CardsFlex {
+    display: block;
+    font-size: 15px;
+    color: #25282A;
+    text-transform: capitalize;
+}
+
+
+
+.vilain1 .CardsFlex2 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #25282A;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.vilain1:hover .CardsFlex2 {
+    bottom: 0;
+}
+
+.vilain1 .CardsFlex2:nth-child(n) {
+    display: inline-block;
+}
+
+// .vilain1 .CardsFlex2:nth-child(n) a {
+//     display: block;
+//     padding: 10px;
+//     font-size: 17px;
+//     color: white;
+//     transition: all 0.3s ease 0s;
+//     text-decoration: none;
+// }
+
+.vilain1 .CardsFlex2 li a:hover {
+    color: #1369ce;
+    background-color: #f7f5ec;
+}
+
+
+//******************** BUTTON ***************************
+
+.ButtonCards{
+min-height: 50px;
+margin: 20px;
+background-color: #fb6012;
+color: #25282A;
+border-radius: 12px;
+border: 1px solid rgba(209, 213, 219, 0.3);
+font-weight: bold;
+}
+
+.ButtonCards:hover {
+	cursor: pointer;
+	transform: translateY(0.2em);
+}
+
+.ButtonCards:focus {
+	transform: translateY(0.3em);
+    color: #fb6012;
+    background-color: #25282A;
+}
+
+
+//******************** Old CSS ***************************
+
+
+// .Cards-item {
+//     margin:10px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     transition: width 0.5s ease-in;
+//     box-shadow: 5px 5px 5px black;
+//     width: 300px;
+//     background-color: #97A2A8;
+//     border-radius: 10px;
+//     }
+
+// .Cards-item h3 {
+//     text-align: center;
+//     font-weight: bold;
+//     font-size: 20px;
+//     background-color: #97A2A8;
+//     color: #25282A;
+// }
+// .Quickdescription {
+//     font-size: 16px;
+//     text-align: center;
+//     margin: auto 10px auto 10px;    
+//     background-color: #97A2A8;
+//     color: #25282A;
+// }
+
+// .ButtonCards {
+//     font: var(--font2);
+//     font-size: 12px;
+//     text-decoration: none;
+//     background-color: #FB6012;
+//     border: 2px solid #97A2A8;
+//     box-shadow: 5px 5px 10px #97A2A8;
+//     text-align: center;
+//     color: beige;
+//     margin: 10px;
+//     padding: 10px;
+//     width: 120px;
+//     cursor: pointer;
+//     margin: auto;
+//     margin-top: 15px;
+//     margin-bottom: 15px;
+// }
+
+// .CardsFlex {
+//     display: flex;
+//     flex-direction: row;
+//     background-color: #97A2A8;
+//     border-radius: 10px;
+//     padding: 10px;
+//     img {
+//         width: 100px;
+//         height: 100px;
+//         border-radius: 50%;
+//         object-fit: cover;
+//     }
+// }
+// .CardsFlex2 {
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     h4 {
+//         color: #ffffff;
+//         font-size: 1.8em;
+//         margin: 15px 0px;
+//         text-shadow: 3px 3px #FB6012;
+//     }
+// }
+
+.posts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+// @media (max-width: 600px) {
+//     .vilain1 {
+//         margin-right: 15px;
+//     }
+// }

@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom'
+
 const TeamButton = () => {
   return (
     <div>
-      <a href='#' className='boutonTeam'>
+      <Link to='/team' className='boutonTeam'>
         Notre équipe
-      </a>
+      </Link>
     </div>
   )
 }

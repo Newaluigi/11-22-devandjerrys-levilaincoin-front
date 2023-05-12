@@ -1,5 +1,5 @@
-const NewVilain = () => {
-  return <div>test</div>
+const NewVliain = () => {
+  return
 }
 
-export default NewVilain
+export default NewVliain

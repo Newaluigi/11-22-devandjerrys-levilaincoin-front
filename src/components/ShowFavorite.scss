@@ -1,0 +1,22 @@
+.favDisplay{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 100%;
+    // background-color: aqua;
+    color: rgb(17, 16, 16);
+    margin: 0;
+    .heart{
+        position: relative;
+        left: -20%;
+        top: -5%;
+    }
+}
+@media (max-width: 600px) {
+    .favDisplay{
+        .vilain1{
+            margin-right: 15px;
+        }
+    }
+ 
+}

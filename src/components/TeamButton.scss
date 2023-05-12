@@ -1,19 +1,15 @@
-.boutonTeam {
-    /* display: inline-block; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-decoration: none;
-    background-color: #FB6012;
-    border: 2px solid #97A2A8;
-    box-shadow: 5px 5px 10px #97A2A8;
+.boutonTeam{
+    font: var(--font2);
     text-align: center;
-    font-size: 0.4em;
-    color: beige;
-    margin: 10px;
+    text-decoration: none;
+    color: var(--third-color);
     padding: 10px;
     width: 120px;
     cursor: pointer;
-    /* -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s; */
+    opacity: 0.6;
+}
+.boutonTeam:hover{
+    opacity: 1;
+    color: var(--main-color);
+    font-size: larger;
 }
