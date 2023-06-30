@@ -1,6 +1,6 @@
 <div align='center'>
     <h1 id="top"><b>🦹 Levilaincoin 🦹</b></h1>
-    <img src='src/assets/images/logo.png'  />
+    <img src='src/assets/img/leVilainCoinLogo.png'  />
     <p>WCS PROJECT [Hackathon #2]</b></p>
 
 ![Size](https://img.shields.io/github/languages/code-size/Newaluigi/11-22-devandjerrys-levilaincoin-front.svg)
@@ -237,13 +237,20 @@ You begin the experience with a login page.
 <br />
 <br />
 <p align="center"> 
-<img src='/src/assets/readme/login.jpg' alt="screen login">
+<img src='/src/assets/readme/home.jpg' alt="screen login">
 </p>
 On the homepage you have a little animation of Excalibur and the navbar present on every page as well on the right side with the logo of the Kaamelott TV show
 <br />
 <br />
 <p align="center"> 
-<img src='/src/assets/readme/home.jpg' alt="screen home">
+<img src='/src/assets/readme/home2.jpg' alt="screen home">
+</p>
+<p align="center"> 
+<img src='/src/assets/readme/home3.jpg' alt="screen home">
+</p>
+<br />
+<p align="center"> 
+<img src='/src/assets/readme/burger.jpg' alt="screen home">
 </p>
 
 #### Knights page
@@ -251,11 +258,11 @@ Here we have all the knights of the database, and we can open a new page with mo
 <br />
 <br />
 <p align="center"> 
-<img src='/src/assets/readme/knights.jpg' alt="screen knights">
+<img src='/src/assets/readme/event.jpg' alt="screen knights">
 </p>    
 <br />
 <p align="center"> 
-<img src='/src/assets/readme/knight-detail.jpg' alt="screen knight details">
+<img src='/src/assets/readme/presta.jpg' alt="screen knight details">
 </p>
 
 #### Quests page
@@ -263,22 +270,34 @@ Here we have all the quests of the database, and we can open a modal with more d
 <br />
 <br />
 <p align="center"> 
-<img src='/src/assets/readme/quests.jpg' alt="screen quests">
+<img src='/src/assets/readme/card.jpg' alt="screen quests">
 </p>
 <br />
 <p align="center"> 
-<img src='/src/assets/readme/quest-detail.jpg' alt="screen quest details">
+<img src='/src/assets/readme/book.jpg' alt="screen quest details">
+</p>
+<br />
+<p align="center"> 
+<img src='/src/assets/readme/calendar.jpg' alt="screen quest details">
+</p>
+<br />
+<p align="center"> 
+<img src='/src/assets/readme/modalvilain.jpg' alt="screen quest details">
 </p>
 
 #### Contact & Team
 At the end of the navbar there are two bonus page : the presentation of the knights of the SQL table with a little animation that reveal the social links of each and the contact page with a little cool sound effect
 <br />
 <p align="center"> 
-<img src='/src/assets/readme/contact.jpg' alt="screen contact">
+<img src='/src/assets/readme/team.jpg' alt="screen contact">
 </p>
 <br />
 <p align="center"> 
-<img src='/src/assets/readme/team.jpg' alt="screen team">
+<img src='/src/assets/readme/contact.jpg' alt="screen team">
+</p>
+<br />
+<p align="center"> 
+<img src='/src/assets/readme/404.jpg' alt="screen team">
 </p>
 
 
